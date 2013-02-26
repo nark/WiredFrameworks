@@ -350,6 +350,8 @@
 		4C667F85147B02E400AAA5C7 /* WIThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C667F6E147B02E400AAA5C7 /* WIThread.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C667F86147B02E400AAA5C7 /* WIThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C667F6F147B02E400AAA5C7 /* WIThread.m */; };
 		4C70E06714B3BA2300761F46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C70E06614B3BA2300761F46 /* UIKit.framework */; };
+		4C773D4E16DD366B00807EB7 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C773D4B16DD363800807EB7 /* libcrypto.a */; };
+		4C773D4F16DD366B00807EB7 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C773D4916DD363800807EB7 /* libssl.a */; };
 		4C7967C016DC256200E36A03 /* wi-assert.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C79674716DC256100E36A03 /* wi-assert.c */; };
 		4C7967C116DC256200E36A03 /* wi-assert.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C79674716DC256100E36A03 /* wi-assert.c */; };
 		4C7967C216DC256200E36A03 /* wi-assert.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C79674716DC256100E36A03 /* wi-assert.c */; };
@@ -698,8 +700,6 @@
 		4CBDADA5147AFC4A00D0C51A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBDABFF147AF52E00D0C51A /* Foundation.framework */; };
 		4CBDADB0147AFD0200D0C51A /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBDAD00147AF60600D0C51A /* config.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CBDAE1F147AFD3100D0C51A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBDAD07147AF68900D0C51A /* libxml2.dylib */; };
-		4CBDAE20147AFD3900D0C51A /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBDAD03147AF64800D0C51A /* libcrypto.a */; };
-		4CBDAE21147AFD4200D0C51A /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBDAD04147AF64800D0C51A /* libssl.a */; };
 		4CC5CDEE1561495D00C2F624 /* WIDOMElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CC5CDEC1561495D00C2F624 /* WIDOMElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CC5CDEF1561495D00C2F624 /* WIDOMElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC5CDED1561495D00C2F624 /* WIDOMElement.m */; };
 		4CD1DA7E15DFF7370004FB60 /* NSManagedObjectContext+Fetch.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CD1DA7C15DFF7370004FB60 /* NSManagedObjectContext+Fetch.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -761,12 +761,26 @@
 			remoteGlobalIDString = 4C667EBF147B018600AAA5C7;
 			remoteInfo = StaticWiredFoundation;
 		};
-		4C773CEB16DC28DC00807EB7 /* PBXContainerItemProxy */ = {
+		4C773D4816DD363800807EB7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 4C2F235614A6B41700B7E05A /* OpenSSL-for-iPhone.xcodeproj */;
+			containerPortal = 4C773D4316DD363800807EB7 /* openssl.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 1D6058910D05DD3D006BFB54;
-			remoteInfo = "OpenSSL-for-iPhone";
+			remoteGlobalIDString = 755CDE6116A0DC6B00CA98FE;
+			remoteInfo = ssl;
+		};
+		4C773D4A16DD363800807EB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C773D4316DD363800807EB7 /* openssl.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 755CDE7416A0DC7A00CA98FE;
+			remoteInfo = crypto;
+		};
+		4C773D4C16DD366400807EB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C773D4316DD363800807EB7 /* openssl.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 755CDE6016A0DC6B00CA98FE;
+			remoteInfo = ssl;
 		};
 		4CB964D815190B1E0020BE28 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -813,7 +827,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4C2F235614A6B41700B7E05A /* OpenSSL-for-iPhone.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "OpenSSL-for-iPhone.xcodeproj"; path = "../openssl/OpenSSL-for-iPhone.xcodeproj"; sourceTree = "<group>"; };
 		4C3A412615F5691600C9B136 /* WIStatusMenuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIStatusMenuManager.h; sourceTree = "<group>"; };
 		4C3A412715F5691600C9B136 /* WIStatusMenuManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIStatusMenuManager.m; sourceTree = "<group>"; };
 		4C417209147DC2B300DC0A9A /* WiredFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WiredFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1069,6 +1082,7 @@
 		4C667F6E147B02E400AAA5C7 /* WIThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIThread.h; sourceTree = "<group>"; };
 		4C667F6F147B02E400AAA5C7 /* WIThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIThread.m; sourceTree = "<group>"; };
 		4C70E06614B3BA2300761F46 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4C773D4316DD363800807EB7 /* openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openssl.xcodeproj; path = openssl/openssl.xcodeproj; sourceTree = SOURCE_ROOT; };
 		4C79674716DC256100E36A03 /* wi-assert.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "wi-assert.c"; sourceTree = "<group>"; };
 		4C79674816DC256100E36A03 /* wi-assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "wi-assert.h"; sourceTree = "<group>"; };
 		4C79674916DC256100E36A03 /* wi-base.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "wi-base.c"; sourceTree = "<group>"; };
@@ -1189,8 +1203,6 @@
 		4CBDABFC147AF52E00D0C51A /* wired.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = wired.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBDABFF147AF52E00D0C51A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4CBDAD00147AF60600D0C51A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../WiredFrameworks/config.h; sourceTree = "<group>"; };
-		4CBDAD03147AF64800D0C51A /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = openssl/libcrypto.a; sourceTree = "<group>"; };
-		4CBDAD04147AF64800D0C51A /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = openssl/libssl.a; sourceTree = "<group>"; };
 		4CBDAD07147AF68900D0C51A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		4CBDAD14147AF94F00D0C51A /* wired.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = wired.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBDAD18147AF94F00D0C51A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -1296,6 +1308,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C773D4E16DD366B00807EB7 /* libcrypto.a in Frameworks */,
+				4C773D4F16DD366B00807EB7 /* libssl.a in Frameworks */,
 				4CBDAD08147AF68900D0C51A /* libxml2.dylib in Frameworks */,
 				4CBDAC00147AF52E00D0C51A /* Foundation.framework in Frameworks */,
 			);
@@ -1318,8 +1332,6 @@
 			files = (
 				4CBDAE1F147AFD3100D0C51A /* libxml2.dylib in Frameworks */,
 				4CBDADA5147AFC4A00D0C51A /* Foundation.framework in Frameworks */,
-				4CBDAE20147AFD3900D0C51A /* libcrypto.a in Frameworks */,
-				4CBDAE21147AFD4200D0C51A /* libssl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1634,16 +1646,17 @@
 		4C773CE616DC278A00807EB7 /* Subprojects */ = {
 			isa = PBXGroup;
 			children = (
-				4C2F235614A6B41700B7E05A /* OpenSSL-for-iPhone.xcodeproj */,
+				4C773D4316DD363800807EB7 /* openssl.xcodeproj */,
 			);
 			name = Subprojects;
 			path = WiredUIKit;
 			sourceTree = "<group>";
 		};
-		4C773CE816DC28DC00807EB7 /* Products */ = {
+		4C773D4416DD363800807EB7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C773CEC16DC28DC00807EB7 /* OpenSSL-for-iPhone.app */,
+				4C773D4916DD363800807EB7 /* libssl.a */,
+				4C773D4B16DD363800807EB7 /* libcrypto.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1989,8 +2002,6 @@
 				4CBDAD96147AFA6E00D0C51A /* libsqlite3.dylib */,
 				4CBDAD94147AFA6600D0C51A /* libxml2.dylib */,
 				4CBDAD07147AF68900D0C51A /* libxml2.dylib */,
-				4CBDAD03147AF64800D0C51A /* libcrypto.a */,
-				4CBDAD04147AF64800D0C51A /* libssl.a */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -2562,6 +2573,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4C773D4D16DD366400807EB7 /* PBXTargetDependency */,
 			);
 			name = "libwired-ios";
 			productName = wired;
@@ -2640,8 +2652,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 4C773CE816DC28DC00807EB7 /* Products */;
-					ProjectRef = 4C2F235614A6B41700B7E05A /* OpenSSL-for-iPhone.xcodeproj */;
+					ProductGroup = 4C773D4416DD363800807EB7 /* Products */;
+					ProjectRef = 4C773D4316DD363800807EB7 /* openssl.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -2661,11 +2673,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		4C773CEC16DC28DC00807EB7 /* OpenSSL-for-iPhone.app */ = {
+		4C773D4916DD363800807EB7 /* libssl.a */ = {
 			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "OpenSSL-for-iPhone.app";
-			remoteRef = 4C773CEB16DC28DC00807EB7 /* PBXContainerItemProxy */;
+			fileType = archive.ar;
+			path = libssl.a;
+			remoteRef = 4C773D4816DD363800807EB7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4C773D4B16DD363800807EB7 /* libcrypto.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcrypto.a;
+			remoteRef = 4C773D4A16DD363800807EB7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -3136,6 +3155,11 @@
 			target = 4C667EBF147B018600AAA5C7 /* StaticWiredFoundation */;
 			targetProxy = 4C668080147C2D1200AAA5C7 /* PBXContainerItemProxy */;
 		};
+		4C773D4D16DD366400807EB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ssl;
+			targetProxy = 4C773D4C16DD366400807EB7 /* PBXContainerItemProxy */;
+		};
 		4CB964D915190B1E0020BE28 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4CBDADA3147AFC4A00D0C51A /* libwired-simulator */;
@@ -3563,12 +3587,9 @@
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
-					"\"$(SRCROOT)/openssl/include\"",
+					"\"$(SRCROOT)/openssl/openssl-1.0.1c/include/\"",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/openssl\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "";
 				OTHER_LDFLAGS = (
@@ -3595,12 +3616,10 @@
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
-					"\"$(SRCROOT)/openssl/include\"",
+					"\"$(SRCROOT)/openssl/openssl-1.0.1c/include/\"",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/openssl\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = "";
 				OTHER_LDFLAGS = (
@@ -3671,11 +3690,7 @@
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
-					"\"$(SRCROOT)/openssl/include\"",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/openssl\"",
+					"\"$(SRCROOT)/openssl/openssl-1.0.1c/include/\"",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -3700,11 +3715,7 @@
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
-					"\"$(SRCROOT)/openssl/include\"",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/openssl\"",
+					"\"$(SRCROOT)/openssl/openssl-1.0.1c/include/\"",
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
