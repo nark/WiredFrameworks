@@ -47,6 +47,8 @@
 		   selector:@selector(_WI_applicationWillTerminate:)
 			   name:NSApplicationWillTerminateNotification
 			 object:NULL];
+    
+    _dividerThickness = 1.0f;
 }
 
 
@@ -169,6 +171,20 @@
 
 - (NSString *)autosaveName {
 	return _autosaveName;
+}
+
+
+
+#pragma mark -
+
+- (void)setDividerThickness:(CGFloat)thickness {
+    _dividerThickness = thickness;
+    
+    [self setNeedsDisplay:YES];
+}
+
+- (CGFloat)dividerThickness {
+    return _dividerThickness;
 }
 
 @end
