@@ -32,11 +32,11 @@
 
 - (void)setPropertiesFromDictionary:(NSDictionary *)dictionary {
 	NSArray			*subviews;
-	NSView			*view;
+	//NSView			*view;
 	NSRect			frame, previousFrame;
 	id				object;
-	double			percent;
-	float			size;
+	//double			percent;
+	//float			size;
 	NSUInteger		i, count;
 	BOOL			isVertical, usePercent = YES;
 	

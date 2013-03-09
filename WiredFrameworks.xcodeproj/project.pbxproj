@@ -1033,8 +1033,8 @@
 		4C667EF2147B01F900AAA5C7 /* NSThread-WIFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSThread-WIFoundation.m"; sourceTree = "<group>"; };
 		4C667EF3147B01F900AAA5C7 /* RegexKitLite-WIFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RegexKitLite-WIFoundation.h"; sourceTree = "<group>"; };
 		4C667EF4147B01F900AAA5C7 /* RegexKitLite-WIFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RegexKitLite-WIFoundation.m"; sourceTree = "<group>"; };
-		4C667EF5147B01F900AAA5C7 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
-		4C667EF6147B01F900AAA5C7 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		4C667EF5147B01F900AAA5C7 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RegexKitLite.h; path = RegexKitLite/RegexKitLite.h; sourceTree = "<group>"; };
+		4C667EF6147B01F900AAA5C7 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RegexKitLite.m; path = RegexKitLite/RegexKitLite.m; sourceTree = "<group>"; };
 		4C667EF7147B01F900AAA5C7 /* WIDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIDateFormatter.h; sourceTree = "<group>"; };
 		4C667EF8147B01F900AAA5C7 /* WIDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIDateFormatter.m; sourceTree = "<group>"; };
 		4C667EF9147B01F900AAA5C7 /* WIEventQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIEventQueue.h; sourceTree = "<group>"; };
@@ -1202,7 +1202,7 @@
 		4CB43B8E158C7F2200C09100 /* WIChatPluginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIChatPluginManager.m; sourceTree = "<group>"; };
 		4CBDABFC147AF52E00D0C51A /* wired.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = wired.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBDABFF147AF52E00D0C51A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4CBDAD00147AF60600D0C51A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../../WiredFrameworks/config.h; sourceTree = SOURCE_ROOT; };
+		4CBDAD00147AF60600D0C51A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = libwired/config.h; sourceTree = SOURCE_ROOT; };
 		4CBDAD07147AF68900D0C51A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		4CBDAD14147AF94F00D0C51A /* wired.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = wired.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBDAD18147AF94F00D0C51A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -3307,7 +3307,6 @@
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WiredNetworking/WiredNetworking-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -3343,7 +3342,6 @@
 				);
 				FRAMEWORK_VERSION = A;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WiredNetworking/WiredNetworking-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

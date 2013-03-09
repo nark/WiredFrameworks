@@ -33,7 +33,7 @@ extern NSString * const WIFileCreationDate;
 extern NSString * const WIFileModificationDate;
 
 
-@interface WITreeView : NSControl {
+@interface WITreeView : NSControl <NSTableViewDataSource, NSTableViewDelegate> {
 	IBOutlet NSView					*_detailView;
 	IBOutlet NSImageView			*_iconImageView;
 	IBOutlet WebView				*_attributesWebView;

@@ -316,7 +316,7 @@
 		[string appendString:[[self host] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 		
 		if([self port] != 0)
-			[string appendFormat:@":%lu", [self port]];
+			[string appendFormat:@":%lu", (unsigned long)[self port]];
 	}
 	
 	if([[self path] length] > 0)
@@ -447,9 +447,9 @@
 		return [self host];
 	
 	if([[self host] containsSubstring:@":"])
-		return [NSSWF:@"[%@]:%lu", [self host], [self port]];
+		return [NSSWF:@"[%@]:%lu", [self host], (unsigned long)[self port]];
 
-	return [NSSWF:@"%@:%lu", [self host], [self port]];
+	return [NSSWF:@"%@:%lu", [self host], (unsigned long)[self port]];
 }
 
 
