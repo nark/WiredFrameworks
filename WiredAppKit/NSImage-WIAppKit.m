@@ -96,7 +96,7 @@
 				  NSForegroundColorAttributeName,
 				  NULL];
 	
-	[[NSSWF:@"%u", count] drawInRect:NSMakeRect(6.0, 0.0, size.width, size.height) withAttributes:attributes];
+	[[NSSWF:@"%lu", (unsigned long)count] drawInRect:NSMakeRect(6.0, 0.0, size.width, size.height) withAttributes:attributes];
 	
 	[image unlockFocus];
 	
@@ -200,7 +200,7 @@
 			NSForegroundColorAttributeName,
 		NULL];
 	
-	[[NSSWF:@"%lu", unread] drawWithRect:NSMakeRect(stringPoint.x, stringPoint.y, 0.0, 0.0)
+	[[NSSWF:@"%lu", (unsigned long)unread] drawWithRect:NSMakeRect(stringPoint.x, stringPoint.y, 0.0, 0.0)
 								 options:NSStringDrawingDisableScreenFontSubstitution
 							  attributes:attributes];
 

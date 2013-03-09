@@ -28,7 +28,7 @@
 
 #import <WiredAppKit/WIWindowController.h>
 
-@interface WIPreferencesController : WIWindowController {
+@interface WIPreferencesController : WIWindowController <NSWindowDelegate, NSToolbarDelegate> {
 	NSMutableArray							*_identifiers;
 	NSMutableDictionary						*_views;
 	

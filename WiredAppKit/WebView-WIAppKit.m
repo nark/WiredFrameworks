@@ -7,6 +7,8 @@
 //
 
 #import "WebView-WIAppKit.h"
+#import <WebKit/WebKit.h>
+#import <objc/runtime.h>
 
 
 

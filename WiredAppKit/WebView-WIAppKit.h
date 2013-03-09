@@ -9,6 +9,8 @@
 #import "WITemplateBundle.h"
 #import "WIChatLogController.h"
 
+
+
 @interface WebView (WIAppKit)
 
 - (void)scrollToBottom;

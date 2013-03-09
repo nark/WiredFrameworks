@@ -40,50 +40,50 @@
 
 
 
-- (void)sendEvent:(NSEvent *)event {
-	BOOL	handled = NO;
-	
-	if(_delegateWindowTitleBarMenu && [event type] == NSLeftMouseDown && [event commandKeyModifier]) {
-		NSPoint		point;
-		NSRect		frame;
-		NSSize		size;
-		
-		point = [event locationInWindow];
-		frame = [self frame];
-		size = [[NSFont titleBarFont] sizeOfString:[self title]];
-		
-		if(frame.size.height - point.y <= size.height + 5.0 &&
-		   point.x > (frame.size.width / 2.0) - (size.width / 2.0) &&
-		   point.x < (frame.size.width / 2.0) + (size.width / 2.0)) {
-			NSMenu		*menu;
-			NSEvent		*menuEvent;
-			NSPoint		menuPoint;
-			
-			menu = [[self delegate] windowTitleBarMenu:self];
-			
-			if(menu) {
-				menuPoint = NSMakePoint((frame.size.width / 2.0) - (size.width / 2.0),
-										frame.size.height - 2.0);
-				
-				menuEvent = [NSEvent mouseEventWithType:[event type]
-											   location:menuPoint
-										  modifierFlags:[event modifierFlags]
-											  timestamp:[event timestamp]
-										   windowNumber:[event windowNumber]
-												context:[event context]
-											eventNumber:[event eventNumber]
-											 clickCount:[event clickCount]
-											   pressure:[event pressure]];
-				
-				[NSMenu popUpContextMenu:menu withEvent:menuEvent forView:NULL];
-				
-				handled = YES;
-			}
-		}
-	}
-	
-	if(!handled)
-		[super sendEvent:event];
-}
+//- (void)sendEvent:(NSEvent *)event {
+//	BOOL	handled = NO;
+//	
+//	if(_delegateWindowTitleBarMenu && [event type] == NSLeftMouseDown && [event commandKeyModifier]) {
+//		NSPoint		point;
+//		NSRect		frame;
+//		NSSize		size;
+//		
+//		point = [event locationInWindow];
+//		frame = [self frame];
+//		size = [[NSFont titleBarFont] sizeOfString:[self title]];
+//		
+//		if(frame.size.height - point.y <= size.height + 5.0 &&
+//		   point.x > (frame.size.width / 2.0) - (size.width / 2.0) &&
+//		   point.x < (frame.size.width / 2.0) + (size.width / 2.0)) {
+//			NSMenu		*menu;
+//			NSEvent		*menuEvent;
+//			NSPoint		menuPoint;
+//			
+//			menu = [[self delegate] windowTitleBarMenu:self];
+//			
+//			if(menu) {
+//				menuPoint = NSMakePoint((frame.size.width / 2.0) - (size.width / 2.0),
+//										frame.size.height - 2.0);
+//				
+//				menuEvent = [NSEvent mouseEventWithType:[event type]
+//											   location:menuPoint
+//										  modifierFlags:[event modifierFlags]
+//											  timestamp:[event timestamp]
+//										   windowNumber:[event windowNumber]
+//												context:[event context]
+//											eventNumber:[event eventNumber]
+//											 clickCount:[event clickCount]
+//											   pressure:[event pressure]];
+//				
+//				[NSMenu popUpContextMenu:menu withEvent:menuEvent forView:NULL];
+//				
+//				handled = YES;
+//			}
+//		}
+//	}
+//	
+//	if(!handled)
+//		[super sendEvent:event];
+//}
 
 @end
