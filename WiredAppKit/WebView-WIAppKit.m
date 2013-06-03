@@ -15,6 +15,7 @@
 
 @interface WebView (WIAppKitPrivate)
 
+- (WebArchive *)_webArchive;
 - (void)_exportWebArchiveToPath:(NSString *)path;
 - (void)_exportHTMLToPath:(NSString *)path;
 - (void)_exportRTFDToPath:(NSString *)path;
@@ -26,15 +27,24 @@
 
 @implementation WebView (WIAppKitPrivate)
 
+- (WebArchive *)_webArchive {
+    WebResource		*dataSource;
+	WebArchive		*archive;
+    
+    dataSource		= [[[[self mainFrame] DOMDocument] webArchive] mainResource];
+	archive			= [[WebArchive alloc] initWithMainResource:dataSource
+                                            subresources:nil
+                                        subframeArchives:nil];
+    
+    return archive;
+}
+
+
+
 - (void)_exportWebArchiveToPath:(NSString *)path {
-	WebResource		*dataSource;
 	WebArchive		*archive;
 	
-	dataSource		= [[[[self mainFrame] DOMDocument] webArchive] mainResource];
-	archive			= [[WebArchive alloc]
-					   initWithMainResource:dataSource
-					   subresources:nil
-					   subframeArchives:nil];
+	archive			= [self _webArchive];
 	
 	[[archive data] writeToFile:path atomically:YES];
 	
@@ -42,17 +52,13 @@
 }
 
 
+
 - (void)_exportHTMLToPath:(NSString *)path {
-	WebResource		*dataSource;
 	WebArchive		*archive;
 	NSString		*htmlString;
 	NSError			*error;
 	
-	dataSource		= [[[[self mainFrame] DOMDocument] webArchive] mainResource];
-	archive			= [[WebArchive alloc]
-					   initWithMainResource:dataSource
-					   subresources:nil
-					   subframeArchives:nil];
+	archive			= [self _webArchive];
 	
 	htmlString = [self stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('html')[0].innerHTML"];
 	
@@ -63,19 +69,14 @@
 }
 
 
+
 - (void)_exportRTFDToPath:(NSString *)path {
-	WebResource				*dataSource;
 	WebArchive				*archive;
 	NSDictionary			*options;
 	NSAttributedString		*attributedSting;
 	
-	dataSource		= [[[[self mainFrame] DOMDocument] webArchive] mainResource];
-	archive			= [[WebArchive alloc]
-					   initWithMainResource:dataSource
-					   subresources:nil
-					   subframeArchives:nil];
-	
-	options = [NSDictionary dictionaryWithObject:[NSNumber numberWithUnsignedInteger:NSUTF8StringEncoding] 
+	archive			= [self _webArchive];
+	options         = [NSDictionary dictionaryWithObject:[NSNumber numberWithUnsignedInteger:NSUTF8StringEncoding] 
 										  forKey: NSCharacterEncodingDocumentOption];
 	
 	attributedSting	= [[NSAttributedString alloc] initWithHTML:[archive data] options:options documentAttributes:NULL];
@@ -88,28 +89,23 @@
 }
 
 
+
 - (void)_exportTXTToPath:(NSString *)path {
-	WebResource				*dataSource;
 	WebArchive				*archive;
 	NSDictionary			*options;
 	NSAttributedString		*attributedSting;
 	NSString				*string;
 	NSError					*error;
 	
-	dataSource		= [[[[self mainFrame] DOMDocument] webArchive] mainResource];
-	archive			= [[WebArchive alloc]
-					   initWithMainResource:dataSource
-					   subresources:nil
-					   subframeArchives:nil];
+	archive             = [self _webArchive];
+	options             = [NSDictionary dictionaryWithObject:[NSNumber numberWithUnsignedInteger:NSUTF8StringEncoding]
+                                                      forKey: NSCharacterEncodingDocumentOption];
 	
-	options = [NSDictionary dictionaryWithObject:[NSNumber numberWithUnsignedInteger:NSUTF8StringEncoding] 
-										  forKey: NSCharacterEncodingDocumentOption];
-	
-	attributedSting	= [[NSAttributedString alloc] initWithHTML:[archive data] options:options documentAttributes:NULL];
-	string = [attributedSting string];
+	attributedSting     = [[NSAttributedString alloc] initWithHTML:[archive data] options:options documentAttributes:NULL];
+	string              = [attributedSting string];
 	
 	[string writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
-	
+
 	[attributedSting autorelease];
 	[archive release];
 }
@@ -124,22 +120,27 @@
 
 @implementation WebView (WIAppKit)
 
-
-
 #pragma mark -
 
 - (void)scrollToBottom {
-	DOMNodeList *bodyNodeList   = [[[self mainFrame] DOMDocument] getElementsByTagName:@"body"];
-	DOMHTMLElement *bodyNode    = (DOMHTMLElement *)[bodyNodeList item:0];
-	
-	NSNumber    *bodyHeight = [bodyNode valueForKey:@"scrollHeight"];
-	NSRect		rect;
-	
-	rect = [[[[[self mainFrame] frameView] documentView] enclosingScrollView] documentVisibleRect];
-	rect.origin.y =  [bodyHeight doubleValue] + 50;
+	DOMNodeList         *bodyNodeList;
+    DOMHTMLElement      *bodyNode;
+    NSNumber            *bodyHeight;
+    NSScrollView        *scrollView;
+    NSRect              rect;
+    
+    bodyNodeList        = [[[self mainFrame] DOMDocument] getElementsByTagName:@"body"];
+    bodyNode            = (DOMHTMLElement *)[bodyNodeList item:0];
+    bodyHeight          = [bodyNode valueForKey:@"scrollHeight"];
+    scrollView          = [[[[self mainFrame] frameView] documentView] enclosingScrollView];
+        
+	rect                = [scrollView documentVisibleRect];
+	rect.origin.y       = [bodyHeight doubleValue] + 50;
+    
 	[[[[self mainFrame] frameView] documentView] scrollRectToVisible:rect];
-	
 }
+
+
 
 
 
@@ -163,7 +164,10 @@
 
 
 - (void)appendElement:(DOMElement *)element toBottomOfElementWithID:(NSString *)elementID scroll:(BOOL)scroll {
-	DOMElement *contentElement = [[[self mainFrame] DOMDocument] getElementById:elementID];
+	DOMElement *contentElement;
+    
+    contentElement = [[[self mainFrame] DOMDocument] getElementById:elementID];
+    
 	[contentElement appendChild:element];
 	
 	if(scroll)
@@ -173,19 +177,24 @@
 
 
 
+
+
 #pragma mark -
 
 - (void)reloadStylesheetWithID:(NSString *)elementID withTemplate:(WITemplateBundle *)template type:(WITemplateType)type {
-	DOMHTMLElement *header = (DOMHTMLElement *)[[[self mainFrame] DOMDocument] getElementById:elementID];
+	DOMHTMLElement *header;
+    
+    header = (DOMHTMLElement *)[[[self mainFrame] DOMDocument] getElementById:elementID];
+    
 	[header setAttribute:@"href" value:[template defaultStylesheetPathForType:type]];
-	
-//	NSString *scriptString = [NSString stringWithFormat:@"document.getElementById('%@').href = '%@';", elementID, [template defaultStylesheetPathForType:type]];
-//	
-//	[[self windowScriptObject] evaluateWebScript:scriptString];
 }
 
+
 - (void)clearChildrenElementsOfElementWithID:(NSString *)elementID {
-	DOMHTMLElement *contentElement = (DOMHTMLElement *)[[[self mainFrame] DOMDocument] getElementById:elementID];
+	DOMHTMLElement *contentElement;
+    
+    contentElement = (DOMHTMLElement *)[[[self mainFrame] DOMDocument] getElementById:elementID];
+    
 	[contentElement setInnerHTML:@""];
 }
 

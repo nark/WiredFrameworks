@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0F438316F1419F00735AC3 /* NSTreeController+WIAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0F438116F1419F00735AC3 /* NSTreeController+WIAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C0F438416F1419F00735AC3 /* NSTreeController+WIAppKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F438216F1419F00735AC3 /* NSTreeController+WIAppKit.m */; };
 		4C3A412815F5691600C9B136 /* WIStatusMenuManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C3A412615F5691600C9B136 /* WIStatusMenuManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C3A412915F5691600C9B136 /* WIStatusMenuManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A412715F5691600C9B136 /* WIStatusMenuManager.m */; };
 		4C41720B147DC2B300DC0A9A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41720A147DC2B300DC0A9A /* Cocoa.framework */; };
@@ -689,6 +691,8 @@
 		4C99E3C4154ED39700915AAC /* WIP7Link.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57B67A154EBF1600C9BAA5 /* WIP7Link.m */; };
 		4C99E3C6154ED39D00915AAC /* WIP7Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C57B675154EBD7B00C9BAA5 /* WIP7Connection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C99E3C7154ED39D00915AAC /* WIP7Link.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C57B679154EBF1600C9BAA5 /* WIP7Link.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CAC224516ED515D00BDB650 /* WIView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CAC224316ED515D00BDB650 /* WIView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4CAC224616ED515D00BDB650 /* WIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC224416ED515D00BDB650 /* WIView.m */; };
 		4CB43B8A158C7EA100C09100 /* WIChatPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB43B88158C7EA100C09100 /* WIChatPlugin.h */; };
 		4CB43B8B158C7EA100C09100 /* WIChatPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB43B89158C7EA100C09100 /* WIChatPlugin.m */; };
 		4CB43B8F158C7F2200C09100 /* WIChatPluginManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB43B8D158C7F2100C09100 /* WIChatPluginManager.h */; };
@@ -827,6 +831,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C0F438116F1419F00735AC3 /* NSTreeController+WIAppKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTreeController+WIAppKit.h"; sourceTree = "<group>"; };
+		4C0F438216F1419F00735AC3 /* NSTreeController+WIAppKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTreeController+WIAppKit.m"; sourceTree = "<group>"; };
 		4C3A412615F5691600C9B136 /* WIStatusMenuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIStatusMenuManager.h; sourceTree = "<group>"; };
 		4C3A412715F5691600C9B136 /* WIStatusMenuManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIStatusMenuManager.m; sourceTree = "<group>"; };
 		4C417209147DC2B300DC0A9A /* WiredFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WiredFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1196,13 +1202,15 @@
 		4C7967BF16DC256200E36A03 /* wired.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wired.h; path = libwired/libwired/wired.h; sourceTree = SOURCE_ROOT; };
 		4C7C1AA91486D5EE00563036 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4C7C1B4D1486DD6500563036 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		4CAC224316ED515D00BDB650 /* WIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIView.h; sourceTree = "<group>"; };
+		4CAC224416ED515D00BDB650 /* WIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIView.m; sourceTree = "<group>"; };
 		4CB43B88158C7EA100C09100 /* WIChatPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIChatPlugin.h; sourceTree = "<group>"; };
 		4CB43B89158C7EA100C09100 /* WIChatPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIChatPlugin.m; sourceTree = "<group>"; };
 		4CB43B8D158C7F2100C09100 /* WIChatPluginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIChatPluginManager.h; sourceTree = "<group>"; };
 		4CB43B8E158C7F2200C09100 /* WIChatPluginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIChatPluginManager.m; sourceTree = "<group>"; };
 		4CBDABFC147AF52E00D0C51A /* wired.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = wired.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBDABFF147AF52E00D0C51A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4CBDAD00147AF60600D0C51A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = libwired/config.h; sourceTree = SOURCE_ROOT; };
+		4CBDAD00147AF60600D0C51A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = SOURCE_ROOT; };
 		4CBDAD07147AF68900D0C51A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		4CBDAD14147AF94F00D0C51A /* wired.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = wired.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CBDAD18147AF94F00D0C51A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -1393,6 +1401,8 @@
 				4C417341147EE00800DC0A9A /* NSToolbar-WIAppKit.m */,
 				4C417342147EE00800DC0A9A /* NSToolbarItem-WIAppKit.h */,
 				4C417343147EE00800DC0A9A /* NSToolbarItem-WIAppKit.m */,
+				4C0F438116F1419F00735AC3 /* NSTreeController+WIAppKit.h */,
+				4C0F438216F1419F00735AC3 /* NSTreeController+WIAppKit.m */,
 				4C417344147EE00800DC0A9A /* NSView-WIAppKit.h */,
 				4C417345147EE00800DC0A9A /* NSView-WIAppKit.m */,
 				4C417346147EE00800DC0A9A /* NSWindow-WIAppKit.h */,
@@ -1468,6 +1478,8 @@
 				4C417386147EE00800DC0A9A /* WITreeView.m */,
 				4C417387147EE00800DC0A9A /* WIUnclickableProgressIndicator.h */,
 				4C417388147EE00800DC0A9A /* WIUnclickableProgressIndicator.m */,
+				4CAC224316ED515D00BDB650 /* WIView.h */,
+				4CAC224416ED515D00BDB650 /* WIView.m */,
 				4C417389147EE00800DC0A9A /* WIWindow.h */,
 				4C41738A147EE00800DC0A9A /* WIWindow.m */,
 				4C41738B147EE00800DC0A9A /* WIWindowController.h */,
@@ -2166,6 +2178,8 @@
 				4CB43B8A158C7EA100C09100 /* WIChatPlugin.h in Headers */,
 				4CB43B8F158C7F2200C09100 /* WIChatPluginManager.h in Headers */,
 				4C3A412815F5691600C9B136 /* WIStatusMenuManager.h in Headers */,
+				4CAC224516ED515D00BDB650 /* WIView.h in Headers */,
+				4C0F438316F1419F00735AC3 /* NSTreeController+WIAppKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2861,6 +2875,8 @@
 				4CB43B8B158C7EA100C09100 /* WIChatPlugin.m in Sources */,
 				4CB43B90158C7F2200C09100 /* WIChatPluginManager.m in Sources */,
 				4C3A412915F5691600C9B136 /* WIStatusMenuManager.m in Sources */,
+				4CAC224616ED515D00BDB650 /* WIView.m in Sources */,
+				4C0F438416F1419F00735AC3 /* NSTreeController+WIAppKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

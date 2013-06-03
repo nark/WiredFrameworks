@@ -55,24 +55,35 @@
 
 + (void)load {
 	NSAutoreleasePool	*pool;
-	NSArray				*arguments;
+//	NSArray				*arguments;
 	const char			**argv;
-	int					i, argc;
-	
+//	int					i, argc;
+    int                 argc;
+    
 	wi_initialize();
-
-	pool		= [[NSAutoreleasePool alloc] init];
-	arguments	= [[NSProcessInfo processInfo] arguments];
-	argc		= (int) [arguments count];
-	argv		= malloc(argc);
-
-	for(i = 0; i < argc; i++)
-		argv[i] = [[arguments objectAtIndex:i] UTF8String];
-
-	wi_load(argc, argv);
-	free(argv);
-	
-	[pool release];
+    
+    pool		= [[NSAutoreleasePool alloc] init];
+    argc        = 0;
+    argv		= malloc(argc);
+    
+    wi_load(argc, argv);
+    free(argv);
+    
+    [pool release];
+    
+    // crash the debuuger in Xcode 4+
+//	pool		= [[NSAutoreleasePool alloc] init];
+//	arguments	= [[NSProcessInfo processInfo] arguments];
+//	argc		= (int) [arguments count];
+//	argv		= malloc(argc);
+//
+//	for(i = 0; i < argc; i++)
+//        argv[i] = [[arguments objectAtIndex:i] UTF8String];
+//
+//	wi_load(argc, argv);
+//	free(argv);
+//	
+//	[pool release];
 
 	wi_log_stderr = true;
 	wi_log_level = WI_LOG_DEBUG;

@@ -58,6 +58,7 @@
 #import <WiredAppKit/WITreeTableView.h>
 #import <WiredAppKit/WITreeView.h>
 #import <WiredAppKit/WIUnclickableProgressIndicator.h>
+#import <WiredAppKit/WIView.h>
 #import <WiredAppKit/WIWindow.h>
 #import <WiredAppKit/WIWindowController.h>
 #import <WiredAppKit/WIDOMElement.h>
@@ -84,6 +85,7 @@
 #import <WiredAppKit/NSTextView-WIAppKit.h>
 #import <WiredAppKit/NSToolbar-WIAppKit.h>
 #import <WiredAppKit/NSToolbarItem-WIAppKit.h>
+#import <WiredAppKit/NSTreeController+WIAppKit.h>
 #import <WiredAppKit/NSView-WIAppKit.h>
 #import <WiredAppKit/NSWindow-WIAppKit.h>
 #import <WiredAppKit/NSWindowController-WIAppKit.h>
