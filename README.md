@@ -20,7 +20,7 @@ For every platforms:
 * Init required submodules (libwired and openssl):
 
 		cd WiredFrameworks/
-		git submodule update --init
+		git submodule update --init --recursive
 				
 * Add `WiredFrameworks.xcodeproj` as a subproject to your Xcode project.
 
