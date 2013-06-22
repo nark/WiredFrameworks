@@ -32,6 +32,7 @@
 #import <WiredAppKit/WIChatLogController.h>
 #import <WiredAppKit/WIChatHistoryBundle.h>
 #import <WiredAppKit/WIColorCell.h>
+#import <WiredAppKit/WIConfigManager.h>
 #import <WiredAppKit/WICrashReportsController.h>
 #import <WiredAppKit/WIExceptionHandler.h>
 #import <WiredAppKit/WIGraphView.h>

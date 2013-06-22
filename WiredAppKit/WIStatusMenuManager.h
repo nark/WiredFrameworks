@@ -15,6 +15,7 @@
 + (BOOL) willStartAtLogin:(NSURL *)itemURL;
 + (void) setStartAtLogin:(NSURL *)itemURL enabled:(BOOL)enabled;
 
++ (BOOL)isHelperRunning:(NSURL *)url;
 + (void)startHelper:(NSURL *)itemURL;
 + (void)stopHelper:(NSURL *)itemURL;
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C19253617765D480078B1CF /* WIConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C19253417765D480078B1CF /* WIConfigManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C19253717765D480078B1CF /* WIConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C19253517765D480078B1CF /* WIConfigManager.m */; };
 		4C3A412815F5691600C9B136 /* WIStatusMenuManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C3A412615F5691600C9B136 /* WIStatusMenuManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C3A412915F5691600C9B136 /* WIStatusMenuManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A412715F5691600C9B136 /* WIStatusMenuManager.m */; };
 		4C41720B147DC2B300DC0A9A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41720A147DC2B300DC0A9A /* Cocoa.framework */; };
@@ -827,6 +829,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C19253417765D480078B1CF /* WIConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIConfigManager.h; sourceTree = "<group>"; };
+		4C19253517765D480078B1CF /* WIConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIConfigManager.m; sourceTree = "<group>"; };
 		4C3A412615F5691600C9B136 /* WIStatusMenuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIStatusMenuManager.h; sourceTree = "<group>"; };
 		4C3A412715F5691600C9B136 /* WIStatusMenuManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIStatusMenuManager.m; sourceTree = "<group>"; };
 		4C417209147DC2B300DC0A9A /* WiredFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WiredFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1413,6 +1417,8 @@
 				4CFDCBC815694FC300DA17A6 /* WIChatHistoryBundle.m */,
 				4C417352147EE00800DC0A9A /* WIColorCell.h */,
 				4C417353147EE00800DC0A9A /* WIColorCell.m */,
+				4C19253417765D480078B1CF /* WIConfigManager.h */,
+				4C19253517765D480078B1CF /* WIConfigManager.m */,
 				4C417355147EE00800DC0A9A /* WICrashReportsController.h */,
 				4C417356147EE00800DC0A9A /* WICrashReportsController.m */,
 				4C417357147EE00800DC0A9A /* WIExceptionHandler.h */,
@@ -2166,6 +2172,7 @@
 				4CB43B8A158C7EA100C09100 /* WIChatPlugin.h in Headers */,
 				4CB43B8F158C7F2200C09100 /* WIChatPluginManager.h in Headers */,
 				4C3A412815F5691600C9B136 /* WIStatusMenuManager.h in Headers */,
+				4C19253617765D480078B1CF /* WIConfigManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2861,6 +2868,7 @@
 				4CB43B8B158C7EA100C09100 /* WIChatPlugin.m in Sources */,
 				4CB43B90158C7F2200C09100 /* WIChatPluginManager.m in Sources */,
 				4C3A412915F5691600C9B136 /* WIStatusMenuManager.m in Sources */,
+				4C19253717765D480078B1CF /* WIConfigManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3788,7 +3796,7 @@
 				4C417217147DC2B400DC0A9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4C417268147DC40900DC0A9A /* Build configuration list for PBXNativeTarget "WiredNetworking" */ = {
 			isa = XCConfigurationList;
@@ -3797,7 +3805,7 @@
 				4C41726A147DC40900DC0A9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4C417310147EDF1000DC0A9A /* Build configuration list for PBXNativeTarget "WiredAppKit" */ = {
 			isa = XCConfigurationList;
@@ -3806,7 +3814,7 @@
 				4C41730F147EDF1000DC0A9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4C61FC591487166B008EE92C /* Build configuration list for PBXNativeTarget "StaticWiredUIKit" */ = {
 			isa = XCConfigurationList;
@@ -3815,7 +3823,7 @@
 				4C61FC581487166B008EE92C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4C667EC8147B018600AAA5C7 /* Build configuration list for PBXNativeTarget "StaticWiredFoundation" */ = {
 			isa = XCConfigurationList;
@@ -3824,7 +3832,7 @@
 				4C667ECA147B018600AAA5C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4C667F56147B02A000AAA5C7 /* Build configuration list for PBXNativeTarget "StaticWiredNetworking" */ = {
 			isa = XCConfigurationList;
@@ -3833,7 +3841,7 @@
 				4C667F58147B02A000AAA5C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4CBDABF6147AF52E00D0C51A /* Build configuration list for PBXProject "WiredFrameworks" */ = {
 			isa = XCConfigurationList;
@@ -3842,7 +3850,7 @@
 				4CBDAC08147AF52E00D0C51A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4CBDAC09147AF52E00D0C51A /* Build configuration list for PBXNativeTarget "libwired-ios" */ = {
 			isa = XCConfigurationList;
@@ -3851,7 +3859,7 @@
 				4CBDAC0B147AF52E00D0C51A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4CBDAD21147AF94F00D0C51A /* Build configuration list for PBXNativeTarget "libwired-osx" */ = {
 			isa = XCConfigurationList;
@@ -3860,7 +3868,7 @@
 				4CBDAD23147AF94F00D0C51A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4CBDADAC147AFC4A00D0C51A /* Build configuration list for PBXNativeTarget "libwired-simulator" */ = {
 			isa = XCConfigurationList;
@@ -3869,7 +3877,7 @@
 				4CBDADAE147AFC4A00D0C51A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4CFDCBD91569533C00DA17A6 /* Build configuration list for PBXNativeTarget "ChatHistory-default" */ = {
 			isa = XCConfigurationList;
@@ -3878,7 +3886,7 @@
 				4CFDCBDB1569533C00DA17A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

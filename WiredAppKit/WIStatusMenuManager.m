@@ -18,6 +18,30 @@
     system("killall 'Wired Server Helper'");
 }
 
++ (BOOL)isHelperRunning:(NSURL *)url
+{
+    NSBundle    *bundle;
+    NSTask      *task;
+    NSString    *executablePath;
+    BOOL        result;
+    
+    bundle          = [NSBundle bundleWithURL:url];
+    task            = [[NSTask alloc] init];
+    executablePath  = [bundle executablePath];
+    result          = NO;
+    
+    [task setLaunchPath:executablePath];
+    
+    if([task isRunning]) {
+        result = YES;
+    }
+    
+    [task release];
+    
+    return result;
+}
+
+
 + (BOOL) willStartAtLogin:(NSURL *)itemURL
 {
     Boolean foundIt=false;
