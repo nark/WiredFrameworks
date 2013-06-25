@@ -252,6 +252,10 @@
 		4C4F6A1615D9734F00E16940 /* NSDataAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F6A1415D9734F00E16940 /* NSDataAdditions.m */; };
 		4C4F6A1A15D975AB00E16940 /* NSStringAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4F6A1815D975AB00E16940 /* NSStringAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C4F6A1B15D975AB00E16940 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F6A1915D975AB00E16940 /* NSStringAdditions.m */; };
+		4C4FDEA917799F1200FADB95 /* WISheetController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4FDEA717799F1200FADB95 /* WISheetController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C4FDEAA17799F1200FADB95 /* WISheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDEA817799F1200FADB95 /* WISheetController.m */; };
+		4C4FDEAD17799F5300FADB95 /* WIConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4FDEAB17799F5300FADB95 /* WIConfigManager.h */; };
+		4C4FDEAE17799F5300FADB95 /* WIConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDEAC17799F5300FADB95 /* WIConfigManager.m */; };
 		4C5281BD1568511C00D130A3 /* WIChatLogController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C5281BB1568511C00D130A3 /* WIChatLogController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C5281BE1568511C00D130A3 /* WIChatLogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5281BC1568511C00D130A3 /* WIChatLogController.m */; };
 		4C57B677154EBD7B00C9BAA5 /* WIP7Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C57B675154EBD7B00C9BAA5 /* WIP7Connection.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1016,6 +1020,10 @@
 		4C4F6A1415D9734F00E16940 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDataAdditions.m; path = ../../oldies/wired/WiredKit/NSDataAdditions.m; sourceTree = "<group>"; };
 		4C4F6A1815D975AB00E16940 /* NSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSStringAdditions.h; path = ../../oldies/wired/WiredKit/NSStringAdditions.h; sourceTree = "<group>"; };
 		4C4F6A1915D975AB00E16940 /* NSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSStringAdditions.m; path = ../../oldies/wired/WiredKit/NSStringAdditions.m; sourceTree = "<group>"; };
+		4C4FDEA717799F1200FADB95 /* WISheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WISheetController.h; sourceTree = "<group>"; };
+		4C4FDEA817799F1200FADB95 /* WISheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WISheetController.m; sourceTree = "<group>"; };
+		4C4FDEAB17799F5300FADB95 /* WIConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIConfigManager.h; sourceTree = "<group>"; };
+		4C4FDEAC17799F5300FADB95 /* WIConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIConfigManager.m; sourceTree = "<group>"; };
 		4C5281BB1568511C00D130A3 /* WIChatLogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIChatLogController.h; sourceTree = "<group>"; };
 		4C5281BC1568511C00D130A3 /* WIChatLogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIChatLogController.m; sourceTree = "<group>"; };
 		4C57B675154EBD7B00C9BAA5 /* WIP7Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIP7Connection.h; sourceTree = "<group>"; };
@@ -1461,6 +1469,8 @@
 				4CFDCBC815694FC300DA17A6 /* WIChatHistoryBundle.m */,
 				4C417352147EE00800DC0A9A /* WIColorCell.h */,
 				4C417353147EE00800DC0A9A /* WIColorCell.m */,
+				4C4FDEAB17799F5300FADB95 /* WIConfigManager.h */,
+				4C4FDEAC17799F5300FADB95 /* WIConfigManager.m */,
 				4C417355147EE00800DC0A9A /* WICrashReportsController.h */,
 				4C417356147EE00800DC0A9A /* WICrashReportsController.m */,
 				4C417357147EE00800DC0A9A /* WIExceptionHandler.h */,
@@ -1484,6 +1494,8 @@
 				4C417369147EE00800DC0A9A /* WiredAppKit.h */,
 				4C41736A147EE00800DC0A9A /* WIReleaseNotesController.h */,
 				4C41736B147EE00800DC0A9A /* WIReleaseNotesController.m */,
+				4C4FDEA717799F1200FADB95 /* WISheetController.h */,
+				4C4FDEA817799F1200FADB95 /* WISheetController.m */,
 				4C41736C147EE00800DC0A9A /* WISplitView.h */,
 				4C41736D147EE00800DC0A9A /* WISplitView.m */,
 				4C3A412615F5691600C9B136 /* WIStatusMenuManager.h */,
@@ -2222,6 +2234,8 @@
 				4C3A412815F5691600C9B136 /* WIStatusMenuManager.h in Headers */,
 				4CAC224516ED515D00BDB650 /* WIView.h in Headers */,
 				4C0F438316F1419F00735AC3 /* NSTreeController+WIAppKit.h in Headers */,
+				4C4FDEA917799F1200FADB95 /* WISheetController.h in Headers */,
+				4C4FDEAD17799F5300FADB95 /* WIConfigManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2926,6 +2940,8 @@
 				4C3A412915F5691600C9B136 /* WIStatusMenuManager.m in Sources */,
 				4CAC224616ED515D00BDB650 /* WIView.m in Sources */,
 				4C0F438416F1419F00735AC3 /* NSTreeController+WIAppKit.m in Sources */,
+				4C4FDEAA17799F1200FADB95 /* WISheetController.m in Sources */,
+				4C4FDEAE17799F5300FADB95 /* WIConfigManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
