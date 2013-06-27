@@ -62,4 +62,6 @@
 - (void)setObject:(id)object forKey:(id)key inDictionaryForKey:(id)dictionaryKey;
 - (void)removeObjectForKey:(id)key inDictionaryForKey:(id)dictionaryKey;
 
+- (NSInteger)indexOfObject:(id)object inArrayForKey:(id)arrayKey;
+
 @end

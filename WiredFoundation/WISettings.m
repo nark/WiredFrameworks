@@ -279,4 +279,12 @@
 	[self setObject:dictionary forKey:dictionaryKey];
 }
 
+
+- (NSInteger)indexOfObject:(id)object inArrayForKey:(id)arrayKey {
+    NSMutableArray		*array;
+	
+	array = [[[self objectForKey:arrayKey] mutableCopy] autorelease];
+    return [array indexOfObject:object];
+}
+
 @end

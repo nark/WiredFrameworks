@@ -254,7 +254,7 @@
 		4C4F6A1B15D975AB00E16940 /* NSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4F6A1915D975AB00E16940 /* NSStringAdditions.m */; };
 		4C4FDEA917799F1200FADB95 /* WISheetController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4FDEA717799F1200FADB95 /* WISheetController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C4FDEAA17799F1200FADB95 /* WISheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDEA817799F1200FADB95 /* WISheetController.m */; };
-		4C4FDEAD17799F5300FADB95 /* WIConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4FDEAB17799F5300FADB95 /* WIConfigManager.h */; };
+		4C4FDEAD17799F5300FADB95 /* WIConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4FDEAB17799F5300FADB95 /* WIConfigManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C4FDEAE17799F5300FADB95 /* WIConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4FDEAC17799F5300FADB95 /* WIConfigManager.m */; };
 		4C5281BD1568511C00D130A3 /* WIChatLogController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C5281BB1568511C00D130A3 /* WIChatLogController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C5281BE1568511C00D130A3 /* WIChatLogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5281BC1568511C00D130A3 /* WIChatLogController.m */; };

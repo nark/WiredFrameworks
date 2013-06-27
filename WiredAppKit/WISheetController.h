@@ -8,6 +8,18 @@
 
 #import <WiredFoundation/WiredFoundation.h>
 
-@interface WISheetController : WIObject
+@interface WISheetController : WIObject {
+    IBOutlet NSWindow       *_sheetWindow;
+    
+    NSWindow                *_parentWindow;
+}
+
+- (void)beginSheetWithParentWindow:(NSWindow *)window;
+
+- (void)reset;
+
+- (IBAction)ok:(id)sender;
+- (IBAction)cancel:(id)sender;
+- (IBAction)close:(id)sender;
 
 @end
