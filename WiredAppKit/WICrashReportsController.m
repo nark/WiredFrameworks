@@ -78,17 +78,20 @@
 - (void)_reloadCrashReports {
 	NSEnumerator		*enumerator;
 	NSString			*path, *crashReporterPath;
+    BOOL                isDir;
 	
 	[_crashReports removeAllObjects];
 	
-	enumerator = [NSSearchPathForDirectoriesInDomains(NSAllLibrariesDirectory, NSAllDomainsMask, YES) objectEnumerator];
+	enumerator = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) objectEnumerator];
 	
 	while((path = [enumerator nextObject])) {
-		crashReporterPath = [[path stringByAppendingPathComponent:@"Logs"]
-			stringByAppendingPathComponent:@"CrashReporter"];
-		
-		if([[NSFileManager defaultManager] directoryExistsAtPath:crashReporterPath])
-			[_crashReports addObjectsFromArray:[self _crashReportsInDirectoryAtPath:crashReporterPath]];
+		crashReporterPath = [[path stringByAppendingPathComponent:@"Logs"] stringByAppendingPathComponent:@"DiagnosticReports"];
+        
+		if([[NSFileManager defaultManager] fileExistsAtPath:crashReporterPath isDirectory:&isDir] && isDir) {
+            NSLog(@"v : %@", crashReporterPath);
+            [_crashReports addObjectsFromArray:[self _crashReportsInDirectoryAtPath:crashReporterPath]];
+        }
+			//
 	}
 	
 	[_crashReports sortUsingSelector:@selector(compareDate:)];
@@ -104,9 +107,9 @@
 	NSString			*file, *crashReportPath;
 	WICrashReport		*crashReport;
 	
-	crashReports	= [NSMutableArray array];
-	enumerator		= [[[NSFileManager defaultManager] directoryContentsWithFileAtPath:path] objectEnumerator];
-	
+	crashReports	= [NSMutableArray array];	
+    enumerator      = [[NSFileManager defaultManager] enumeratorAtPath:path];
+    
 	while((file = [enumerator nextObject])) {
 		crashReportPath = [path stringByAppendingPathComponent:file];
 		
@@ -274,40 +277,40 @@
 #pragma mark -
 
 - (IBAction)send:(id)sender {
-//	NSMutableURLRequest		*request;
-//	NSURLResponse			*response;
-//	NSString				*post, *content;
-//	NSData					*data;
-//	WICrashReport			*crashReport;
-//	NSInteger				row;
-//	
-//	row = [_tableView selectedRow];
-//	
-//	if(row < 0)
-//		return;
-//	
-//	crashReport		= [_crashReports objectAtIndex:row];
-//	content			= [NSString stringWithContentsOfFile:crashReport->_path encoding:NSUTF8StringEncoding error:NULL];
-//	post			= [NSSWF:@"name=%@;content=%@",
-//		[crashReport->_name stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding legalURLCharactersToBeEscaped:@"?=&+"],
-//		[content stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding legalURLCharactersToBeEscaped:@"?=&+"]];
-//	
-//	request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://www.zankasoftware.com/crashreport.pl"]];
-//	[request setHTTPMethod:@"POST"];
-//	[request setHTTPBody:[post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES]];
-//	[request setValue:[NSSWF:@"%u", (unsigned int) [[request HTTPBody] length]] forHTTPHeaderField:@"Content-Length"];
-//	[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-//	
-//	data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:NULL];
-//	
-//	if(data) {
-//		if([response isKindOfClass:[NSHTTPURLResponse class]] && [(NSHTTPURLResponse *) response statusCode] == 200) {
-//			[_sentCrashReports addObject:crashReport->_name];
-//			
-//			[[NSUserDefaults standardUserDefaults] setObject:[_sentCrashReports allObjects]
-//													  forKey:@"_WICrashReportsController_sentCrashReports"];
-//		}
-//	}
+	NSMutableURLRequest		*request;
+	NSURLResponse			*response;
+	NSString				*post, *name, *content;
+	NSData					*data;
+	WICrashReport			*crashReport;
+	NSInteger				row;
+	
+	row = [_tableView selectedRow];
+	
+	if(row < 0)
+		return;
+	
+	crashReport		= [_crashReports objectAtIndex:row];
+	content			= [NSString stringWithContentsOfFile:crashReport->_path encoding:NSASCIIStringEncoding error:NULL];
+    content         = [content stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding legalURLCharactersToBeEscaped:@"?=&+"];
+    name            = [crashReport->_name stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding legalURLCharactersToBeEscaped:@"?=&+"];
+	post			= [NSSWF:@"name=%@&content=%@", name, content];
+	
+	request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://wired.read-write.fr/crashreport.php"]];
+	[request setHTTPMethod:@"POST"];
+	[request setHTTPBody:[post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES]];
+	[request setValue:[NSSWF:@"%u", (unsigned int) [[request HTTPBody] length]] forHTTPHeaderField:@"Content-Length"];
+	[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+	
+	data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:NULL];
+	
+	if(data) {
+		if([response isKindOfClass:[NSHTTPURLResponse class]] && [(NSHTTPURLResponse *) response statusCode] == 200) {
+			[_sentCrashReports addObject:crashReport->_name];
+			
+			[[NSUserDefaults standardUserDefaults] setObject:[_sentCrashReports allObjects]
+													  forKey:@"_WICrashReportsController_sentCrashReports"];
+		}
+	}
 }
 
 
