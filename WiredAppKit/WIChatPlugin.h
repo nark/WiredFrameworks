@@ -17,4 +17,11 @@
 - (NSString *)command;
 - (NSString *)commandOutput;
 
+/*
+    + help string
+    + icon
+    + common name
+    + identifier
+*/
+
 @end
