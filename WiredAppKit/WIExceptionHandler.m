@@ -147,7 +147,11 @@
 #pragma mark -
 
 - (void)crash {
+#if __has_builtin(__builtin_trap)
+    __builtin_trap();
+#else
 	*((char *) NULL) = 0;
+#endif
 }
 
 @end

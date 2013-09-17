@@ -18,7 +18,9 @@
 - (void)appendElement:(DOMElement *)element toTopOfElementWithID:(NSString *)elementID scroll:(BOOL)scroll;
 - (void)appendElement:(DOMElement *)element toBottomOfElementWithID:(NSString *)elementID scroll:(BOOL)scroll;
 
+- (void)appendScriptAtURL:(NSURL *)url;
 - (void)reloadStylesheetWithID:(NSString *)elementID withTemplate:(WITemplateBundle *)template type:(WITemplateType)type;
+
 - (void)clearChildrenElementsOfElementWithID:(NSString *)elementID;
 
 - (void)exportContentToFileAtPath:(NSString *)path forType:(WIChatLogType)type;

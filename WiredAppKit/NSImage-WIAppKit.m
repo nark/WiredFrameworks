@@ -30,6 +30,8 @@
 #import <WiredAppKit/NSBezierPath-WIAppKit.h>
 #import <WiredAppKit/NSImage-WIAppKit.h>
 
+#import <WiredAppKit/CTBadge.h>
+
 @implementation NSImage(WIAppKit)
 
 + (NSImage *)imageWithData:(NSData *)data {
@@ -130,83 +132,46 @@
 
 
 - (NSImage *)badgedImageWithInt:(NSUInteger)unread {
-	static NSImage			*baaadgeImage, *baadgeImage, *badgeImage;
-	static NSDictionary		*attributes;
+    CTBadge                 *ctBadge;
+	static NSImage			*badgeImage;
 	NSImage					*image, *badge;
 	NSRect					badgeRect;
-	NSPoint					stringPoint;
 	NSSize					size;
 	BOOL					small;
 
 	if(unread == 0)
 		return self;
 	
-	if(!baaadgeImage) {
-		baaadgeImage = [[NSImage alloc] initWithContentsOfFile:
-			[[NSBundle bundleWithIdentifier:WIAppKitBundleIdentifier] pathForResource:@"NSImage-Baaadge" ofType:@"tiff"]];
-		baadgeImage = [[NSImage alloc] initWithContentsOfFile:
-			[[NSBundle bundleWithIdentifier:WIAppKitBundleIdentifier] pathForResource:@"NSImage-Baadge" ofType:@"tiff"]];
-		badgeImage = [[NSImage alloc] initWithContentsOfFile:
-			[[NSBundle bundleWithIdentifier:WIAppKitBundleIdentifier] pathForResource:@"NSImage-Badge" ofType:@"tiff"]];
-		
-		attributes = [[NSDictionary alloc] initWithObjectsAndKeys:
-			[NSFont fontWithName:@"Helvetica-Bold" size:24.0],
-				NSFontAttributeName,
-			[NSColor whiteColor],
-				NSForegroundColorAttributeName,
-			NULL];
-	}
-	
-	size	= [self size];
-	small	= (size.width == 32.0);
-	badge	= badgeImage;
-	
-	if(unread >= 100) {
-		badge				= baadgeImage;
-		badgeRect.origin	= small ? NSMakePoint(13.0, 18.0) : NSMakePoint(60.0, 77.0);
-		badgeRect.size		= small ? NSMakeSize(19.0, 14.0) : [badge size];
-		stringPoint			= small ? NSMakePoint(17.0, 23.0) : NSMakePoint(74.0, 96.0);
-	}
-	else if(unread >= 10) {
-		badgeRect.origin	= small ? NSMakePoint(18.0, 18.0) : NSMakePoint(72.0, 77.0);
-		badgeRect.size		= small ? NSMakeSize(14.0, 14.0) : [badge size];
-		stringPoint			= small ? NSMakePoint(21.0, 23.0) : NSMakePoint(84.0, 96.0);
-	}
-	else if(unread < 10) {
-		badgeRect.origin	= small ? NSMakePoint(18.0, 18.0) : NSMakePoint(72.0, 77.0);
-		badgeRect.size		= small ? NSMakeSize(14.0, 14.0) : [badge size];
-		stringPoint			= small ? NSMakePoint(23.0, 23.0) : NSMakePoint(92.0, 96.0);
-	}
+    ctBadge     = [CTBadge systemBadge];
+    badgeImage  = [ctBadge badgeOfSize:14.0 forValue:(unsigned int)unread];
+	size        = [self size];
+	small       = (size.width == 32.0);
+	badge       = badgeImage;
 
+    badgeRect.origin	= NSMakePoint(([self size].width-[badge size].width), 1.0);
+    badgeRect.size		= [badge size];
+    
 	image = [[NSImage alloc] initWithSize:small ? NSMakeSize(32.0, 32.0) : NSMakeSize(128.0, 128.0)];
 	[image lockFocus];
 
 	[[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
 	[[NSGraphicsContext currentContext] setShouldAntialias:YES];
-
-	[self drawInRect:small ? NSMakeRect(0.0, 0.0, 32.0, 32.0) : NSMakeRect(0.0, 0.0, 128.0, 128.0)
+    
+    [self drawInRect:small ? NSMakeRect(0.0, 0.0, 32.0, 32.0) : NSMakeRect(0.0, 0.0, 128.0, 128.0)
 			fromRect:NSMakeRect(0.0, 0.0, size.width, size.width)
 		   operation:NSCompositeSourceOver
 			fraction:1.0];
-	[badge drawInRect:badgeRect
-			 fromRect:NSMakeRect(0.0, 0.0, [badge size].width, [badge size].height)
+    
+    [badgeImage drawInRect:badgeRect
+			 fromRect:NSMakeRect(0.0, 0.0, [badgeImage size].width, [badgeImage size].height)
 			operation:NSCompositeSourceOver
 			 fraction:1.0];
-
-	attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-		[NSFont fontWithName:@"Helvetica-Bold" size:small ? 7.0 : 24.0],
-			NSFontAttributeName,
-		[NSColor whiteColor],
-			NSForegroundColorAttributeName,
-		NULL];
-	
-	[[NSSWF:@"%lu", (unsigned long)unread] drawWithRect:NSMakeRect(stringPoint.x, stringPoint.y, 0.0, 0.0)
-								 options:NSStringDrawingDisableScreenFontSubstitution
-							  attributes:attributes];
-
+    
 	[image unlockFocus];
 
 	return [image autorelease];
+    
+    
 }
 
 

@@ -229,7 +229,7 @@ NSLocalizedStringFromTable(key, @"NSDateTimeAgo", nil)
 
 - (NSString *) timeAgoWithLimit:(NSTimeInterval)limit
 {
-    return [self timeAgoWithLimit:limit dateFormat:NSDateFormatterFullStyle andTimeFormat:NSDateFormatterFullStyle];
+    return [self timeAgoWithLimit:limit dateFormat:NSDateFormatterShortStyle andTimeFormat:NSDateFormatterShortStyle];
 }
 
 - (NSString *) timeAgoWithLimit:(NSTimeInterval)limit dateFormat:(NSDateFormatterStyle)dFormatter andTimeFormat:(NSDateFormatterStyle)tFormatter
@@ -268,7 +268,7 @@ NSLocalizedStringFromTable(key, @"NSDateTimeAgo", nil)
     // Russian (ru)
     if([localeCode isEqual:@"ru"]) {
         NSString *valueStr = [NSString stringWithFormat:@"%.f", value];
-        int l = valueStr.length;
+        int l = (int)valueStr.length;
         int XY = [[valueStr substringWithRange:NSMakeRange(l - 2, l)] intValue];
         int Y = (int)floor(value) % 10;
         
@@ -283,5 +283,25 @@ NSLocalizedStringFromTable(key, @"NSDateTimeAgo", nil)
 }
 
 #pragma clang diagnostic pop
+
+@end
+
+
+
+@implementation NSDate (Javascript)
+
+- (NSString *)JSDate {
+    NSDateFormatter     *dateFormatter;
+    NSCalendar          *calendar;
+    
+    dateFormatter   = [[[NSDateFormatter alloc] init] autorelease];
+    calendar        = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    
+    [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"];
+    [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    [dateFormatter setCalendar:calendar];
+    
+    return [dateFormatter stringFromDate:self];
+}
 
 @end

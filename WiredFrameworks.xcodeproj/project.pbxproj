@@ -126,9 +126,6 @@
 		4C41739C147EE00800DC0A9A /* NSFileManager-WIAppKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C417324147EE00800DC0A9A /* NSFileManager-WIAppKit.m */; };
 		4C41739D147EE00800DC0A9A /* NSFont-WIAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C417325147EE00800DC0A9A /* NSFont-WIAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C41739E147EE00800DC0A9A /* NSFont-WIAppKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C417326147EE00800DC0A9A /* NSFont-WIAppKit.m */; };
-		4C41739F147EE00800DC0A9A /* NSImage-Baaadge.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C417327147EE00800DC0A9A /* NSImage-Baaadge.tiff */; };
-		4C4173A0147EE00800DC0A9A /* NSImage-Baadge.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C417328147EE00800DC0A9A /* NSImage-Baadge.tiff */; };
-		4C4173A1147EE00800DC0A9A /* NSImage-Badge.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 4C417329147EE00800DC0A9A /* NSImage-Badge.tiff */; };
 		4C4173A2147EE00800DC0A9A /* NSImage-WIAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C41732A147EE00800DC0A9A /* NSImage-WIAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C4173A3147EE00800DC0A9A /* NSImage-WIAppKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C41732B147EE00800DC0A9A /* NSImage-WIAppKit.m */; };
 		4C4173A4147EE00800DC0A9A /* NSMenu-WIAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C41732C147EE00800DC0A9A /* NSMenu-WIAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -360,6 +357,7 @@
 		4C667F85147B02E400AAA5C7 /* WIThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C667F6E147B02E400AAA5C7 /* WIThread.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C667F86147B02E400AAA5C7 /* WIThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C667F6F147B02E400AAA5C7 /* WIThread.m */; };
 		4C70E06714B3BA2300761F46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C70E06614B3BA2300761F46 /* UIKit.framework */; };
+		4C76213917E2FF3C00A2EDA9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C76213817E2FF3C00A2EDA9 /* Security.framework */; };
 		4C773D4E16DD366B00807EB7 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C773D4B16DD363800807EB7 /* libcrypto.a */; };
 		4C773D4F16DD366B00807EB7 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C773D4916DD363800807EB7 /* libssl.a */; };
 		4C7967C016DC256200E36A03 /* wi-assert.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C79674716DC256100E36A03 /* wi-assert.c */; };
@@ -699,6 +697,12 @@
 		4C99E3C4154ED39700915AAC /* WIP7Link.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C57B67A154EBF1600C9BAA5 /* WIP7Link.m */; };
 		4C99E3C6154ED39D00915AAC /* WIP7Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C57B675154EBD7B00C9BAA5 /* WIP7Connection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C99E3C7154ED39D00915AAC /* WIP7Link.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C57B679154EBF1600C9BAA5 /* WIP7Link.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C9B2A9617E797A6007B0962 /* CTBadge_1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B2A9217E797A6007B0962 /* CTBadge_1.pdf */; };
+		4C9B2A9717E797A6007B0962 /* CTBadge_3.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B2A9317E797A6007B0962 /* CTBadge_3.pdf */; };
+		4C9B2A9817E797A6007B0962 /* CTBadge_4.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B2A9417E797A6007B0962 /* CTBadge_4.pdf */; };
+		4C9B2A9917E797A6007B0962 /* CTBadge_5.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B2A9517E797A6007B0962 /* CTBadge_5.pdf */; };
+		4C9B2A9D17E797FC007B0962 /* CTBadge.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9B2A9B17E797FB007B0962 /* CTBadge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C9B2A9E17E797FC007B0962 /* CTBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B2A9C17E797FC007B0962 /* CTBadge.m */; };
 		4CAC224516ED515D00BDB650 /* WIView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CAC224316ED515D00BDB650 /* WIView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CAC224616ED515D00BDB650 /* WIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC224416ED515D00BDB650 /* WIView.m */; };
 		4CB43B8A158C7EA100C09100 /* WIChatPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB43B88158C7EA100C09100 /* WIChatPlugin.h */; };
@@ -904,9 +908,6 @@
 		4C417324147EE00800DC0A9A /* NSFileManager-WIAppKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager-WIAppKit.m"; sourceTree = "<group>"; };
 		4C417325147EE00800DC0A9A /* NSFont-WIAppKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFont-WIAppKit.h"; sourceTree = "<group>"; };
 		4C417326147EE00800DC0A9A /* NSFont-WIAppKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFont-WIAppKit.m"; sourceTree = "<group>"; };
-		4C417327147EE00800DC0A9A /* NSImage-Baaadge.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "NSImage-Baaadge.tiff"; sourceTree = "<group>"; };
-		4C417328147EE00800DC0A9A /* NSImage-Baadge.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "NSImage-Baadge.tiff"; sourceTree = "<group>"; };
-		4C417329147EE00800DC0A9A /* NSImage-Badge.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "NSImage-Badge.tiff"; sourceTree = "<group>"; };
 		4C41732A147EE00800DC0A9A /* NSImage-WIAppKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage-WIAppKit.h"; sourceTree = "<group>"; };
 		4C41732B147EE00800DC0A9A /* NSImage-WIAppKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage-WIAppKit.m"; sourceTree = "<group>"; };
 		4C41732C147EE00800DC0A9A /* NSMenu-WIAppKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMenu-WIAppKit.h"; sourceTree = "<group>"; };
@@ -1134,6 +1135,7 @@
 		4C667F6E147B02E400AAA5C7 /* WIThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIThread.h; sourceTree = "<group>"; };
 		4C667F6F147B02E400AAA5C7 /* WIThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIThread.m; sourceTree = "<group>"; };
 		4C70E06614B3BA2300761F46 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		4C76213817E2FF3C00A2EDA9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		4C773D4316DD363800807EB7 /* openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openssl.xcodeproj; path = openssl/openssl.xcodeproj; sourceTree = SOURCE_ROOT; };
 		4C79674716DC256100E36A03 /* wi-assert.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "wi-assert.c"; sourceTree = "<group>"; };
 		4C79674816DC256100E36A03 /* wi-assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "wi-assert.h"; sourceTree = "<group>"; };
@@ -1248,6 +1250,12 @@
 		4C7967BF16DC256200E36A03 /* wired.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wired.h; path = libwired/libwired/wired.h; sourceTree = SOURCE_ROOT; };
 		4C7C1AA91486D5EE00563036 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4C7C1B4D1486DD6500563036 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		4C9B2A9217E797A6007B0962 /* CTBadge_1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CTBadge_1.pdf; sourceTree = "<group>"; };
+		4C9B2A9317E797A6007B0962 /* CTBadge_3.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CTBadge_3.pdf; sourceTree = "<group>"; };
+		4C9B2A9417E797A6007B0962 /* CTBadge_4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CTBadge_4.pdf; sourceTree = "<group>"; };
+		4C9B2A9517E797A6007B0962 /* CTBadge_5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CTBadge_5.pdf; sourceTree = "<group>"; };
+		4C9B2A9B17E797FB007B0962 /* CTBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBadge.h; sourceTree = "<group>"; };
+		4C9B2A9C17E797FC007B0962 /* CTBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBadge.m; sourceTree = "<group>"; };
 		4CAC224316ED515D00BDB650 /* WIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIView.h; sourceTree = "<group>"; };
 		4CAC224416ED515D00BDB650 /* WIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIView.m; sourceTree = "<group>"; };
 		4CB43B88158C7EA100C09100 /* WIChatPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIChatPlugin.h; sourceTree = "<group>"; };
@@ -1296,6 +1304,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C76213917E2FF3C00A2EDA9 /* Security.framework in Frameworks */,
 				4C4B85BA147EF0EB003FD42C /* libicucore.dylib in Frameworks */,
 				4C41720B147DC2B300DC0A9A /* Cocoa.framework in Frameworks */,
 			);
@@ -1403,6 +1412,8 @@
 		4C417304147EDF1000DC0A9A /* WiredAppKit */ = {
 			isa = PBXGroup;
 			children = (
+				4C9B2A9B17E797FB007B0962 /* CTBadge.h */,
+				4C9B2A9C17E797FC007B0962 /* CTBadge.m */,
 				4C417315147EE00800DC0A9A /* NSAlert-WIAppKit.h */,
 				4C417316147EE00800DC0A9A /* NSAlert-WIAppKit.m */,
 				4C417317147EE00800DC0A9A /* NSApplication-WIAppKit.h */,
@@ -1553,9 +1564,10 @@
 				4C417407147EE07000DC0A9A /* ReleaseNotes.xib */,
 				4C417409147EE07000DC0A9A /* TreeDetail.xib */,
 				4C41740B147EE07000DC0A9A /* ViewOptions.xib */,
-				4C417327147EE00800DC0A9A /* NSImage-Baaadge.tiff */,
-				4C417328147EE00800DC0A9A /* NSImage-Baadge.tiff */,
-				4C417329147EE00800DC0A9A /* NSImage-Badge.tiff */,
+				4C9B2A9217E797A6007B0962 /* CTBadge_1.pdf */,
+				4C9B2A9317E797A6007B0962 /* CTBadge_3.pdf */,
+				4C9B2A9417E797A6007B0962 /* CTBadge_4.pdf */,
+				4C9B2A9517E797A6007B0962 /* CTBadge_5.pdf */,
 				4C41734D147EE00800DC0A9A /* TreeDetail.html */,
 				4C417354147EE00800DC0A9A /* WICrashReportsController-SendReport.tiff */,
 				4C417372147EE00800DC0A9A /* WITableViewManager-SortAscending.tiff */,
@@ -1980,6 +1992,7 @@
 		4CBDABF1147AF52E00D0C51A = {
 			isa = PBXGroup;
 			children = (
+				4C76213817E2FF3C00A2EDA9 /* Security.framework */,
 				4CBDAC01147AF52E00D0C51A /* libwired */,
 				4C667EC2147B018600AAA5C7 /* WiredFoundation */,
 				4C667F50147B02A000AAA5C7 /* WiredNetworking */,
@@ -2236,6 +2249,7 @@
 				4C0F438316F1419F00735AC3 /* NSTreeController+WIAppKit.h in Headers */,
 				4C4FDEA917799F1200FADB95 /* WISheetController.h in Headers */,
 				4C4FDEAD17799F5300FADB95 /* WIConfigManager.h in Headers */,
+				4C9B2A9D17E797FC007B0962 /* CTBadge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2787,9 +2801,6 @@
 			files = (
 				4CFDCBDC1569537B00DA17A6 /* ChatHistory-default.WiredHistory in Resources */,
 				4C417309147EDF1000DC0A9A /* InfoPlist.strings in Resources */,
-				4C41739F147EE00800DC0A9A /* NSImage-Baaadge.tiff in Resources */,
-				4C4173A0147EE00800DC0A9A /* NSImage-Baadge.tiff in Resources */,
-				4C4173A1147EE00800DC0A9A /* NSImage-Badge.tiff in Resources */,
 				4C4173C5147EE00800DC0A9A /* TreeDetail.html in Resources */,
 				4C4173CC147EE00800DC0A9A /* WICrashReportsController-SendReport.tiff in Resources */,
 				4C4173EA147EE00900DC0A9A /* WITableViewManager-SortAscending.tiff in Resources */,
@@ -2800,6 +2811,10 @@
 				4C41740F147EE07000DC0A9A /* TreeDetail.xib in Resources */,
 				4C417410147EE07000DC0A9A /* ViewOptions.xib in Resources */,
 				4C297AFD177885C5002ED699 /* Localizable.strings in Resources */,
+				4C9B2A9617E797A6007B0962 /* CTBadge_1.pdf in Resources */,
+				4C9B2A9717E797A6007B0962 /* CTBadge_3.pdf in Resources */,
+				4C9B2A9817E797A6007B0962 /* CTBadge_4.pdf in Resources */,
+				4C9B2A9917E797A6007B0962 /* CTBadge_5.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2942,6 +2957,7 @@
 				4C0F438416F1419F00735AC3 /* NSTreeController+WIAppKit.m in Sources */,
 				4C4FDEAA17799F1200FADB95 /* WISheetController.m in Sources */,
 				4C4FDEAE17799F5300FADB95 /* WIConfigManager.m in Sources */,
+				4C9B2A9E17E797FC007B0962 /* CTBadge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

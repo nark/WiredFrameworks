@@ -41,8 +41,9 @@
     NSBundle            *bundle;
     NSError             *error;
     
-    result      = [NSMutableArray array];
-    fileNames    = [fileManager contentsOfDirectoryAtPath:path error:&error];
+    fileManager     = [NSFileManager defaultManager];
+    result          = [NSMutableArray array];
+    fileNames       = [fileManager contentsOfDirectoryAtPath:path error:&error];
     
     for(NSString *fileName in fileNames) {
         subPath = [path stringByAppendingPathComponent:fileName];

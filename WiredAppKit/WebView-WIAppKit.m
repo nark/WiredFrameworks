@@ -36,7 +36,7 @@
                                             subresources:nil
                                         subframeArchives:nil];
     
-    return archive;
+    return [archive autorelease];
 }
 
 
@@ -48,7 +48,7 @@
 	
 	[[archive data] writeToFile:path atomically:YES];
 	
-	[archive release];
+	//[archive release];
 }
 
 
@@ -57,15 +57,10 @@
 	WebArchive		*archive;
 	NSString		*htmlString;
 	NSError			*error;
-	
-	archive			= [self _webArchive];
-	
+		
 	htmlString = [self stringByEvaluatingJavaScriptFromString:@"document.getElementsByTagName('html')[0].innerHTML"];
 	
 	[htmlString writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
-	
-	[htmlString release];
-	[archive release];
 }
 
 
@@ -85,7 +80,7 @@
 																									  atomically:YES];
 	
 	[attributedSting autorelease];
-	[archive release];
+	//[archive release];
 }
 
 
@@ -107,7 +102,7 @@
 	[string writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:&error];
 
 	[attributedSting autorelease];
-	[archive release];
+	//[archive release];
 }
 
 
@@ -180,6 +175,27 @@
 
 
 #pragma mark -
+
+- (void)appendScriptAtURL:(NSURL *)url {
+    NSString            *string;
+    DOMDocument         *document;
+    DOMElement          *jsElement, *headElement;
+    DOMText             *text;
+    
+    if(!url)
+        return;
+    
+    string          = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+    document        = [self mainFrameDocument];
+    jsElement       = [document createElement:@"script"];
+    text            = [document createTextNode:string];
+    headElement     = (DOMElement*)[[document getElementsByTagName:@"head"] item:0];
+    
+    [jsElement setAttribute:@"type" value:@"text/javascript"];
+    [jsElement appendChild:text];
+    [headElement appendChild:jsElement];
+}
+
 
 - (void)reloadStylesheetWithID:(NSString *)elementID withTemplate:(WITemplateBundle *)template type:(WITemplateType)type {
 	DOMHTMLElement *header;

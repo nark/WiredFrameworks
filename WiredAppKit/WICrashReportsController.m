@@ -159,6 +159,10 @@
 - (id)init {
 	NSString		*path;
 	
+    path = [[NSBundle bundleWithIdentifier:WIAppKitBundleIdentifier] pathForResource:@"CrashReports" ofType:@"nib"];
+	
+	self = [self initWithWindowNibPath:path owner:self];
+    
 	_crashReports		= [[NSMutableArray alloc] init];
 
 	_readCrashReports	= [[NSMutableSet alloc] init];
@@ -172,10 +176,6 @@
 	_dateFormatter		= [[WIDateFormatter alloc] init];
 	[_dateFormatter setDateStyle:NSDateFormatterShortStyle];
 	[_dateFormatter setTimeStyle:NSDateFormatterShortStyle];
-	
-	path = [[NSBundle bundleWithIdentifier:WIAppKitBundleIdentifier] pathForResource:@"CrashReports" ofType:@"nib"];
-	
-	self = [self initWithWindowNibPath:path owner:self];
 	
 	[self window];
 	

@@ -49,3 +49,10 @@
 - (NSString *) timeAgoWithLimit:(NSTimeInterval)limit;
 - (NSString *) timeAgoWithLimit:(NSTimeInterval)limit dateFormat:(NSDateFormatterStyle)dFormatter andTimeFormat:(NSDateFormatterStyle)tFormatter;
 @end
+
+
+@interface NSDate (Javascript)
+
+- (NSString *)JSDate;
+
+@end

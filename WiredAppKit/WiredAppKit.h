@@ -93,3 +93,5 @@
 #import <WiredAppKit/NSWindowController-WIAppKit.h>
 #import <WiredAppKit/NSWorkspace-WIAppKit.h>
 #import <WiredAppKit/WebView-WIAppKit.h>
+
+#import <WiredAppKit/CTBadge.h>
