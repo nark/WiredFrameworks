@@ -14,6 +14,10 @@
 		4C297AF0177884FF002ED699 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C297AEE177884FF002ED699 /* Localizable.strings */; };
 		4C297AF217788505002ED699 /* WiredNetworking-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4C667F52147B02A000AAA5C7 /* WiredNetworking-Prefix.pch */; };
 		4C297AFD177885C5002ED699 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C297AF8177885C5002ED699 /* Localizable.strings */; };
+		4C2BDA3817F8F5FC0069B38E /* WIEmoticon.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C2BDA3617F8F5FB0069B38E /* WIEmoticon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C2BDA3917F8F5FC0069B38E /* WIEmoticon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2BDA3717F8F5FC0069B38E /* WIEmoticon.m */; };
+		4C2BDA3D17F8F6510069B38E /* WIEmoticonPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C2BDA3B17F8F6510069B38E /* WIEmoticonPack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C2BDA3E17F8F6510069B38E /* WIEmoticonPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2BDA3C17F8F6510069B38E /* WIEmoticonPack.m */; };
 		4C3A412815F5691600C9B136 /* WIStatusMenuManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C3A412615F5691600C9B136 /* WIStatusMenuManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C3A412915F5691600C9B136 /* WIStatusMenuManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3A412715F5691600C9B136 /* WIStatusMenuManager.m */; };
 		4C41720B147DC2B300DC0A9A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41720A147DC2B300DC0A9A /* Cocoa.framework */; };
@@ -74,7 +78,6 @@
 		4C417254147DC30900DC0A9A /* WITypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C667F09147B01FA00AAA5C7 /* WITypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C417255147DC30900DC0A9A /* WIURL.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C667F0A147B01FA00AAA5C7 /* WIURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C417256147DC30900DC0A9A /* WIURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C667F0B147B01FA00AAA5C7 /* WIURL.m */; };
-		4C41725D147DC40900DC0A9A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41720A147DC2B300DC0A9A /* Cocoa.framework */; };
 		4C41726B147DC45500DC0A9A /* NSNumber-WINetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C667F59147B02E400AAA5C7 /* NSNumber-WINetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C41726C147DC45500DC0A9A /* NSNumber-WINetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C667F5A147B02E400AAA5C7 /* NSNumber-WINetworking.m */; };
 		4C41726D147DC45500DC0A9A /* NSProcessInfo-WINetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C667F5B147B02E400AAA5C7 /* NSProcessInfo-WINetworking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -98,14 +101,7 @@
 		4C41727F147DC45500DC0A9A /* WISocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C667F6D147B02E400AAA5C7 /* WISocket.m */; };
 		4C417280147DC45500DC0A9A /* WIThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C667F6E147B02E400AAA5C7 /* WIThread.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C417281147DC45500DC0A9A /* WIThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C667F6F147B02E400AAA5C7 /* WIThread.m */; };
-		4C417285147DC4A100DC0A9A /* WiredFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C417209147DC2B300DC0A9A /* WiredFoundation.framework */; };
 		4C417288147DC4DB00DC0A9A /* WiredFoundation.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4C417209147DC2B300DC0A9A /* WiredFoundation.framework */; };
-		4C41728B147DC62C00DC0A9A /* wired.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBDAD14147AF94F00D0C51A /* wired.a */; };
-		4C41728F147DC68600DC0A9A /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBDAD9A147AFA8300D0C51A /* libssl.dylib */; };
-		4C417290147DC68700DC0A9A /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBDAD98147AFA7E00D0C51A /* libcrypto.dylib */; };
-		4C417291147DC68900DC0A9A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBDAD96147AFA6E00D0C51A /* libsqlite3.dylib */; };
-		4C417292147DC68B00DC0A9A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBDAD94147AFA6600D0C51A /* libxml2.dylib */; };
-		4C417294147DC69D00DC0A9A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C417293147DC69D00DC0A9A /* libz.dylib */; };
 		4C417303147EDF1000DC0A9A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C41720A147DC2B300DC0A9A /* Cocoa.framework */; };
 		4C417309147EDF1000DC0A9A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C417307147EDF1000DC0A9A /* InfoPlist.strings */; };
 		4C41738D147EE00800DC0A9A /* NSAlert-WIAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C417315147EE00800DC0A9A /* NSAlert-WIAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -233,13 +229,11 @@
 		4C4B8429147EE16E003FD42C /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4B8428147EE16E003FD42C /* ExceptionHandling.framework */; };
 		4C4B842B147EE1A9003FD42C /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4B842A147EE1A9003FD42C /* Quartz.framework */; };
 		4C4B842D147EE1AE003FD42C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4B842C147EE1AE003FD42C /* WebKit.framework */; };
-		4C4B842E147EE1B4003FD42C /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBDAD98147AFA7E00D0C51A /* libcrypto.dylib */; };
 		4C4B842F147EE1C1003FD42C /* WiredFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C417209147DC2B300DC0A9A /* WiredFoundation.framework */; };
 		4C4B85B2147EF08C003FD42C /* RegexKitLite-WIFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C667EF3147B01F900AAA5C7 /* RegexKitLite-WIFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C4B85B3147EF08C003FD42C /* RegexKitLite-WIFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C667EF4147B01F900AAA5C7 /* RegexKitLite-WIFoundation.m */; };
 		4C4B85B4147EF08C003FD42C /* RegexKitLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C667EF5147B01F900AAA5C7 /* RegexKitLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C4B85B5147EF08C003FD42C /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C667EF6147B01F900AAA5C7 /* RegexKitLite.m */; };
-		4C4B85BA147EF0EB003FD42C /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4B85B9147EF0EB003FD42C /* libicucore.dylib */; };
 		4C4B85D9147EF7DE003FD42C /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C4B85D8147EF7DE003FD42C /* libicucore.dylib */; };
 		4C4B85DB147EF7F9003FD42C /* RegexKitLite-WIFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C667EF3147B01F900AAA5C7 /* RegexKitLite-WIFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C4B85DC147EF7F9003FD42C /* RegexKitLite-WIFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C667EF4147B01F900AAA5C7 /* RegexKitLite-WIFoundation.m */; };
@@ -357,7 +351,6 @@
 		4C667F85147B02E400AAA5C7 /* WIThread.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C667F6E147B02E400AAA5C7 /* WIThread.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C667F86147B02E400AAA5C7 /* WIThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C667F6F147B02E400AAA5C7 /* WIThread.m */; };
 		4C70E06714B3BA2300761F46 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C70E06614B3BA2300761F46 /* UIKit.framework */; };
-		4C76213917E2FF3C00A2EDA9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C76213817E2FF3C00A2EDA9 /* Security.framework */; };
 		4C773D4E16DD366B00807EB7 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C773D4B16DD363800807EB7 /* libcrypto.a */; };
 		4C773D4F16DD366B00807EB7 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C773D4916DD363800807EB7 /* libssl.a */; };
 		4C7967C016DC256200E36A03 /* wi-assert.c in Sources */ = {isa = PBXBuildFile; fileRef = 4C79674716DC256100E36A03 /* wi-assert.c */; };
@@ -725,10 +718,20 @@
 		4CDAB3401567D16A00291388 /* WebView-WIAppKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDAB33E1567D16A00291388 /* WebView-WIAppKit.m */; };
 		4CDAB3441568025200291388 /* WITemplateBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDAB3421568025100291388 /* WITemplateBundle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CDAB3451568025200291388 /* WITemplateBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDAB3431568025100291388 /* WITemplateBundle.m */; };
-		4CEB6AE615DC034000D284BF /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEB6AE515DC034000D284BF /* libssl.dylib */; };
-		4CEB6AE815DC034500D284BF /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEB6AE715DC034500D284BF /* libcrypto.dylib */; };
-		4CEB6AEA15DC034900D284BF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEB6AE915DC034900D284BF /* libxml2.dylib */; };
-		4CEB6AEC15DC034F00D284BF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEB6AEB15DC034F00D284BF /* libsqlite3.dylib */; };
+		4CE151B317FDF587004DA093 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151B217FDF587004DA093 /* libssl.dylib */; };
+		4CE151B517FDF59A004DA093 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151B417FDF59A004DA093 /* libcrypto.dylib */; };
+		4CE151B717FDF5A0004DA093 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151B617FDF5A0004DA093 /* libxml2.dylib */; };
+		4CE151B917FDF5B3004DA093 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151B817FDF5B3004DA093 /* libicucore.dylib */; };
+		4CE151BB17FDF5BB004DA093 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151BA17FDF5BB004DA093 /* libsqlite3.dylib */; };
+		4CE151BC17FDF65B004DA093 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151B817FDF5B3004DA093 /* libicucore.dylib */; };
+		4CE151D517FDFA51004DA093 /* libcommonCrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151D417FDFA51004DA093 /* libcommonCrypto.dylib */; };
+		4CE151D917FDFAC8004DA093 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151D817FDFAC8004DA093 /* Cocoa.framework */; };
+		4CE151DA17FDFACD004DA093 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151D617FDFAA9004DA093 /* Foundation.framework */; };
+		4CE151DC17FDFB01004DA093 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151DB17FDFB01004DA093 /* libz.dylib */; };
+		4CE151E017FDFC3E004DA093 /* libc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151DF17FDFC3E004DA093 /* libc.dylib */; };
+		4CE151E117FDFC4A004DA093 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151DB17FDFB01004DA093 /* libz.dylib */; };
+		4CE151E517FDFD38004DA093 /* wired.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBDAD14147AF94F00D0C51A /* wired.a */; };
+		4CE151E617FDFD62004DA093 /* WiredFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C417209147DC2B300DC0A9A /* WiredFoundation.framework */; };
 		4CF094931559C81C005D77BB /* WITemplateBundleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF094911559C81C005D77BB /* WITemplateBundleManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CF094941559C81C005D77BB /* WITemplateBundleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF094921559C81C005D77BB /* WITemplateBundleManager.m */; };
 		4CF598FB16C832ED0042E2E1 /* UIView+CocoaPlant.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF598FA16C832ED0042E2E1 /* UIView+CocoaPlant.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -748,13 +751,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4C417208147DC2B300DC0A9A;
 			remoteInfo = WiredFoundation;
-		};
-		4C417289147DC62000DC0A9A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CBDABF3147AF52E00D0C51A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4CBDAD13147AF94F00D0C51A;
-			remoteInfo = "libwired-osx";
 		};
 		4C4B8430147EE1DC003FD42C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -805,6 +801,13 @@
 			remoteGlobalIDString = 4CBDADA3147AFC4A00D0C51A;
 			remoteInfo = "libwired-simulator";
 		};
+		4CE151E317FDFD2F004DA093 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CBDABF3147AF52E00D0C51A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CBDAD13147AF94F00D0C51A;
+			remoteInfo = "libwired-osx";
+		};
 		4CFA5EEC154F5629000ECBDB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4CBDABF3147AF52E00D0C51A /* Project object */;
@@ -845,23 +848,23 @@
 /* Begin PBXFileReference section */
 		4C0F438116F1419F00735AC3 /* NSTreeController+WIAppKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTreeController+WIAppKit.h"; sourceTree = "<group>"; };
 		4C0F438216F1419F00735AC3 /* NSTreeController+WIAppKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTreeController+WIAppKit.m"; sourceTree = "<group>"; };
-		4C297AE51778840E002ED699 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297AE817788427002ED699 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297AEA1778843D002ED699 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297AEC17788487002ED699 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297AED1778848F002ED699 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297AEF177884FF002ED699 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297AF117788505002ED699 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297AF31778850C002ED699 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297AF417788511002ED699 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297AF51778851D002ED699 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C297AE51778840E002ED699 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C297AE817788427002ED699 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C297AEA1778843D002ED699 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C297AEC17788487002ED699 /* ja */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C297AED1778848F002ED699 /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C297AEF177884FF002ED699 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C297AF117788505002ED699 /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C297AF31778850C002ED699 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C297AF417788511002ED699 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C297AF51778851D002ED699 /* ja */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C297AF6177885C5002ED699 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/CrashReports.xib; sourceTree = "<group>"; };
 		4C297AF7177885C5002ED699 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4C297AF9177885C5002ED699 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C297AFA177885C5002ED699 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ReleaseNotes.xib; sourceTree = "<group>"; };
 		4C297AFB177885C5002ED699 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/TreeDetail.xib; sourceTree = "<group>"; };
 		4C297AFC177885C5002ED699 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/ViewOptions.xib; sourceTree = "<group>"; };
-		4C297AFE177885DE002ED699 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4C297AFE177885DE002ED699 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C297AFF177885E8002ED699 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/CrashReports.xib; sourceTree = "<group>"; };
 		4C297B00177885E8002ED699 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4C297B01177885E8002ED699 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -880,12 +883,15 @@
 		4C297B1417788611002ED699 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/ReleaseNotes.xib; sourceTree = "<group>"; };
 		4C297B1517788611002ED699 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/TreeDetail.xib; sourceTree = "<group>"; };
 		4C297B1617788611002ED699 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/ViewOptions.xib; sourceTree = "<group>"; };
+		4C2BDA3617F8F5FB0069B38E /* WIEmoticon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIEmoticon.h; sourceTree = "<group>"; };
+		4C2BDA3717F8F5FC0069B38E /* WIEmoticon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIEmoticon.m; sourceTree = "<group>"; };
+		4C2BDA3B17F8F6510069B38E /* WIEmoticonPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIEmoticonPack.h; sourceTree = "<group>"; };
+		4C2BDA3C17F8F6510069B38E /* WIEmoticonPack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIEmoticonPack.m; sourceTree = "<group>"; };
 		4C3A412615F5691600C9B136 /* WIStatusMenuManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIStatusMenuManager.h; sourceTree = "<group>"; };
 		4C3A412715F5691600C9B136 /* WIStatusMenuManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIStatusMenuManager.m; sourceTree = "<group>"; };
 		4C417209147DC2B300DC0A9A /* WiredFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WiredFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C41720A147DC2B300DC0A9A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		4C41725C147DC40900DC0A9A /* WiredNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WiredNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C417293147DC69D00DC0A9A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = SDKs/MacOSX10.7.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		4C417302147EDF1000DC0A9A /* WiredAppKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WiredAppKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C417306147EDF1000DC0A9A /* WiredAppKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WiredAppKit-Info.plist"; sourceTree = "<group>"; };
 		4C417308147EDF1000DC0A9A /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -1015,7 +1021,6 @@
 		4C4B8428147EE16E003FD42C /* ExceptionHandling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExceptionHandling.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/ExceptionHandling.framework; sourceTree = DEVELOPER_DIR; };
 		4C4B842A147EE1A9003FD42C /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Quartz.framework; sourceTree = DEVELOPER_DIR; };
 		4C4B842C147EE1AE003FD42C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = SDKs/MacOSX10.7.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
-		4C4B85B9147EF0EB003FD42C /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = SDKs/MacOSX10.6.sdk/usr/lib/libicucore.dylib; sourceTree = DEVELOPER_DIR; };
 		4C4B85D8147EF7DE003FD42C /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		4C4F6A1315D9734F00E16940 /* NSDataAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDataAdditions.h; path = ../../oldies/wired/WiredKit/NSDataAdditions.h; sourceTree = "<group>"; };
 		4C4F6A1415D9734F00E16940 /* NSDataAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDataAdditions.m; path = ../../oldies/wired/WiredKit/NSDataAdditions.m; sourceTree = "<group>"; };
@@ -1135,7 +1140,6 @@
 		4C667F6E147B02E400AAA5C7 /* WIThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIThread.h; sourceTree = "<group>"; };
 		4C667F6F147B02E400AAA5C7 /* WIThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIThread.m; sourceTree = "<group>"; };
 		4C70E06614B3BA2300761F46 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		4C76213817E2FF3C00A2EDA9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		4C773D4316DD363800807EB7 /* openssl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openssl.xcodeproj; path = openssl/openssl.xcodeproj; sourceTree = SOURCE_ROOT; };
 		4C79674716DC256100E36A03 /* wi-assert.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "wi-assert.c"; sourceTree = "<group>"; };
 		4C79674816DC256100E36A03 /* wi-assert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "wi-assert.h"; sourceTree = "<group>"; };
@@ -1270,10 +1274,6 @@
 		4CBDAD18147AF94F00D0C51A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		4CBDAD19147AF94F00D0C51A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4CBDAD1A147AF94F00D0C51A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4CBDAD94147AFA6600D0C51A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = SDKs/MacOSX10.7.sdk/usr/lib/libxml2.dylib; sourceTree = DEVELOPER_DIR; };
-		4CBDAD96147AFA6E00D0C51A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = SDKs/MacOSX10.7.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
-		4CBDAD98147AFA7E00D0C51A /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = SDKs/MacOSX10.7.sdk/usr/lib/libcrypto.dylib; sourceTree = DEVELOPER_DIR; };
-		4CBDAD9A147AFA8300D0C51A /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = SDKs/MacOSX10.7.sdk/usr/lib/libssl.dylib; sourceTree = DEVELOPER_DIR; };
 		4CBDADA4147AFC4A00D0C51A /* wired.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = wired.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC5CDEC1561495D00C2F624 /* WIDOMElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIDOMElement.h; sourceTree = "<group>"; };
 		4CC5CDED1561495D00C2F624 /* WIDOMElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIDOMElement.m; sourceTree = "<group>"; };
@@ -1283,10 +1283,27 @@
 		4CDAB33E1567D16A00291388 /* WebView-WIAppKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WebView-WIAppKit.m"; sourceTree = "<group>"; };
 		4CDAB3421568025100291388 /* WITemplateBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WITemplateBundle.h; sourceTree = "<group>"; };
 		4CDAB3431568025100291388 /* WITemplateBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WITemplateBundle.m; sourceTree = "<group>"; };
-		4CEB6AE515DC034000D284BF /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/libssl.dylib; sourceTree = DEVELOPER_DIR; };
-		4CEB6AE715DC034500D284BF /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/libcrypto.dylib; sourceTree = DEVELOPER_DIR; };
-		4CEB6AE915DC034900D284BF /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/libxml2.dylib; sourceTree = DEVELOPER_DIR; };
-		4CEB6AEB15DC034F00D284BF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
+		4CE151B217FDF587004DA093 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libssl.dylib; sourceTree = DEVELOPER_DIR; };
+		4CE151B417FDF59A004DA093 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libcrypto.dylib; sourceTree = DEVELOPER_DIR; };
+		4CE151B617FDF5A0004DA093 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libxml2.dylib; sourceTree = DEVELOPER_DIR; };
+		4CE151B817FDF5B3004DA093 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libicucore.dylib; sourceTree = DEVELOPER_DIR; };
+		4CE151BA17FDF5BB004DA093 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
+		4CE151D217FDFA44004DA093 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		4CE151D417FDFA51004DA093 /* libcommonCrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcommonCrypto.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/system/libcommonCrypto.dylib; sourceTree = DEVELOPER_DIR; };
+		4CE151D617FDFAA9004DA093 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4CE151D817FDFAC8004DA093 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		4CE151DB17FDFB01004DA093 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
+		4CE151DD17FDFB96004DA093 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = DEVELOPER_DIR; };
+		4CE151DF17FDFC3E004DA093 /* libc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libc.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/usr/lib/libc.dylib; sourceTree = DEVELOPER_DIR; };
+		4CE1526C180051EC004DA093 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4CE1526D180051EC004DA093 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4CE1526E180051EC004DA093 /* nl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4CE1526F180051EC004DA093 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/CrashReports.xib; sourceTree = "<group>"; };
+		4CE15270180051EC004DA093 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/ReleaseNotes.xib; sourceTree = "<group>"; };
+		4CE15271180051EC004DA093 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/TreeDetail.xib; sourceTree = "<group>"; };
+		4CE15272180051EC004DA093 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/ViewOptions.xib; sourceTree = "<group>"; };
+		4CE15273180051EC004DA093 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4CE15274180051EC004DA093 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CF094911559C81C005D77BB /* WITemplateBundleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WITemplateBundleManager.h; sourceTree = "<group>"; };
 		4CF094921559C81C005D77BB /* WITemplateBundleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WITemplateBundleManager.m; sourceTree = "<group>"; };
 		4CF598FA16C832ED0042E2E1 /* UIView+CocoaPlant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CocoaPlant.h"; sourceTree = "<group>"; };
@@ -1304,8 +1321,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C76213917E2FF3C00A2EDA9 /* Security.framework in Frameworks */,
-				4C4B85BA147EF0EB003FD42C /* libicucore.dylib in Frameworks */,
+				4CE151BC17FDF65B004DA093 /* libicucore.dylib in Frameworks */,
 				4C41720B147DC2B300DC0A9A /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1314,14 +1330,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C417294147DC69D00DC0A9A /* libz.dylib in Frameworks */,
-				4C41728B147DC62C00DC0A9A /* wired.a in Frameworks */,
-				4C41728F147DC68600DC0A9A /* libssl.dylib in Frameworks */,
-				4C417290147DC68700DC0A9A /* libcrypto.dylib in Frameworks */,
-				4C417291147DC68900DC0A9A /* libsqlite3.dylib in Frameworks */,
-				4C417292147DC68B00DC0A9A /* libxml2.dylib in Frameworks */,
-				4C41725D147DC40900DC0A9A /* Cocoa.framework in Frameworks */,
-				4C417285147DC4A100DC0A9A /* WiredFoundation.framework in Frameworks */,
+				4CE151E517FDFD38004DA093 /* wired.a in Frameworks */,
+				4CE151DC17FDFB01004DA093 /* libz.dylib in Frameworks */,
+				4CE151DA17FDFACD004DA093 /* Foundation.framework in Frameworks */,
+				4CE151D917FDFAC8004DA093 /* Cocoa.framework in Frameworks */,
+				4CE151E617FDFD62004DA093 /* WiredFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1330,7 +1343,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C4B842F147EE1C1003FD42C /* WiredFoundation.framework in Frameworks */,
-				4C4B842E147EE1B4003FD42C /* libcrypto.dylib in Frameworks */,
 				4C4B842D147EE1AE003FD42C /* WebKit.framework in Frameworks */,
 				4C4B842B147EE1A9003FD42C /* Quartz.framework in Frameworks */,
 				4C4B8429147EE16E003FD42C /* ExceptionHandling.framework in Frameworks */,
@@ -1382,10 +1394,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CEB6AEC15DC034F00D284BF /* libsqlite3.dylib in Frameworks */,
-				4CEB6AEA15DC034900D284BF /* libxml2.dylib in Frameworks */,
-				4CEB6AE815DC034500D284BF /* libcrypto.dylib in Frameworks */,
-				4CEB6AE615DC034000D284BF /* libssl.dylib in Frameworks */,
+				4CE151E117FDFC4A004DA093 /* libz.dylib in Frameworks */,
+				4CE151E017FDFC3E004DA093 /* libc.dylib in Frameworks */,
+				4CE151D517FDFA51004DA093 /* libcommonCrypto.dylib in Frameworks */,
+				4CE151BB17FDF5BB004DA093 /* libsqlite3.dylib in Frameworks */,
+				4CE151B917FDF5B3004DA093 /* libicucore.dylib in Frameworks */,
+				4CE151B717FDF5A0004DA093 /* libxml2.dylib in Frameworks */,
+				4CE151B517FDF59A004DA093 /* libcrypto.dylib in Frameworks */,
+				4CE151B317FDF587004DA093 /* libssl.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1484,6 +1500,10 @@
 				4C4FDEAC17799F5300FADB95 /* WIConfigManager.m */,
 				4C417355147EE00800DC0A9A /* WICrashReportsController.h */,
 				4C417356147EE00800DC0A9A /* WICrashReportsController.m */,
+				4C2BDA3617F8F5FB0069B38E /* WIEmoticon.h */,
+				4C2BDA3717F8F5FC0069B38E /* WIEmoticon.m */,
+				4C2BDA3B17F8F6510069B38E /* WIEmoticonPack.h */,
+				4C2BDA3C17F8F6510069B38E /* WIEmoticonPack.m */,
 				4C417357147EE00800DC0A9A /* WIExceptionHandler.h */,
 				4C417358147EE00800DC0A9A /* WIExceptionHandler.m */,
 				4C417359147EE00800DC0A9A /* WIGraphView.h */,
@@ -1992,7 +2012,6 @@
 		4CBDABF1147AF52E00D0C51A = {
 			isa = PBXGroup;
 			children = (
-				4C76213817E2FF3C00A2EDA9 /* Security.framework */,
 				4CBDAC01147AF52E00D0C51A /* libwired */,
 				4C667EC2147B018600AAA5C7 /* WiredFoundation */,
 				4C667F50147B02A000AAA5C7 /* WiredNetworking */,
@@ -2028,6 +2047,18 @@
 		4CBDABFE147AF52E00D0C51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CE151DF17FDFC3E004DA093 /* libc.dylib */,
+				4CE151DD17FDFB96004DA093 /* Carbon.framework */,
+				4CE151DB17FDFB01004DA093 /* libz.dylib */,
+				4CE151D817FDFAC8004DA093 /* Cocoa.framework */,
+				4CE151D617FDFAA9004DA093 /* Foundation.framework */,
+				4CE151D417FDFA51004DA093 /* libcommonCrypto.dylib */,
+				4CE151D217FDFA44004DA093 /* Security.framework */,
+				4CE151BA17FDF5BB004DA093 /* libsqlite3.dylib */,
+				4CE151B817FDF5B3004DA093 /* libicucore.dylib */,
+				4CE151B617FDF5A0004DA093 /* libxml2.dylib */,
+				4CE151B417FDF59A004DA093 /* libcrypto.dylib */,
+				4CE151B217FDF587004DA093 /* libssl.dylib */,
 				4C70E06614B3BA2300761F46 /* UIKit.framework */,
 				4C7C1B4D1486DD6500563036 /* CoreData.framework */,
 				4C7C1AA91486D5EE00563036 /* CoreData.framework */,
@@ -2067,17 +2098,7 @@
 		4CBDAD02147AF63800D0C51A /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				4CEB6AEB15DC034F00D284BF /* libsqlite3.dylib */,
-				4CEB6AE915DC034900D284BF /* libxml2.dylib */,
-				4CEB6AE715DC034500D284BF /* libcrypto.dylib */,
-				4CEB6AE515DC034000D284BF /* libssl.dylib */,
 				4C4B85D8147EF7DE003FD42C /* libicucore.dylib */,
-				4C4B85B9147EF0EB003FD42C /* libicucore.dylib */,
-				4C417293147DC69D00DC0A9A /* libz.dylib */,
-				4CBDAD9A147AFA8300D0C51A /* libssl.dylib */,
-				4CBDAD98147AFA7E00D0C51A /* libcrypto.dylib */,
-				4CBDAD96147AFA6E00D0C51A /* libsqlite3.dylib */,
-				4CBDAD94147AFA6600D0C51A /* libxml2.dylib */,
 				4CBDAD07147AF68900D0C51A /* libxml2.dylib */,
 			);
 			name = Libraries;
@@ -2250,6 +2271,8 @@
 				4C4FDEA917799F1200FADB95 /* WISheetController.h in Headers */,
 				4C4FDEAD17799F5300FADB95 /* WIConfigManager.h in Headers */,
 				4C9B2A9D17E797FC007B0962 /* CTBadge.h in Headers */,
+				4C2BDA3817F8F5FC0069B38E /* WIEmoticon.h in Headers */,
+				4C2BDA3D17F8F6510069B38E /* WIEmoticonPack.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2562,7 +2585,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				4C41728A147DC62000DC0A9A /* PBXTargetDependency */,
+				4CE151E417FDFD2F004DA093 /* PBXTargetDependency */,
 				4C417284147DC46A00DC0A9A /* PBXTargetDependency */,
 			);
 			name = WiredNetworking;
@@ -2722,7 +2745,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0450;
-				ORGANIZATIONNAME = OPALE;
+				ORGANIZATIONNAME = "Read-Write";
 			};
 			buildConfigurationList = 4CBDABF6147AF52E00D0C51A /* Build configuration list for PBXProject "WiredFrameworks" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2735,6 +2758,7 @@
 				jp,
 				ja,
 				de,
+				nl,
 			);
 			mainGroup = 4CBDABF1147AF52E00D0C51A;
 			productRefGroup = 4CBDABFD147AF52E00D0C51A /* Products */;
@@ -2958,6 +2982,8 @@
 				4C4FDEAA17799F1200FADB95 /* WISheetController.m in Sources */,
 				4C4FDEAE17799F5300FADB95 /* WIConfigManager.m in Sources */,
 				4C9B2A9E17E797FC007B0962 /* CTBadge.m in Sources */,
+				4C2BDA3917F8F5FC0069B38E /* WIEmoticon.m in Sources */,
+				4C2BDA3E17F8F6510069B38E /* WIEmoticonPack.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3232,11 +3258,6 @@
 			target = 4C417208147DC2B300DC0A9A /* WiredFoundation */;
 			targetProxy = 4C417283147DC46A00DC0A9A /* PBXContainerItemProxy */;
 		};
-		4C41728A147DC62000DC0A9A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4CBDAD13147AF94F00D0C51A /* libwired-osx */;
-			targetProxy = 4C417289147DC62000DC0A9A /* PBXContainerItemProxy */;
-		};
 		4C4B8431147EE1DC003FD42C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4C417208147DC2B300DC0A9A /* WiredFoundation */;
@@ -3261,6 +3282,11 @@
 			isa = PBXTargetDependency;
 			target = 4CBDADA3147AFC4A00D0C51A /* libwired-simulator */;
 			targetProxy = 4CB964D815190B1E0020BE28 /* PBXContainerItemProxy */;
+		};
+		4CE151E417FDFD2F004DA093 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CBDAD13147AF94F00D0C51A /* libwired-osx */;
+			targetProxy = 4CE151E317FDFD2F004DA093 /* PBXContainerItemProxy */;
 		};
 		4CFA5EED154F5629000ECBDB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3288,6 +3314,7 @@
 				4C297AEA1778843D002ED699 /* it */,
 				4C297AEC17788487002ED699 /* ja */,
 				4C297AED1778848F002ED699 /* de */,
+				4CE1526C180051EC004DA093 /* nl */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -3300,6 +3327,7 @@
 				4C297AF31778850C002ED699 /* fr */,
 				4C297AF417788511002ED699 /* it */,
 				4C297AF51778851D002ED699 /* ja */,
+				4CE1526D180051EC004DA093 /* nl */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -3312,6 +3340,7 @@
 				4C297B01177885E8002ED699 /* fr */,
 				4C297B07177885EE002ED699 /* it */,
 				4C297B1317788611002ED699 /* ja */,
+				4CE1526E180051EC004DA093 /* nl */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -3324,6 +3353,7 @@
 				4C297B00177885E8002ED699 /* fr */,
 				4C297B06177885EE002ED699 /* it */,
 				4C297B1217788611002ED699 /* ja */,
+				4CE15273180051EC004DA093 /* nl */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -3336,6 +3366,7 @@
 				4C297AFF177885E8002ED699 /* fr */,
 				4C297B05177885EE002ED699 /* it */,
 				4C297B1117788611002ED699 /* ja */,
+				4CE1526F180051EC004DA093 /* nl */,
 			);
 			name = CrashReports.xib;
 			sourceTree = "<group>";
@@ -3348,6 +3379,7 @@
 				4C297B02177885E8002ED699 /* fr */,
 				4C297B08177885EE002ED699 /* it */,
 				4C297B1417788611002ED699 /* ja */,
+				4CE15270180051EC004DA093 /* nl */,
 			);
 			name = ReleaseNotes.xib;
 			sourceTree = "<group>";
@@ -3360,6 +3392,7 @@
 				4C297B03177885E8002ED699 /* fr */,
 				4C297B09177885EE002ED699 /* it */,
 				4C297B1517788611002ED699 /* ja */,
+				4CE15271180051EC004DA093 /* nl */,
 			);
 			name = TreeDetail.xib;
 			sourceTree = "<group>";
@@ -3372,6 +3405,7 @@
 				4C297B04177885E8002ED699 /* fr */,
 				4C297B0A177885EE002ED699 /* it */,
 				4C297B1617788611002ED699 /* ja */,
+				4CE15272180051EC004DA093 /* nl */,
 			);
 			name = ViewOptions.xib;
 			sourceTree = "<group>";
@@ -3380,6 +3414,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4CFDCBD61569533C00DA17A6 /* en */,
+				4CE15274180051EC004DA093 /* nl */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -3411,7 +3446,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -3441,7 +3476,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -3475,7 +3510,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -3510,7 +3545,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -3540,7 +3575,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -3571,7 +3606,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -3586,7 +3621,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = WiredUIKit;
 				PUBLIC_HEADERS_FOLDER_PATH = WiredUIKit;
-				SDKROOT = iphoneos5.0;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 			};
@@ -3602,7 +3637,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = WiredUIKit;
 				PUBLIC_HEADERS_FOLDER_PATH = WiredUIKit;
-				SDKROOT = iphoneos5.0;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 			};
@@ -3621,6 +3656,7 @@
 				);
 				PRODUCT_NAME = WiredFoundation;
 				PUBLIC_HEADERS_FOLDER_PATH = WiredFoundation;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -3638,6 +3674,7 @@
 				);
 				PRODUCT_NAME = WiredFoundation;
 				PUBLIC_HEADERS_FOLDER_PATH = WiredFoundation;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -3656,6 +3693,7 @@
 				);
 				PRODUCT_NAME = WiredNetworking;
 				PUBLIC_HEADERS_FOLDER_PATH = WiredNetworking;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -3674,6 +3712,7 @@
 				);
 				PRODUCT_NAME = WiredNetworking;
 				PUBLIC_HEADERS_FOLDER_PATH = WiredNetworking;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -3796,14 +3835,20 @@
 					/usr/include/libxml2,
 					"\"$(SRCROOT)\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
+				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
+					"-licucore",
+					"-dynamic",
 				);
 				PRODUCT_NAME = wired;
 				PUBLIC_HEADERS_FOLDER_PATH = wired;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -3822,14 +3867,20 @@
 					/usr/include/libxml2,
 					"\"$(SRCROOT)\"",
 				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/lib/system",
+				);
+				MACH_O_TYPE = mh_dylib;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
+					"-licucore",
+					"-dynamic",
 				);
 				PRODUCT_NAME = wired;
 				PUBLIC_HEADERS_FOLDER_PATH = wired;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -3902,7 +3953,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = WiredHistory;
 			};
 			name = Debug;
@@ -3926,7 +3977,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = WiredHistory;
 			};
 			name = Release;

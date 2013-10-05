@@ -98,7 +98,7 @@
 	status = FSPathMakeRef((UInt8 *) [path fileSystemRepresentation], &fsRef, NULL);
 
 	if(status != noErr) {
-		NSLog(@"*** FSPathMakeRef(): %ld", status);
+		NSLog(@"*** FSPathMakeRef(): %d", (int)status);
 
 		return NO;
 	}

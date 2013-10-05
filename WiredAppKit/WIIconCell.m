@@ -182,6 +182,7 @@
 			imageFrame.origin.y += ceil((textFrame.size.height - imageFrame.size.height) / 2.0);
 		
 		[_image compositeToPoint:imageFrame.origin operation:NSCompositeSourceOver];
+        //[_image drawAtPoint:imageFrame.origin fromRect:view.bounds operation:NSCompositeSourceOver fraction:1.0];
 	}
 	
 	textFrame.origin.y		+= _verticalTextOffset;

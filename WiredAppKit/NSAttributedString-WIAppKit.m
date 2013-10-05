@@ -101,7 +101,7 @@
 	if(![self containsAttachments])
 		return;
 	
-	markerString			= [NSString stringWithFormat:@"%C", NSAttachmentCharacter];
+	markerString			= [NSString stringWithFormat:@"%C", (unichar)NSAttachmentCharacter];
 	searchRange.location	= 0;
 	searchRange.length		= [self length];
 	

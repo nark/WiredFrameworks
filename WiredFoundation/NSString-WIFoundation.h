@@ -34,7 +34,14 @@
 + (id)stringWithData:(NSData *)data encoding:(NSStringEncoding)encoding;
 + (id)stringWithBytes:(const void *)bytes length:(NSUInteger)length encoding:(NSStringEncoding)encoding;
 + (id)stringWithRandomCharactersFromString:(NSString *)string length:(NSUInteger)length;
+
 + (id)UUIDString;
+
++ (NSString *)URLRegex;
++ (NSString *)fileURLRegex;
++ (NSString *)schemelessURLRegex;
++ (NSString *)mailtoURLRegex;
++ (NSString *)htmlRegex;
 
 - (NSUInteger)UTF8StringLength;
 - (unsigned long long)unsignedLongLongValue;

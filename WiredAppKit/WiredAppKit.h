@@ -34,6 +34,8 @@
 #import <WiredAppKit/WIColorCell.h>
 #import <WiredAppKit/WIConfigManager.h>
 #import <WiredAppKit/WICrashReportsController.h>
+#import <WiredAppKit/WIEmoticon.h>
+#import <WiredAppKit/WIEmoticonPack.h>
 #import <WiredAppKit/WIExceptionHandler.h>
 #import <WiredAppKit/WIGraphView.h>
 #import <WiredAppKit/WIIconCell.h>

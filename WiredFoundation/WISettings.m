@@ -265,6 +265,10 @@
 	NSMutableDictionary		*dictionary;
 	
 	dictionary = [[[self objectForKey:dictionaryKey] mutableCopy] autorelease];
+    
+    if(!dictionary)
+        dictionary = [NSMutableDictionary dictionary];
+    
 	[dictionary setObject:object forKey:key];
 	[self setObject:dictionary forKey:dictionaryKey];
 }

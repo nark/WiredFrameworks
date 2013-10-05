@@ -54,10 +54,13 @@
 #pragma mark -
 
 - (void)scrollWheel:(NSEvent *)event {
-	if(WIAbs([event deltaX]) > WIAbs([event deltaY]) && WIAbs([event deltaX]) > WIAbs([event deltaZ]))
-		[[self delegate] scrollWheel:event];
-	else
+	if(WIAbs([event deltaX]) > WIAbs([event deltaY]) && WIAbs([event deltaX]) > WIAbs([event deltaZ])) {
+        if([[self delegate] respondsToSelector:@selector(scrollWheel:)])
+            [[self delegate] scrollWheel:event];
+	} else
+    {
 		[super scrollWheel:event];
+    }
 }
 
 @end

@@ -128,7 +128,6 @@
 											 defer:YES];
 	[window setShowsToolbarButton:NO];
 	[window setDelegate:self];
-    [window setContentBorderThickness:32.0 forEdge:NSMinYEdge];
 	[self setWindow:window];
 	[window release];
 	

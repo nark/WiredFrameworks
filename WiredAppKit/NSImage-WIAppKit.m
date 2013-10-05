@@ -112,16 +112,20 @@
 - (NSImage *)tintedImageWithColor:(NSColor *)color {
 	NSImage		*image;
 	NSSize		size;
+    NSRect      rect;
 
 	size = [self size];
+    rect = NSMakeRect(0, 0, [self size].width, [self size].height);
+    
 	image = [[NSImage alloc] initWithSize:size];
 	[image lockFocus];
 
 	[[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationNone];
 	[[NSGraphicsContext currentContext] setShouldAntialias:NO];
 
-	[self compositeToPoint:NSZeroPoint operation:NSCompositeSourceOver];
-
+	//[self compositeToPoint:NSZeroPoint operation:NSCompositeSourceOver];
+    [self drawAtPoint:NSZeroPoint fromRect:rect operation:NSCompositeSourceOver fraction:1.0];
+    
 	[color set];
 	NSRectFillUsingOperation(NSMakeRect(0, 0, size.width, size.height), NSCompositeSourceAtop);
 	[image unlockFocus];
@@ -168,7 +172,7 @@
 			 fraction:1.0];
     
 	[image unlockFocus];
-
+    
 	return [image autorelease];
     
     
