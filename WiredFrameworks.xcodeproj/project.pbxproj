@@ -696,6 +696,14 @@
 		4C9B2A9917E797A6007B0962 /* CTBadge_5.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9B2A9517E797A6007B0962 /* CTBadge_5.pdf */; };
 		4C9B2A9D17E797FC007B0962 /* CTBadge.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9B2A9B17E797FB007B0962 /* CTBadge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C9B2A9E17E797FC007B0962 /* CTBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B2A9C17E797FC007B0962 /* CTBadge.m */; };
+		4CA9B2BB1807168A00FDDB3A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2BA1807168A00FDDB3A /* Security.framework */; };
+		4CA9B2D31807221200FDDB3A /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2D21807221200FDDB3A /* libcrypto.dylib */; };
+		4CA9B2D51807221600FDDB3A /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2D41807221600FDDB3A /* libssl.dylib */; };
+		4CA9B2D71807221C00FDDB3A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2D61807221C00FDDB3A /* libz.dylib */; };
+		4CA9B2D91807222500FDDB3A /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2D81807222500FDDB3A /* libicucore.dylib */; };
+		4CA9B2DB1807222B00FDDB3A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2DA1807222B00FDDB3A /* libsqlite3.dylib */; };
+		4CA9B2DD1807223A00FDDB3A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2DC1807223A00FDDB3A /* libxml2.dylib */; };
+		4CA9B2E01807228000FDDB3A /* wired.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBDAD14147AF94F00D0C51A /* wired.a */; };
 		4CAC224516ED515D00BDB650 /* WIView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CAC224316ED515D00BDB650 /* WIView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CAC224616ED515D00BDB650 /* WIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC224416ED515D00BDB650 /* WIView.m */; };
 		4CB43B8A158C7EA100C09100 /* WIChatPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB43B88158C7EA100C09100 /* WIChatPlugin.h */; };
@@ -718,20 +726,14 @@
 		4CDAB3401567D16A00291388 /* WebView-WIAppKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDAB33E1567D16A00291388 /* WebView-WIAppKit.m */; };
 		4CDAB3441568025200291388 /* WITemplateBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDAB3421568025100291388 /* WITemplateBundle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CDAB3451568025200291388 /* WITemplateBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDAB3431568025100291388 /* WITemplateBundle.m */; };
-		4CE151B317FDF587004DA093 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151B217FDF587004DA093 /* libssl.dylib */; };
-		4CE151B517FDF59A004DA093 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151B417FDF59A004DA093 /* libcrypto.dylib */; };
-		4CE151B717FDF5A0004DA093 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151B617FDF5A0004DA093 /* libxml2.dylib */; };
-		4CE151B917FDF5B3004DA093 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151B817FDF5B3004DA093 /* libicucore.dylib */; };
-		4CE151BB17FDF5BB004DA093 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151BA17FDF5BB004DA093 /* libsqlite3.dylib */; };
 		4CE151BC17FDF65B004DA093 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151B817FDF5B3004DA093 /* libicucore.dylib */; };
-		4CE151D517FDFA51004DA093 /* libcommonCrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151D417FDFA51004DA093 /* libcommonCrypto.dylib */; };
 		4CE151D917FDFAC8004DA093 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151D817FDFAC8004DA093 /* Cocoa.framework */; };
 		4CE151DA17FDFACD004DA093 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151D617FDFAA9004DA093 /* Foundation.framework */; };
 		4CE151DC17FDFB01004DA093 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151DB17FDFB01004DA093 /* libz.dylib */; };
-		4CE151E017FDFC3E004DA093 /* libc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151DF17FDFC3E004DA093 /* libc.dylib */; };
-		4CE151E117FDFC4A004DA093 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151DB17FDFB01004DA093 /* libz.dylib */; };
-		4CE151E517FDFD38004DA093 /* wired.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBDAD14147AF94F00D0C51A /* wired.a */; };
 		4CE151E617FDFD62004DA093 /* WiredFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C417209147DC2B300DC0A9A /* WiredFoundation.framework */; };
+		4CEFF6D8180C6CD300AD7AD9 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2D41807221600FDDB3A /* libssl.dylib */; };
+		4CEFF6D9180C6CD900AD7AD9 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2D21807221200FDDB3A /* libcrypto.dylib */; };
+		4CEFF6DA180C6CE500AD7AD9 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2DC1807223A00FDDB3A /* libxml2.dylib */; };
 		4CF094931559C81C005D77BB /* WITemplateBundleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF094911559C81C005D77BB /* WITemplateBundleManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CF094941559C81C005D77BB /* WITemplateBundleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF094921559C81C005D77BB /* WITemplateBundleManager.m */; };
 		4CF598FB16C832ED0042E2E1 /* UIView+CocoaPlant.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF598FA16C832ED0042E2E1 /* UIView+CocoaPlant.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -794,19 +796,19 @@
 			remoteGlobalIDString = 755CDE6016A0DC6B00CA98FE;
 			remoteInfo = ssl;
 		};
+		4CA9B2DE1807227C00FDDB3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CBDABF3147AF52E00D0C51A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CBDAD13147AF94F00D0C51A;
+			remoteInfo = "libwired-osx";
+		};
 		4CB964D815190B1E0020BE28 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4CBDABF3147AF52E00D0C51A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4CBDADA3147AFC4A00D0C51A;
 			remoteInfo = "libwired-simulator";
-		};
-		4CE151E317FDFD2F004DA093 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4CBDABF3147AF52E00D0C51A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4CBDAD13147AF94F00D0C51A;
-			remoteInfo = "libwired-osx";
 		};
 		4CFA5EEC154F5629000ECBDB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1260,6 +1262,14 @@
 		4C9B2A9517E797A6007B0962 /* CTBadge_5.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = CTBadge_5.pdf; sourceTree = "<group>"; };
 		4C9B2A9B17E797FB007B0962 /* CTBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBadge.h; sourceTree = "<group>"; };
 		4C9B2A9C17E797FC007B0962 /* CTBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBadge.m; sourceTree = "<group>"; };
+		4CA9B2BA1807168A00FDDB3A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		4CA9B2CF18071E4000FDDB3A /* libwired.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libwired.a; path = libwired/run/lib/libwired.a; sourceTree = "<group>"; };
+		4CA9B2D21807221200FDDB3A /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libcrypto.dylib; sourceTree = DEVELOPER_DIR; };
+		4CA9B2D41807221600FDDB3A /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libssl.dylib; sourceTree = DEVELOPER_DIR; };
+		4CA9B2D61807221C00FDDB3A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
+		4CA9B2D81807222500FDDB3A /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libicucore.dylib; sourceTree = DEVELOPER_DIR; };
+		4CA9B2DA1807222B00FDDB3A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
+		4CA9B2DC1807223A00FDDB3A /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libxml2.dylib; sourceTree = DEVELOPER_DIR; };
 		4CAC224316ED515D00BDB650 /* WIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIView.h; sourceTree = "<group>"; };
 		4CAC224416ED515D00BDB650 /* WIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIView.m; sourceTree = "<group>"; };
 		4CB43B88158C7EA100C09100 /* WIChatPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIChatPlugin.h; sourceTree = "<group>"; };
@@ -1330,8 +1340,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CE151E517FDFD38004DA093 /* wired.a in Frameworks */,
+				4CEFF6DA180C6CE500AD7AD9 /* libxml2.dylib in Frameworks */,
+				4CEFF6D9180C6CD900AD7AD9 /* libcrypto.dylib in Frameworks */,
+				4CEFF6D8180C6CD300AD7AD9 /* libssl.dylib in Frameworks */,
 				4CE151DC17FDFB01004DA093 /* libz.dylib in Frameworks */,
+				4CA9B2E01807228000FDDB3A /* wired.a in Frameworks */,
 				4CE151DA17FDFACD004DA093 /* Foundation.framework in Frameworks */,
 				4CE151D917FDFAC8004DA093 /* Cocoa.framework in Frameworks */,
 				4CE151E617FDFD62004DA093 /* WiredFoundation.framework in Frameworks */,
@@ -1394,14 +1407,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CE151E117FDFC4A004DA093 /* libz.dylib in Frameworks */,
-				4CE151E017FDFC3E004DA093 /* libc.dylib in Frameworks */,
-				4CE151D517FDFA51004DA093 /* libcommonCrypto.dylib in Frameworks */,
-				4CE151BB17FDF5BB004DA093 /* libsqlite3.dylib in Frameworks */,
-				4CE151B917FDF5B3004DA093 /* libicucore.dylib in Frameworks */,
-				4CE151B717FDF5A0004DA093 /* libxml2.dylib in Frameworks */,
-				4CE151B517FDF59A004DA093 /* libcrypto.dylib in Frameworks */,
-				4CE151B317FDF587004DA093 /* libssl.dylib in Frameworks */,
+				4CA9B2DD1807223A00FDDB3A /* libxml2.dylib in Frameworks */,
+				4CA9B2DB1807222B00FDDB3A /* libsqlite3.dylib in Frameworks */,
+				4CA9B2D91807222500FDDB3A /* libicucore.dylib in Frameworks */,
+				4CA9B2D71807221C00FDDB3A /* libz.dylib in Frameworks */,
+				4CA9B2D51807221600FDDB3A /* libssl.dylib in Frameworks */,
+				4CA9B2D31807221200FDDB3A /* libcrypto.dylib in Frameworks */,
+				4CA9B2BB1807168A00FDDB3A /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2047,6 +2059,14 @@
 		4CBDABFE147AF52E00D0C51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4CA9B2DC1807223A00FDDB3A /* libxml2.dylib */,
+				4CA9B2DA1807222B00FDDB3A /* libsqlite3.dylib */,
+				4CA9B2D81807222500FDDB3A /* libicucore.dylib */,
+				4CA9B2D61807221C00FDDB3A /* libz.dylib */,
+				4CA9B2D41807221600FDDB3A /* libssl.dylib */,
+				4CA9B2D21807221200FDDB3A /* libcrypto.dylib */,
+				4CA9B2CF18071E4000FDDB3A /* libwired.a */,
+				4CA9B2BA1807168A00FDDB3A /* Security.framework */,
 				4CE151DF17FDFC3E004DA093 /* libc.dylib */,
 				4CE151DD17FDFB96004DA093 /* Carbon.framework */,
 				4CE151DB17FDFB01004DA093 /* libz.dylib */,
@@ -2585,7 +2605,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				4CE151E417FDFD2F004DA093 /* PBXTargetDependency */,
+				4CA9B2DF1807227C00FDDB3A /* PBXTargetDependency */,
 				4C417284147DC46A00DC0A9A /* PBXTargetDependency */,
 			);
 			name = WiredNetworking;
@@ -3278,15 +3298,15 @@
 			name = ssl;
 			targetProxy = 4C773D4C16DD366400807EB7 /* PBXContainerItemProxy */;
 		};
+		4CA9B2DF1807227C00FDDB3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CBDAD13147AF94F00D0C51A /* libwired-osx */;
+			targetProxy = 4CA9B2DE1807227C00FDDB3A /* PBXContainerItemProxy */;
+		};
 		4CB964D915190B1E0020BE28 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4CBDADA3147AFC4A00D0C51A /* libwired-simulator */;
 			targetProxy = 4CB964D815190B1E0020BE28 /* PBXContainerItemProxy */;
-		};
-		4CE151E417FDFD2F004DA093 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4CBDAD13147AF94F00D0C51A /* libwired-osx */;
-			targetProxy = 4CE151E317FDFD2F004DA093 /* PBXContainerItemProxy */;
 		};
 		4CFA5EED154F5629000ECBDB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -3501,10 +3521,15 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(BUILT_PRODUCTS_DIR)\"",
 					"\"$(SRCROOT)/../\"",
+					"\"$(SRCROOT)/vendor/WiredFrameworks/libwired/run/include\"",
 				);
 				INFOPLIST_FILE = "WiredNetworking/WiredNetworking-Info.plist";
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/nark/Development/Me/Cocoa/Wired/wired2/WiredClient/vendor/WiredFrameworks/libwired/run/lib,
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -3540,6 +3565,10 @@
 				INFOPLIST_FILE = "WiredNetworking/WiredNetworking-Info.plist";
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/nark/Development/Me/Cocoa/Wired/wired2/WiredClient/vendor/WiredFrameworks/libwired/run/lib,
+				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -3738,7 +3767,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = iphoneos5.0;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 			};
 			name = Debug;
@@ -3757,7 +3786,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				SDKROOT = iphoneos5.0;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = NO;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -3839,13 +3868,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				MACH_O_TYPE = mh_dylib;
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-					"-licucore",
-					"-dynamic",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = wired;
 				PUBLIC_HEADERS_FOLDER_PATH = wired;
 				SDKROOT = macosx;
@@ -3871,13 +3894,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				MACH_O_TYPE = mh_dylib;
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-					"-licucore",
-					"-dynamic",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = wired;
 				PUBLIC_HEADERS_FOLDER_PATH = wired;
 				SDKROOT = macosx;

@@ -33,6 +33,6 @@ typedef void (^WIAlertSheetCompletionHandler)(NSAlert *alert, NSInteger returnCo
 
 - (void)runNonModal;
 - (void)beginSheetModalForWindow:(NSWindow *)window;
-- (void)beginSheetModalForWindow:(NSWindow *)window completionHandler:(WIAlertSheetCompletionHandler)completionHandler;
+//- (void)beginSheetModalForWindow:(NSWindow *)window completionHandler:(WIAlertSheetCompletionHandler)completionHandler;
 
 @end

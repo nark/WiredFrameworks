@@ -30,6 +30,8 @@
 
 @implementation NSApplication(WIAppKit)
 
+#pragma mark -
+
 - (NSString *)name {
 	return [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleExecutable"];
 }
@@ -46,6 +48,30 @@
 		return systemVersion;
 
 	return 0x1000;
+}
+
+
+
+
+#pragma mark -
+
+- (void)_blockSheetDidEnd:(NSWindow *)sheet
+               returnCode:(NSInteger)returnCode
+              contextInfo:(void *)contextInfo
+{
+    void (^block)(NSInteger) = (id)contextInfo;
+    block(returnCode);
+}
+
+- (void)beginSheet:(NSWindow *)sheet
+    modalForWindow:(NSWindow *)docWindow
+       didEndBlock:(void (^)(NSInteger returnCode))block
+{
+    [self beginSheet:sheet
+      modalForWindow:docWindow
+       modalDelegate:self
+      didEndSelector:@selector(_blockSheetDidEnd:returnCode:contextInfo:)
+         contextInfo:Block_copy((__bridge void *)block)];
 }
 
 @end

@@ -31,4 +31,7 @@
 - (NSString *)name;
 - (NSUInteger)systemVersion;
 
+- (void)beginSheet:(NSWindow *)sheet
+    modalForWindow:(NSWindow *)docWindow
+       didEndBlock:(void (^)(NSInteger returnCode))block;
 @end

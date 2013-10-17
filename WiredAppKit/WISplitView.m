@@ -144,7 +144,6 @@
 }
 
 - (NSColor *)dividerColor {
-	
 	if(![[self window] isKeyWindow])
 		return [NSColor colorWithCalibratedRed:0.6246 green:0.6247 blue:0.6245 alpha:1.0000];
 	
@@ -159,19 +158,19 @@
 
 #pragma mark -
 
-- (void)setAutosaveName:(NSString *)value {
-	[value retain];
-	[_autosaveName release];
-	_autosaveName = value;
-	
-	[self _loadSplitViewPosition];
-}
-
-
-
-- (NSString *)autosaveName {
-	return _autosaveName;
-}
+//- (void)setAutosaveName:(NSString *)value {
+//	[value retain];
+//	[_autosaveName release];
+//	_autosaveName = value;
+//	
+//	//[self _loadSplitViewPosition];
+//}
+//
+//
+//
+//- (NSString *)autosaveName {
+//	return _autosaveName;
+//}
 
 
 

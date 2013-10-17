@@ -32,8 +32,8 @@
     CGFloat             _dividerThickness;
 }
 
-- (void)setAutosaveName:(NSString *)value;
-- (NSString *)autosaveName;
+//- (void)setAutosaveName:(NSString *)value;
+//- (NSString *)autosaveName;
 
 - (void)setDividerThickness:(CGFloat)thickness;
 

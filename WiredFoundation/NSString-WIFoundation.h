@@ -101,6 +101,7 @@
 - (void)deleteCharactersToIndex:(NSUInteger)index;
 - (void)deleteCharactersFromIndex:(NSUInteger)index;
 
+- (void)replaceOccurrencesOfCharactersSet:(NSCharacterSet *)set withString:(NSString *)target;
 - (NSUInteger)replaceOccurrencesOfString:(NSString *)target withString:(NSString *)replacement;
 - (NSUInteger)replaceOccurrencesOfString:(NSString *)target withString:(NSString *)replacement options:(NSUInteger)options;
 

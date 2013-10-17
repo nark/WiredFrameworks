@@ -3,7 +3,7 @@
 //  WiredFrameworks
 //
 //  Created by Rafaël Warnault on 30/09/13.
-//  Copyright (c) 2013 OPALE. All rights reserved.
+//  Copyright (c) 2013 Read-Write.fr. All rights reserved.
 //
 
 #import "WIEmoticon.h"
@@ -57,7 +57,7 @@
 @synthesize enabled             = _enabled;
 @dynamic    image;
 @dynamic    equivalent;
-
+@dynamic    sortedEquivalents;
 
 
 #pragma mark -
@@ -83,6 +83,7 @@
 {
     [_path release];
     [_name release];
+    [_sortedEquivalents release];
     [_textEquivalents release];
     [_pack release];
     [_image release];
@@ -105,5 +106,20 @@
 - (NSString *)equivalent {
     return [_textEquivalents objectAtIndex:0];
 }
+
+
+- (NSArray *)sortedEquivalents {
+    NSArray *descriptors;
+    
+    if(!_sortedEquivalents) {
+        descriptors = [NSArray arrayWithObject:
+                       [NSSortDescriptor sortDescriptorWithKey:@"length"
+                                                     ascending:NO]];
+        
+        _sortedEquivalents = [[self.textEquivalents sortedArrayUsingDescriptors:descriptors] retain];
+    }
+    return _sortedEquivalents;
+}
+
 
 @end

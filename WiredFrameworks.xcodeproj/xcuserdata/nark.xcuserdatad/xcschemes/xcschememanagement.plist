@@ -7,17 +7,17 @@
 		<key>ChatHistory-default.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>21</integer>
 		</dict>
 		<key>WiredAppKit (Framework).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>5</integer>
 		</dict>
 		<key>WiredData (Static).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>15</integer>
 		</dict>
 		<key>WiredData.xcscheme</key>
 		<dict>
@@ -27,12 +27,12 @@
 		<key>WiredFoundation (Framework).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>WiredFoundation (Static).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>13</integer>
 		</dict>
 		<key>WiredNetworking (Framework).xcscheme</key>
 		<dict>
@@ -42,27 +42,27 @@
 		<key>WiredNetworking (Static).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>14</integer>
 		</dict>
 		<key>WiredUIKit (Static).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>16</integer>
 		</dict>
 		<key>libwired-ios.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>18</integer>
 		</dict>
 		<key>libwired-osx.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>19</integer>
 		</dict>
 		<key>libwired-simulator.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>20</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -158,6 +158,16 @@
 			<true/>
 		</dict>
 		<key>4CA54B79148790DC00FFF8CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4CA9B2C918071D5000FDDB3A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4CA9B2E81807281900FDDB3A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

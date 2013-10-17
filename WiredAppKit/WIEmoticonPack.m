@@ -3,7 +3,7 @@
 //  WiredFrameworks
 //
 //  Created by Rafaël Warnault on 30/09/13.
-//  Copyright (c) 2013 OPALE. All rights reserved.
+//  Copyright (c) 2013 Read-Write.fr. All rights reserved.
 //
 
 #import "WIEmoticonPack.h"

@@ -58,6 +58,7 @@
 - (void)addObject:(id)object toArrayForKey:(id)arrayKey;
 - (void)replaceObjectAtIndex:(NSUInteger)index withObject:(id)object inArrayForKey:(id)arrayKey;
 - (void)removeObjectAtIndex:(NSUInteger)index fromArrayForKey:(id)arrayKey;
+- (void)removeObject:(id)object fromArrayForKey:(id)arrayKey;
 
 - (void)setObject:(id)object forKey:(id)key inDictionaryForKey:(id)dictionaryKey;
 - (void)removeObjectForKey:(id)key inDictionaryForKey:(id)dictionaryKey;

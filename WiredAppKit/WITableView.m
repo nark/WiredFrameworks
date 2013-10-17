@@ -122,6 +122,17 @@
 }
 
 
+- (void)reloadData {
+    if([NSThread isMainThread])
+        [super reloadData];
+    else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [super reloadData];
+        });
+    }
+}
+
+
 
 #pragma mark -
 

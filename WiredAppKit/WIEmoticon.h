@@ -3,7 +3,7 @@
 //  WiredFrameworks
 //
 //  Created by Rafaël Warnault on 30/09/13.
-//  Copyright (c) 2013 OPALE. All rights reserved.
+//  Copyright (c) 2013 Read-Write.fr. All rights reserved.
 //
 
 #import <WiredFoundation/WiredFoundation.h>
@@ -15,6 +15,7 @@
     NSString                        *_path;
     NSString                        *_name;
     NSArray                         *_textEquivalents;
+    NSArray                         *_sortedEquivalents;
     NSImage                         *_image;
     
     WIEmoticonPack                  *_pack;
@@ -27,6 +28,7 @@
 @property (readwrite, retain)   NSString            *name;
 @property (readonly)            NSString            *equivalent;
 @property (readwrite, retain)   NSArray             *textEquivalents;
+@property (readonly)            NSArray             *sortedEquivalents;
 
 @property (readwrite, retain)   WIEmoticonPack      *pack;
 @property (readwrite, retain)   NSImage             *image;

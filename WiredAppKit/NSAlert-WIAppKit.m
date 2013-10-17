@@ -144,6 +144,6 @@ void OABeginAlertSheet(NSString *title, NSString *defaultButton, NSString *alter
     if (otherButton)
         [alert addButtonWithTitle:otherButton];
     
-    [alert beginSheetModalForWindow:docWindow completionHandler:completionHandler];
+    //[alert beginSheetModalForWindow:docWindow completionHandler:completionHandler];
     [alert release]; // retained by the runner while the sheet is up
 }

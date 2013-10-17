@@ -258,6 +258,18 @@
 }
 
 
+- (void)removeObject:(id)object fromArrayForKey:(id)arrayKey {
+	NSMutableArray		*array;
+    NSInteger           index;
+    
+    index = [[self objectForKey:arrayKey] indexOfObject:object];
+    array = [[[self objectForKey:arrayKey] mutableCopy] autorelease];
+    
+	[array removeObjectAtIndex:index];
+	[self setObject:array forKey:arrayKey];
+}
+
+
 
 #pragma mark -
 
