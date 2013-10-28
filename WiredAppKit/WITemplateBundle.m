@@ -241,7 +241,7 @@ NSString * const WITemplateAttributesURLTextColor		= @"<? urltextcolor ?>";
 	switch (type) {
 		case WITemplateTypeChat:		result = @"chat";		break;
 		case WITemplateTypeMessages:	result = @"messages";	break;
-		case WITemplateTypeBoards:		result = @"Boards";		break;
+		case WITemplateTypeBoards:		result = @"boards";		break;
 	}
 	return result;
 }

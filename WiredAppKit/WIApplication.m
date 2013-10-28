@@ -52,7 +52,7 @@ NSString * const WIApplicationDidChangeFlagsNotification	= @"WIApplicationDidCha
 		[[[[[NSApp keyWindow] contentView] subviews] objectAtIndex:2] setStringValue:
 			[self _terminationDelayStringValue]];
 	} else {
-		[NSApp abortModal];
+		[NSApp stopModalWithCode:NSAlertDefaultReturn];
 		[timer invalidate];
 	}
 }
@@ -175,7 +175,7 @@ NSString * const WIApplicationDidChangeFlagsNotification	= @"WIApplicationDidCha
 
 
 - (NSApplicationTerminateReply)runTerminationDelayPanelWithTimeInterval:(NSTimeInterval)delay message:(NSString *)message {
-	NSPanel		*panel;
+	NSAlert		*alert;
 	NSTimer		*timer;
 	NSInteger	result;
 	
@@ -187,20 +187,20 @@ NSString * const WIApplicationDidChangeFlagsNotification	= @"WIApplicationDidCha
 								  selector:@selector(_terminationDelayTimer:)
 								  userInfo:NULL
 								   repeats:YES];
+    
 	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSModalPanelRunLoopMode];
-
-	panel = NSGetAlertPanel(WILS(@"Are you sure you want to quit?", @"WIApplication: termination delay panel"),
-							[self _terminationDelayStringValue],
-							WILS(@"Quit", @"WIApplication: termination delay panel"),
-							WILS(@"Cancel", @"WIApplication: termination delay panel"),
-							NULL);
-	result = [self runModalForWindow:panel];
-	NSReleaseAlertPanel(panel);
-	
+    
+    alert = [NSAlert alertWithMessageText:WILS(@"Are you sure you want to quit?", @"WIApplication: termination delay panel")
+                            defaultButton:WILS(@"Quit", @"WIApplication: termination delay panel")
+                          alternateButton:WILS(@"Cancel", @"WIApplication: termination delay panel")
+                              otherButton:nil
+                informativeTextWithFormat:@"%@", [self _terminationDelayStringValue]];
+    
+	result = [alert runModal];
+    
 	[_terminationMessage release];
-	
 	[timer invalidate];
-	
+    	
 	if(result == NSAlertDefaultReturn)
 		return NSTerminateNow;
 	

@@ -8,7 +8,9 @@
 
 #import <WiredFoundation/WiredFoundation.h>
 
-@interface WIEmoticonPack : WIObject <NSCopying> {
+#define	WIEmoticonPackPBoardType         @"fr.read-write.WiredAppKit.WIEmoticonPack"
+
+@interface WIEmoticonPack : WIObject <NSCopying, NSPasteboardWriting, NSPasteboardReading> {
     NSBundle			*_bundle;
     NSString			*_path;
     NSString			*_name;

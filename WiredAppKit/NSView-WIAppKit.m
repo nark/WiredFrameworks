@@ -30,6 +30,12 @@
 
 @implementation NSView(WIAppKit)
 
+- (void)removeAllSubviews {
+    while ([[self subviews] count] > 0)
+        [[[self subviews] lastObject] removeFromSuperview];
+}
+
+
 - (NSArray *)subviewsWithTag:(NSInteger)tag {
 	NSEnumerator	*enumerator;
 	NSMutableArray	*array;

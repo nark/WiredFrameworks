@@ -28,6 +28,7 @@
 
 @interface NSView(WIAppKit)
 
+- (void)removeAllSubviews;
 - (NSArray *)subviewsWithTag:(NSInteger)tag;
 
 @end

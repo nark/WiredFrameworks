@@ -125,7 +125,6 @@
 }
 
 
-
 #pragma mark -
 
 - (void)dealloc
@@ -230,5 +229,69 @@
     return [NSSWF:@"Pack:%@", self.name];
 }
 
+
+
+#pragma mark -
+#pragma mark NSPasteboardWriting support
+
+- (NSArray *)writableTypesForPasteboard:(NSPasteboard *)pasteboard {
+    return [NSArray arrayWithObjects:(id)WIEmoticonPackPBoardType, nil];
+}
+
+- (id)pasteboardPropertyListForType:(NSString *)type {
+    return [self.packKey pasteboardPropertyListForType:type];
+}
+
+- (NSPasteboardWritingOptions)writingOptionsForType:(NSString *)type pasteboard:(NSPasteboard *)pasteboard {
+    if ([self.packKey respondsToSelector:@selector(writingOptionsForType:pasteboard:)]) {
+        return [self.packKey writingOptionsForType:type pasteboard:pasteboard];
+    } else {
+        return 0;
+    }
+}
+
+
+
+#pragma mark -
+#pragma mark  NSPasteboardReading support
+
++ (NSArray *)readableTypesForPasteboard:(NSPasteboard *)pasteboard {
+    // We allow creation from folder and image URLs only, but there is no way to specify just file URLs that contain images
+    return [NSArray arrayWithObjects:(id)WIEmoticonPackPBoardType, nil];
+}
+
++ (NSPasteboardReadingOptions)readingOptionsForType:(NSString *)type pasteboard:(NSPasteboard *)pasteboard {
+    return NSPasteboardReadingAsString;
+}
+
+- (id)initWithPasteboardPropertyList:(id)propertyList ofType:(NSString *)type {
+    // We recreate the appropriate object
+    [self release];
+    self = nil;
+//    // We only have URLs accepted. Create the URL
+//    NSURL *url = [[[NSURL alloc] initWithPasteboardPropertyList:propertyList ofType:type] autorelease];
+//    // Now see what the data type is; if it isn't an image, we return nil
+//    NSString *urlUTI;
+//    if ([url getResourceValue:&urlUTI forKey:NSURLTypeIdentifierKey error:NULL]) {
+//        // We could use UTTypeConformsTo((CFStringRef)type, kUTTypeImage), but we want to make sure it is an image UTI type that NSImage can handle
+//        if ([[NSImage imageTypes] containsObject:urlUTI]) {
+//            // We can use it with NSImage
+//            self = [[ATDesktopImageEntity alloc] initWithFileURL:url];
+//        } else if ([urlUTI isEqualToString:(id)kUTTypeFolder]) {
+//            // It is a folder
+//            self = [[ATDesktopFolderEntity alloc] initWithFileURL:url];
+//        }
+//    }
+    // We may return nil
+    return self;
+}
+
+
+
+#pragma mark -
+
+- (NSString *)description {
+    return self.packKey;
+}
 
 @end

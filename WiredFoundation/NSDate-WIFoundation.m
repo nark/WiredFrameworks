@@ -146,6 +146,7 @@
 - (NSString *)JSDate {
     NSDateFormatter     *dateFormatter;
     NSCalendar          *calendar;
+    NSString            *result;
     
     dateFormatter   = [[[NSDateFormatter alloc] init] autorelease];
     calendar        = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
@@ -154,7 +155,9 @@
     [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
     [dateFormatter setCalendar:calendar];
     
-    return [dateFormatter stringFromDate:self];
+    result = [dateFormatter stringFromDate:self];
+    
+    return (result ? result : @"");
 }
 
 @end
