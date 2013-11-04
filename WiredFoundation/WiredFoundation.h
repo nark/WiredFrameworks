@@ -28,10 +28,10 @@
 
 #import <WiredFoundation/WIObject.h>
 
-//#if TARGET_OS_MAC
+#if TARGET_OS_MAC
     #import <WiredFoundation/RegexKitLite.h>
     #import <WiredFoundation/RegexKitLite-WIFoundation.h>
-//#endif
+#endif
 
 #import <WiredFoundation/WIDateFormatter.h>
 #import <WiredFoundation/WIEventQueue.h>

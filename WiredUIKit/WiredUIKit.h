@@ -13,6 +13,6 @@
 #import <WiredUIKit/UIColor+WiredUIKit.h>
 #import <WiredUIKit/UIImage+Size.h>
 #import <WiredUIKit/UIView+CocoaPlant.h>
-#import <WiredUIKit/NSDataAdditions.h>
-#import <WiredUIKit/NSStringAdditions.h>
 #import <WiredUIKit/NSManagedObjectContext+Fetch.h>
+#import <WiredUIKit/NSString+WiredKitAdditions.h>
+#import <WiredUIKit/NSData+WiredKitAdditions.h>

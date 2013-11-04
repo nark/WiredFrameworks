@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4C04AABB181EA9B800D00B75"
-               BuildableName = "libStaticWiredData.a"
-               BlueprintName = "StaticWiredData"
+               BlueprintIdentifier = "4CFCEBD9181EA57400D5FF71"
+               BuildableName = "libStaticWiredKit.a"
+               BlueprintName = "StaticWiredKit"
                ReferencedContainer = "container:WiredFrameworks.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4C04AAC8181EA9B800D00B75"
-               BuildableName = "WiredDataTests.xctest"
-               BlueprintName = "WiredDataTests"
+               BlueprintIdentifier = "4CFCEBE6181EA57500D5FF71"
+               BuildableName = "WiredKitTests.xctest"
+               BlueprintName = "WiredKitTests"
                ReferencedContainer = "container:WiredFrameworks.xcodeproj">
             </BuildableReference>
          </TestableReference>
