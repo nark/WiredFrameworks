@@ -123,8 +123,8 @@
 	[[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationNone];
 	[[NSGraphicsContext currentContext] setShouldAntialias:NO];
 
-	//[self compositeToPoint:NSZeroPoint operation:NSCompositeSourceOver];
-    [self drawAtPoint:NSZeroPoint fromRect:rect operation:NSCompositeSourceOver fraction:1.0];
+	[self compositeToPoint:NSZeroPoint operation:NSCompositeSourceOver];
+    //[self drawAtPoint:NSZeroPoint fromRect:rect operation:NSCompositeSourceOver fraction:1.0];
     
 	[color set];
 	NSRectFillUsingOperation(NSMakeRect(0, 0, size.width, size.height), NSCompositeSourceAtop);

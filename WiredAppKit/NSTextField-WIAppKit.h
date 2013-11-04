@@ -29,6 +29,7 @@
 @interface NSTextField(WIAppKit)
 
 - (void)sizeToFitFromContent;
+- (void)adjustHeightForTopView:(NSView *)topView bottomView:(NSView *)bottomView;
 
 - (void)setPlaceholderString:(NSString *)string;
 - (NSString *)placeholderString;

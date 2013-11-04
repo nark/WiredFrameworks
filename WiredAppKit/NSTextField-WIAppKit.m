@@ -28,6 +28,8 @@
 
 #import <WiredAppKit/NSTextField-WIAppKit.h>
 
+#define WI_APPKIT_MESSAGE_VIEW_DEFAULT_HEIGHT 32
+
 @implementation NSTextField(WIAppKit)
 
 - (void)sizeToFitFromContent {
@@ -38,6 +40,50 @@
 	size = [[self cell] cellSizeForBounds:NSMakeRect(0, 0, frame.size.width, 10000.0)];
 	
 	[self setFrameSize:size];
+}
+
+
+- (void)adjustHeightForTopView:(NSView *)topView bottomView:(NSView *)bottomView {
+    NSText              *fieldEditor;
+    NSTextView          *textView;
+    NSRect              usedRect;
+    NSInteger           height, offset;
+    
+    fieldEditor = [[self window] fieldEditor:NO forObject:self];
+    
+    if([fieldEditor isKindOfClass:[NSTextView class]]) {
+        textView      = (NSTextView *)fieldEditor;
+        usedRect      = [textView.textContainer.layoutManager usedRectForTextContainer:textView.textContainer];
+        height        = usedRect.size.height;
+        offset        = usedRect.size.height - self.frame.size.height;
+        
+        if(usedRect.size.height > self.frame.size.height) {
+            [bottomView setFrame:NSMakeRect(bottomView.frame.origin.x,
+                                            bottomView.frame.origin.y,
+                                            bottomView.frame.size.width,
+                                            bottomView.frame.size.height + height)];
+            
+            [topView setFrame:NSMakeRect(topView.frame.origin.x,
+                                         topView.frame.origin.y + height,
+                                         topView.frame.size.width,
+                                         topView.frame.size.height - height)];
+            
+        } else {
+            if([[self stringValue] length] == 0) {
+                height = bottomView.frame.size.height - WI_APPKIT_MESSAGE_VIEW_DEFAULT_HEIGHT;
+                
+                [bottomView setFrame:NSMakeRect(bottomView.frame.origin.x,
+                                                bottomView.frame.origin.y,
+                                                bottomView.frame.size.width,
+                                                WI_APPKIT_MESSAGE_VIEW_DEFAULT_HEIGHT)];
+                
+                [topView setFrame:NSMakeRect(topView.frame.origin.x,
+                                             topView.frame.origin.y - height,
+                                             topView.frame.size.width,
+                                             topView.frame.size.height + height)];
+            }
+        }
+    }
 }
 
 
