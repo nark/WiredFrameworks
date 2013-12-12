@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4C04AABB181EA9B800D00B75"
-               BuildableName = "libStaticWiredData.a"
+               BuildableName = "WiredData.a"
                BlueprintName = "StaticWiredData"
                ReferencedContainer = "container:WiredFrameworks.xcodeproj">
             </BuildableReference>

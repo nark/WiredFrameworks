@@ -80,6 +80,9 @@ typedef enum _WISocketEvent			WISocketEvent;
 
 	CFSocketRef						_socketRef;
 	CFRunLoopSourceRef				_sourceRef;
+    
+    CFReadStreamRef                 _readStream;
+    CFWriteStreamRef                _writeStream;
 }
 
 + (WISocket *)socketWithAddress:(WIAddress *)address type:(WISocketType)type;

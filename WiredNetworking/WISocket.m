@@ -672,7 +672,12 @@ end:
 											  type,
 											  _WISocketCallback,
 											  &context);
-		
+        
+        // Add support for iOS kCFStreamNetworkServiceTypeVoIP property
+        CFStreamCreatePairWithSocket(kCFAllocatorDefault, wi_socket_descriptor(_socket), &_readStream, &_writeStream);
+        CFReadStreamSetProperty(_readStream, kCFStreamNetworkServiceType, kCFStreamNetworkServiceTypeVoIP);
+        CFWriteStreamSetProperty(_writeStream, kCFStreamNetworkServiceType, kCFStreamNetworkServiceTypeVoIP);
+        
 		_sourceRef = CFSocketCreateRunLoopSource(NULL, _socketRef, 0);
 	}
 
@@ -695,6 +700,18 @@ end:
 			CFRelease(_socketRef);
 			_socketRef = NULL;
 		}
+        
+        if(_readStream) {
+            CFReadStreamClose(_readStream);
+            CFRelease(_readStream);
+            _readStream = NULL;
+        }
+        
+        if(_writeStream) {
+            CFWriteStreamClose(_writeStream);
+            CFRelease(_writeStream);
+            _writeStream = NULL;
+        }
 	}
 }
 
