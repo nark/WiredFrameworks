@@ -10,10 +10,10 @@
 #endif
 
 /* Define to 1 if you have the <CommonCrypto/CommonCryptor.h> header file. */
-#define HAVE_COMMONCRYPTO_COMMONCRYPTOR_H 0
+//#define HAVE_COMMONCRYPTO_COMMONCRYPTOR_H 0
 
 /* Define to 1 if you have the <CommonCrypto/CommonDigest.h> header file. */
-#define HAVE_COMMONCRYPTO_COMMONDIGEST_H 0
+//#define HAVE_COMMONCRYPTO_COMMONDIGEST_H 0
 
 /* Define to 1 if you have the <CoreServices/CoreServices.h> header file. */
 #define HAVE_CORESERVICES_CORESERVICES_H 1

@@ -129,25 +129,30 @@
 #pragma mark - 
 
 - (NSUInteger)_TLSOptions {
-    NSUInteger options = WIP7ChecksumSHA1;
-    NSInteger ciperTag = -1;
+    NSUInteger options = 0;
+    NSInteger cipherTag = -1;
     
 	if(_delegateLinkCipher)
-        ciperTag = [_delegate linkCipher:self];
+        cipherTag = [_delegate linkCipher:self];
     
 	if(_delegateLinkCompressionEnabled)
 		if([_delegate linkCompressionEnabled:self])
 			options = options | WIP7CompressionDeflate;
     
-    if(ciperTag != -1) {
-        switch (ciperTag) {
+    if(cipherTag != -1) {
+        switch (cipherTag) {
             case 0: options = options | WIP7EncryptionRSA_AES128_SHA1; break;
-            case 1: options = options | WIP7EncryptionRSA_AES192_SHA1; break;
+            case 1: options = options | WIP7EncryptionRSA_AES192_SHA1;  break;
             case 2: options = options | WIP7EncryptionRSA_AES256_SHA1; break;
             case 3: options = options | WIP7EncryptionRSA_BF128_SHA1; break;
             case 4: options = options | WIP7EncryptionRSA_3DES192_SHA1; break;
+            case 5: options = options | WIP7EncryptionRSA_AES256_SHA256; break;
         }
+    } else {
+       options = options | WIP7EncryptionRSA_AES256_SHA1;
     }
+    
+    options = options | WIP7ChecksumSHA1;
     
     return options;
 }

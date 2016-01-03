@@ -751,12 +751,6 @@
 		4C9B2A9D17E797FC007B0962 /* CTBadge.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C9B2A9B17E797FB007B0962 /* CTBadge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C9B2A9E17E797FC007B0962 /* CTBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B2A9C17E797FC007B0962 /* CTBadge.m */; };
 		4CA9B2BB1807168A00FDDB3A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2BA1807168A00FDDB3A /* Security.framework */; };
-		4CA9B2D31807221200FDDB3A /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2D21807221200FDDB3A /* libcrypto.dylib */; };
-		4CA9B2D51807221600FDDB3A /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2D41807221600FDDB3A /* libssl.dylib */; };
-		4CA9B2D71807221C00FDDB3A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2D61807221C00FDDB3A /* libz.dylib */; };
-		4CA9B2D91807222500FDDB3A /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2D81807222500FDDB3A /* libicucore.dylib */; };
-		4CA9B2DB1807222B00FDDB3A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2DA1807222B00FDDB3A /* libsqlite3.dylib */; };
-		4CA9B2DD1807223A00FDDB3A /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2DC1807223A00FDDB3A /* libxml2.dylib */; };
 		4CA9B2E01807228000FDDB3A /* wired.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBDAD14147AF94F00D0C51A /* wired.a */; };
 		4CAC224516ED515D00BDB650 /* WIView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CAC224316ED515D00BDB650 /* WIView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CAC224616ED515D00BDB650 /* WIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC224416ED515D00BDB650 /* WIView.m */; };
@@ -1008,16 +1002,13 @@
 		4C14AC9C181F03C000A4435D /* NSData+WiredKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+WiredKitAdditions.m"; sourceTree = "<group>"; };
 		4C14AC9D181F03C000A4435D /* NSString+WiredKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+WiredKitAdditions.h"; sourceTree = "<group>"; };
 		4C14AC9E181F03C000A4435D /* NSString+WiredKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WiredKitAdditions.m"; sourceTree = "<group>"; };
+		4C155CCA1C3491FB00C16971 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		4C297AE51778840E002ED699 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C297AE817788427002ED699 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297AEA1778843D002ED699 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297AEC17788487002ED699 /* ja */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C297AED1778848F002ED699 /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C297AEF177884FF002ED699 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C297AF117788505002ED699 /* de */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C297AF31778850C002ED699 /* fr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297AF417788511002ED699 /* it */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297AF51778851D002ED699 /* ja */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4C297AF6177885C5002ED699 /* de */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = de; path = de.lproj/CrashReports.xib; sourceTree = "<group>"; };
 		4C297AF7177885C5002ED699 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4C297AF9177885C5002ED699 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -1031,18 +1022,6 @@
 		4C297B02177885E8002ED699 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ReleaseNotes.xib; sourceTree = "<group>"; };
 		4C297B03177885E8002ED699 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/TreeDetail.xib; sourceTree = "<group>"; };
 		4C297B04177885E8002ED699 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/ViewOptions.xib; sourceTree = "<group>"; };
-		4C297B05177885EE002ED699 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/CrashReports.xib; sourceTree = "<group>"; };
-		4C297B06177885EE002ED699 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4C297B07177885EE002ED699 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297B08177885EE002ED699 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/ReleaseNotes.xib; sourceTree = "<group>"; };
-		4C297B09177885EE002ED699 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/TreeDetail.xib; sourceTree = "<group>"; };
-		4C297B0A177885EE002ED699 /* it */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = it; path = it.lproj/ViewOptions.xib; sourceTree = "<group>"; };
-		4C297B1117788611002ED699 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/CrashReports.xib; sourceTree = "<group>"; };
-		4C297B1217788611002ED699 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4C297B1317788611002ED699 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		4C297B1417788611002ED699 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/ReleaseNotes.xib; sourceTree = "<group>"; };
-		4C297B1517788611002ED699 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/TreeDetail.xib; sourceTree = "<group>"; };
-		4C297B1617788611002ED699 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ja; path = ja.lproj/ViewOptions.xib; sourceTree = "<group>"; };
 		4C2BDA3617F8F5FB0069B38E /* WIEmoticon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIEmoticon.h; sourceTree = "<group>"; };
 		4C2BDA3717F8F5FC0069B38E /* WIEmoticon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIEmoticon.m; sourceTree = "<group>"; };
 		4C2BDA3B17F8F6510069B38E /* WIEmoticonPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIEmoticonPack.h; sourceTree = "<group>"; };
@@ -1597,12 +1576,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CA9B2DD1807223A00FDDB3A /* libxml2.dylib in Frameworks */,
-				4CA9B2DB1807222B00FDDB3A /* libsqlite3.dylib in Frameworks */,
-				4CA9B2D91807222500FDDB3A /* libicucore.dylib in Frameworks */,
-				4CA9B2D71807221C00FDDB3A /* libz.dylib in Frameworks */,
-				4CA9B2D51807221600FDDB3A /* libssl.dylib in Frameworks */,
-				4CA9B2D31807221200FDDB3A /* libcrypto.dylib in Frameworks */,
 				4CA9B2BB1807168A00FDDB3A /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2371,6 +2344,7 @@
 		4CBDABFE147AF52E00D0C51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C155CCA1C3491FB00C16971 /* libxml2.tbd */,
 				4C14AC91181EE50D00A4435D /* UIKit.framework */,
 				4C14AC71181EDED900A4435D /* Security.framework */,
 				4C14AC01181EAB5100A4435D /* CoreData.framework */,
@@ -3894,8 +3868,6 @@
 			children = (
 				4C297AE51778840E002ED699 /* en */,
 				4C297AE817788427002ED699 /* fr */,
-				4C297AEA1778843D002ED699 /* it */,
-				4C297AEC17788487002ED699 /* ja */,
 				4C297AED1778848F002ED699 /* de */,
 				4CE1526C180051EC004DA093 /* nl */,
 			);
@@ -3908,8 +3880,6 @@
 				4C297AEF177884FF002ED699 /* en */,
 				4C297AF117788505002ED699 /* de */,
 				4C297AF31778850C002ED699 /* fr */,
-				4C297AF417788511002ED699 /* it */,
-				4C297AF51778851D002ED699 /* ja */,
 				4CE1526D180051EC004DA093 /* nl */,
 			);
 			name = Localizable.strings;
@@ -3921,8 +3891,6 @@
 				4C297AF9177885C5002ED699 /* de */,
 				4C297AFE177885DE002ED699 /* en */,
 				4C297B01177885E8002ED699 /* fr */,
-				4C297B07177885EE002ED699 /* it */,
-				4C297B1317788611002ED699 /* ja */,
 				4CE1526E180051EC004DA093 /* nl */,
 			);
 			name = Localizable.strings;
@@ -3934,8 +3902,6 @@
 				4C417308147EDF1000DC0A9A /* en */,
 				4C297AF7177885C5002ED699 /* de */,
 				4C297B00177885E8002ED699 /* fr */,
-				4C297B06177885EE002ED699 /* it */,
-				4C297B1217788611002ED699 /* ja */,
 				4CE15273180051EC004DA093 /* nl */,
 			);
 			name = InfoPlist.strings;
@@ -3947,8 +3913,6 @@
 				4C417406147EE07000DC0A9A /* en */,
 				4C297AF6177885C5002ED699 /* de */,
 				4C297AFF177885E8002ED699 /* fr */,
-				4C297B05177885EE002ED699 /* it */,
-				4C297B1117788611002ED699 /* ja */,
 				4CE1526F180051EC004DA093 /* nl */,
 			);
 			name = CrashReports.xib;
@@ -3960,8 +3924,6 @@
 				4C417408147EE07000DC0A9A /* en */,
 				4C297AFA177885C5002ED699 /* de */,
 				4C297B02177885E8002ED699 /* fr */,
-				4C297B08177885EE002ED699 /* it */,
-				4C297B1417788611002ED699 /* ja */,
 				4CE15270180051EC004DA093 /* nl */,
 			);
 			name = ReleaseNotes.xib;
@@ -3973,8 +3935,6 @@
 				4C41740A147EE07000DC0A9A /* en */,
 				4C297AFB177885C5002ED699 /* de */,
 				4C297B03177885E8002ED699 /* fr */,
-				4C297B09177885EE002ED699 /* it */,
-				4C297B1517788611002ED699 /* ja */,
 				4CE15271180051EC004DA093 /* nl */,
 			);
 			name = TreeDetail.xib;
@@ -3986,8 +3946,6 @@
 				4C41740C147EE07000DC0A9A /* en */,
 				4C297AFC177885C5002ED699 /* de */,
 				4C297B04177885E8002ED699 /* fr */,
-				4C297B0A177885EE002ED699 /* it */,
-				4C297B1617788611002ED699 /* ja */,
 				4CE15272180051EC004DA093 /* nl */,
 			);
 			name = ViewOptions.xib;
@@ -4606,12 +4564,20 @@
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"\"$(SRCROOT)\"",
+					/usr/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+					"-lxml2",
+					"-lsqlite3",
+					"-lz",
+					"-licucore",
+				);
 				PRODUCT_NAME = wired;
 				PUBLIC_HEADERS_FOLDER_PATH = wired;
 				SDKROOT = macosx;
@@ -4632,12 +4598,20 @@
 				HEADER_SEARCH_PATHS = (
 					/usr/include/libxml2,
 					"\"$(SRCROOT)\"",
+					/usr/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"-lssl",
+					"-lcrypto",
+					"-lxml2",
+					"-lsqlite3",
+					"-lz",
+					"-licucore",
+				);
 				PRODUCT_NAME = wired;
 				PUBLIC_HEADERS_FOLDER_PATH = wired;
 				SDKROOT = macosx;
