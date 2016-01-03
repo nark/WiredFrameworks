@@ -702,7 +702,7 @@ NSString * const WIFileModificationDate					= @"WIFileModificationDate";
 			
 			partialPath = [partialPath stringByAppendingPathComponent:component];
 		} else {
-			[tableView deselectAll:self];
+			//[tableView deselectAll:self];
 		}
 			
 	}
@@ -829,9 +829,9 @@ NSString * const WIFileModificationDate					= @"WIFileModificationDate";
 							
 							[[self window] makeFirstResponder:tableView];
 							
-							[[self _tableViewsAheadOfTableView:tableView]
-								makeObjectsPerformSelector:@selector(deselectAll:)
-												withObject:self];
+//							[[self _tableViewsAheadOfTableView:tableView]
+//								makeObjectsPerformSelector:@selector(deselectAll:)
+//												withObject:self];
 
 							handled = YES;
 						}
@@ -885,9 +885,9 @@ NSString * const WIFileModificationDate					= @"WIFileModificationDate";
 
 - (void)tableViewSingleClick:(id)sender {
 	if([sender isKindOfClass:[NSTableView class]]) {
-		[[self _tableViewsAheadOfTableView:sender]
-			makeObjectsPerformSelector:@selector(deselectAll:)
-							withObject:self];
+//		[[self _tableViewsAheadOfTableView:sender]
+//			makeObjectsPerformSelector:@selector(deselectAll:)
+//							withObject:self];
 	}
 	
 	if([self action])
@@ -991,9 +991,9 @@ NSString * const WIFileModificationDate					= @"WIFileModificationDate";
 			[self _addTableView];
 	}
 	
-	[[self _tableViewsAheadOfTableView:tableView]
-		makeObjectsPerformSelector:@selector(deselectAll:)
-						withObject:self];
+//	[[self _tableViewsAheadOfTableView:tableView]
+//		makeObjectsPerformSelector:@selector(deselectAll:)
+//						withObject:self];
 	
 	[self _setPath:path];
 	[self _sizeToFit];

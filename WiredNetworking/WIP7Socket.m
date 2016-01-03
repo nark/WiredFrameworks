@@ -301,7 +301,7 @@ static void _WIP7SocketWroteMessage(wi_p7_socket_t *p7Socket, wi_p7_message_t *p
 - (BOOL)writeMessage:(WIP7Message *)message timeout:(NSTimeInterval)timeout error:(WIError **)error {
 	wi_pool_t			*pool;
 	wi_boolean_t		result;
-	
+    
 	pool = wi_pool_init(wi_pool_alloc());
 	result = wi_p7_socket_write_message(_p7Socket, timeout, [message message]);
 	wi_release(pool);
