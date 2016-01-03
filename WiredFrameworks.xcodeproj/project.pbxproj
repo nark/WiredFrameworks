@@ -711,10 +711,6 @@
 		4CDAB3401567D16A00291388 /* WebView-WIAppKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDAB33E1567D16A00291388 /* WebView-WIAppKit.m */; };
 		4CDAB3441568025200291388 /* WITemplateBundle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDAB3421568025100291388 /* WITemplateBundle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CDAB3451568025200291388 /* WITemplateBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDAB3431568025100291388 /* WITemplateBundle.m */; };
-		4CEB6AE615DC034000D284BF /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEB6AE515DC034000D284BF /* libssl.dylib */; };
-		4CEB6AE815DC034500D284BF /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEB6AE715DC034500D284BF /* libcrypto.dylib */; };
-		4CEB6AEA15DC034900D284BF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEB6AE915DC034900D284BF /* libxml2.dylib */; };
-		4CEB6AEC15DC034F00D284BF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CEB6AEB15DC034F00D284BF /* libsqlite3.dylib */; };
 		4CF094931559C81C005D77BB /* WITemplateBundleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF094911559C81C005D77BB /* WITemplateBundleManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CF094941559C81C005D77BB /* WITemplateBundleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF094921559C81C005D77BB /* WITemplateBundleManager.m */; };
 		4CF598FB16C832ED0042E2E1 /* UIView+CocoaPlant.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF598FA16C832ED0042E2E1 /* UIView+CocoaPlant.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1323,10 +1319,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CEB6AEC15DC034F00D284BF /* libsqlite3.dylib in Frameworks */,
-				4CEB6AEA15DC034900D284BF /* libxml2.dylib in Frameworks */,
-				4CEB6AE815DC034500D284BF /* libcrypto.dylib in Frameworks */,
-				4CEB6AE615DC034000D284BF /* libssl.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3266,7 +3258,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -3296,7 +3288,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -3330,7 +3322,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -3365,7 +3357,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -3395,7 +3387,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -3426,7 +3418,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
@@ -3658,7 +3650,7 @@
 				);
 				PRODUCT_NAME = wired;
 				PUBLIC_HEADERS_FOLDER_PATH = wired;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -3684,7 +3676,7 @@
 				);
 				PRODUCT_NAME = wired;
 				PUBLIC_HEADERS_FOLDER_PATH = wired;
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -3757,7 +3749,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = WiredHistory;
 			};
 			name = Debug;
@@ -3781,7 +3773,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = WiredHistory;
 			};
 			name = Release;
