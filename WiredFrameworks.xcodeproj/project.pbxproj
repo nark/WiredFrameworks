@@ -14,6 +14,10 @@
 		4C04AACF181EA9B900D00B75 /* WiredData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C04AABC181EA9B800D00B75 /* WiredData.a */; };
 		4C04AAD5181EA9B900D00B75 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C04AAD3181EA9B900D00B75 /* InfoPlist.strings */; };
 		4C04AAD7181EA9B900D00B75 /* WiredDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C04AAD6181EA9B900D00B75 /* WiredDataTests.m */; };
+		4C076C561FDF16B800775589 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C155CCA1C3491FB00C16971 /* libxml2.tbd */; };
+		4C076C581FDF16FD00775589 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C076C571FDF16FD00775589 /* libz.tbd */; };
+		4C076C5F1FDF174800775589 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C076C5D1FDF174800775589 /* libcrypto.a */; };
+		4C076C601FDF174800775589 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C076C5E1FDF174800775589 /* libssl.a */; };
 		4C0F438316F1419F00735AC3 /* NSTreeController+WIAppKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C0F438116F1419F00735AC3 /* NSTreeController+WIAppKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C0F438416F1419F00735AC3 /* NSTreeController+WIAppKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0F438216F1419F00735AC3 /* NSTreeController+WIAppKit.m */; };
 		4C14ABDA181EAA4000A4435D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C14ABB7181EAA4000A4435D /* Model.xcdatamodeld */; };
@@ -775,11 +779,7 @@
 		4CE151BC17FDF65B004DA093 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151B817FDF5B3004DA093 /* libicucore.dylib */; };
 		4CE151D917FDFAC8004DA093 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151D817FDFAC8004DA093 /* Cocoa.framework */; };
 		4CE151DA17FDFACD004DA093 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151D617FDFAA9004DA093 /* Foundation.framework */; };
-		4CE151DC17FDFB01004DA093 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE151DB17FDFB01004DA093 /* libz.dylib */; };
 		4CE151E617FDFD62004DA093 /* WiredFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C417209147DC2B300DC0A9A /* WiredFoundation.framework */; };
-		4CEFF6D8180C6CD300AD7AD9 /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2D41807221600FDDB3A /* libssl.dylib */; };
-		4CEFF6D9180C6CD900AD7AD9 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2D21807221200FDDB3A /* libcrypto.dylib */; };
-		4CEFF6DA180C6CE500AD7AD9 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA9B2DC1807223A00FDDB3A /* libxml2.dylib */; };
 		4CF094931559C81C005D77BB /* WITemplateBundleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF094911559C81C005D77BB /* WITemplateBundleManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4CF094941559C81C005D77BB /* WITemplateBundleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CF094921559C81C005D77BB /* WITemplateBundleManager.m */; };
 		4CF598FB16C832ED0042E2E1 /* UIView+CocoaPlant.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CF598FA16C832ED0042E2E1 /* UIView+CocoaPlant.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -948,6 +948,11 @@
 		4C04AAD2181EA9B900D00B75 /* WiredDataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WiredDataTests-Info.plist"; sourceTree = "<group>"; };
 		4C04AAD4181EA9B900D00B75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4C04AAD6181EA9B900D00B75 /* WiredDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WiredDataTests.m; sourceTree = "<group>"; };
+		4C076C571FDF16FD00775589 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4C076C591FDF173F00775589 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = ../../../../../../../../../../usr/local/Cellar/openssl/1.0.2m/lib/libcrypto.dylib; sourceTree = "<group>"; };
+		4C076C5A1FDF173F00775589 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = ../../../../../../../../../../usr/local/Cellar/openssl/1.0.2m/lib/libssl.dylib; sourceTree = "<group>"; };
+		4C076C5D1FDF174800775589 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../../../../../../../../../usr/local/Cellar/openssl/1.0.2m/lib/libcrypto.a; sourceTree = "<group>"; };
+		4C076C5E1FDF174800775589 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../../../../../../../../../../usr/local/Cellar/openssl/1.0.2m/lib/libssl.a; sourceTree = "<group>"; };
 		4C0F438116F1419F00735AC3 /* NSTreeController+WIAppKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTreeController+WIAppKit.h"; sourceTree = "<group>"; };
 		4C0F438216F1419F00735AC3 /* NSTreeController+WIAppKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTreeController+WIAppKit.m"; sourceTree = "<group>"; };
 		4C14ABB8181EAA4000A4435D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -1509,10 +1514,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CEFF6DA180C6CE500AD7AD9 /* libxml2.dylib in Frameworks */,
-				4CEFF6D9180C6CD900AD7AD9 /* libcrypto.dylib in Frameworks */,
-				4CEFF6D8180C6CD300AD7AD9 /* libssl.dylib in Frameworks */,
-				4CE151DC17FDFB01004DA093 /* libz.dylib in Frameworks */,
+				4C076C5F1FDF174800775589 /* libcrypto.a in Frameworks */,
+				4C076C601FDF174800775589 /* libssl.a in Frameworks */,
+				4C076C581FDF16FD00775589 /* libz.tbd in Frameworks */,
+				4C076C561FDF16B800775589 /* libxml2.tbd in Frameworks */,
 				4CA9B2E01807228000FDDB3A /* wired.a in Frameworks */,
 				4CE151DA17FDFACD004DA093 /* Foundation.framework in Frameworks */,
 				4CE151D917FDFAC8004DA093 /* Cocoa.framework in Frameworks */,
@@ -2344,6 +2349,11 @@
 		4CBDABFE147AF52E00D0C51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C076C5D1FDF174800775589 /* libcrypto.a */,
+				4C076C5E1FDF174800775589 /* libssl.a */,
+				4C076C591FDF173F00775589 /* libcrypto.dylib */,
+				4C076C5A1FDF173F00775589 /* libssl.dylib */,
+				4C076C571FDF16FD00775589 /* libz.tbd */,
 				4C155CCA1C3491FB00C16971 /* libxml2.tbd */,
 				4C14AC91181EE50D00A4435D /* UIKit.framework */,
 				4C14AC71181EDED900A4435D /* Security.framework */,
@@ -4191,7 +4201,7 @@
 		4C417269147DC40900DC0A9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -4205,17 +4215,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WiredNetworking/WiredNetworking-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				HEADER_SEARCH_PATHS = (
-					"\"$(BUILT_PRODUCTS_DIR)\"",
-					"\"$(SRCROOT)/../\"",
-					"\"$(SRCROOT)/vendor/WiredFrameworks/libwired/run/include\"",
-				);
+				HEADER_SEARCH_PATHS = /usr/local/opt/openssl/include;
 				INFOPLIST_FILE = "WiredNetworking/WiredNetworking-Info.plist";
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/nark/Development/Me/Cocoa/Wired/wired2/WiredClient/vendor/WiredFrameworks/libwired/run/lib,
+					/usr/local/opt/openssl/lib,
+					/usr/local/Cellar/openssl/1.0.2m/lib,
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -4230,7 +4238,7 @@
 		4C41726A147DC40900DC0A9A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -4245,16 +4253,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WiredNetworking/WiredNetworking-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				HEADER_SEARCH_PATHS = (
-					"\"$(BUILT_PRODUCTS_DIR)\"",
-					"\"$(SRCROOT)/../\"",
-				);
+				HEADER_SEARCH_PATHS = /usr/local/opt/openssl/include;
 				INFOPLIST_FILE = "WiredNetworking/WiredNetworking-Info.plist";
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/nark/Development/Me/Cocoa/Wired/wired2/WiredClient/vendor/WiredFrameworks/libwired/run/lib,
+					/usr/local/opt/openssl/lib,
+					/usr/local/Cellar/openssl/1.0.2m/lib,
 				);
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -4565,10 +4572,12 @@
 					/usr/include/libxml2,
 					"\"$(SRCROOT)\"",
 					/usr/include,
+					/usr/local/opt/openssl/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
+					/usr/local/opt/openssl/lib,
 				);
 				OTHER_LDFLAGS = (
 					"-lssl",
@@ -4599,10 +4608,12 @@
 					/usr/include/libxml2,
 					"\"$(SRCROOT)\"",
 					/usr/include,
+					/usr/local/opt/openssl/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/system",
+					/usr/local/opt/openssl/lib,
 				);
 				OTHER_LDFLAGS = (
 					"-lssl",
