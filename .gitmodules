@@ -1,6 +1,6 @@
 [submodule "libwired"]
 	path = libwired
-	url = https://github.com/sc1sm3/libwired.git
+	url = https://github.com/nark/libwired.git
 [submodule "openssl"]
 	path = openssl
 	url = https://github.com/happywarrior/openssl-iOS.git
