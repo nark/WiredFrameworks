@@ -8,10 +8,10 @@
 
 Pod::Spec.new do |s|
   s.name         = "WiredFrameworks"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "WiredFrameworks is a set of libraries and frameworks for Mac OS X and iOS."
   s.description  = <<-DESC
-  
+WiredFrameworks is a set of libraries and frameworks for Mac OS X and iOS.
 DESC
   
   s.homepage     = "http://wired.read-write.fr"
