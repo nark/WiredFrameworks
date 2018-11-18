@@ -31,6 +31,6 @@
 - (void)setOnStateForItemsWithTag:(int)tag;
 
 - (void)addItems:(NSArray *)items;
-- (void)removeAllItems;
+- (void)removeAllItems1;
 
 @end

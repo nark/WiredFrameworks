@@ -77,6 +77,9 @@
 
 @implementation NSMutableAttributedString(WIAppKit)
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+
 - (void)addAttribute:(NSString *)name value:(id)value {
 	[self addAttribute:name value:value range:NSMakeRange(0, [self length])];
 }
@@ -126,5 +129,7 @@
 		[attachment release];
 	}
 }
+
+#pragma clang diagnostic pop
 
 @end

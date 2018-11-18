@@ -18,7 +18,7 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="-3" userLabel="Application"/>
         <window title="Crash Reports" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="1" userLabel="Crash Reports">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -35,19 +35,19 @@
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="16" horizontalPageScroll="10" verticalLineScroll="16" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="4">
                                 <rect key="frame" x="0.0" y="0.0" width="583" height="167"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <clipView key="contentView" id="gOK-uM-Ofv">
+                                <clipView key="contentView" id="xCg-5N-GOg">
                                     <rect key="frame" x="1" y="0.0" width="581" height="166"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="14" headerView="8" id="7" customClass="WITableView">
-                                            <rect key="frame" x="0.0" y="0.0" width="581" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="581" height="141"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
                                                 <tableColumn identifier="Name" editable="NO" width="425" minWidth="40" maxWidth="1000" id="9">
-                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Nom">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Name">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -89,14 +89,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="8">
-                                    <rect key="frame" x="0.0" y="0.0" width="581" height="17"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="581" height="25"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" id="13">
                                 <rect key="frame" x="0.0" y="176" width="583" height="347"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <clipView key="contentView" drawsBackground="NO" id="fKF-f8-RWo">
+                                <clipView key="contentView" id="9Ew-La-0EZ">
                                     <rect key="frame" x="1" y="1" width="566" height="345"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -110,6 +110,7 @@
                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
                                     </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="15">
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
@@ -133,7 +134,7 @@
             </view>
             <toolbar key="toolbar" implicitIdentifier="C1BEDF5A-EDF7-4AB0-B601-8C12C634AA5D" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="37">
                 <allowedToolbarItems>
-                    <toolbarItem implicitItemIdentifier="25397D81-9D3A-4420-ADAD-305D3BF12511" label="Envoyer à Read Write" paletteLabel="Envoyer à Read Write" tag="-1" image="WICrashReportsController-SendReport" id="45">
+                    <toolbarItem implicitItemIdentifier="25397D81-9D3A-4420-ADAD-305D3BF12511" label="Send to Read Write" paletteLabel="Send to Read Write" tag="-1" image="WICrashReportsController-SendReport" id="45">
                         <connections>
                             <action selector="send:" target="-2" id="46"/>
                         </connections>

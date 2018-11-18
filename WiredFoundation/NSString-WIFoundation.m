@@ -622,6 +622,8 @@
 @end
 
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
 
 @implementation NSMutableString(WIFoundation)
 
@@ -656,7 +658,9 @@
 
 
 - (void)applyFilter:(WITextFilter *)filter {
-	[filter performSelector:@selector(filter:) withObject:self];
+    [filter performSelector:@selector(filter:) withObject:self];
 }
+
+#pragma clang diagnostic pop
 
 @end

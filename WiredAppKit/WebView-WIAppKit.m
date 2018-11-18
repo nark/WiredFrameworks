@@ -54,7 +54,6 @@
 
 
 - (void)_exportHTMLToPath:(NSString *)path {
-	WebArchive		*archive;
 	NSString		*htmlString;
 	NSError			*error;
 		
@@ -76,7 +75,7 @@
 	
 	attributedSting	= [[NSAttributedString alloc] initWithHTML:[archive data] options:options documentAttributes:NULL];
 	
-	[[attributedSting RTFDFromRange:NSMakeRange(0, [attributedSting length]) documentAttributes:nil] writeToFile:path 
+    [[attributedSting RTFDFromRange:NSMakeRange(0, [attributedSting length]) documentAttributes:@{}] writeToFile:path
 																									  atomically:YES];
 	
 	[attributedSting autorelease];

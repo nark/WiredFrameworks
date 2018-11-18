@@ -59,7 +59,7 @@
 - (NSDate *)dateAtStartOfDay {
 	NSDateComponents	*components;
 	
-	components = [[NSCalendar currentCalendar] components:NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit fromDate:self];
+	components = [[NSCalendar currentCalendar] components:NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond fromDate:self];
 	
 	[components setHour:-[components hour]];
 	[components setMinute:-[components minute]];
@@ -77,7 +77,7 @@
 	
 	date			= [self dateAtStartOfDay];
 	firstWeekday	= [[NSCalendar currentCalendar] firstWeekday];
-	components		= [[NSCalendar currentCalendar] components:NSWeekdayCalendarUnit fromDate:date];
+	components		= [[NSCalendar currentCalendar] components:NSCalendarUnitWeekday fromDate:date];
 	
 	if([components weekday] < firstWeekday)
 		[components setWeekday:-[components weekday] + firstWeekday - 7];
@@ -94,7 +94,7 @@
 	NSDateComponents	*components;
 	
 	date			= [self dateAtStartOfDay];
-	components		= [[NSCalendar currentCalendar] components:NSDayCalendarUnit fromDate:date];
+	components		= [[NSCalendar currentCalendar] components:NSCalendarUnitDay fromDate:date];
 	
 	[components setDay:-[components day] + 1];
 	
@@ -108,7 +108,7 @@
 	NSDateComponents	*components;
 	
 	date			= [self dateAtStartOfMonth];
-	components		= [[NSCalendar currentCalendar] components:NSMonthCalendarUnit fromDate:date];
+	components		= [[NSCalendar currentCalendar] components:NSCalendarUnitMonth fromDate:date];
 	
 	[components setMonth:-[components month] + 1];
 	
@@ -149,7 +149,7 @@
     NSString            *result;
     
     dateFormatter   = [[[NSDateFormatter alloc] init] autorelease];
-    calendar        = [[[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar] autorelease];
+    calendar        = [[[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian] autorelease];
     
     [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"];
     [dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];

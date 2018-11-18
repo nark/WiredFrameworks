@@ -254,7 +254,7 @@
           contextInfo:nil];
 }
 
-- (void)endSheet:(NSWindow *)window {
+- (void)endSheet1:(NSWindow *)window {
     [NSApp endSheet:window];
     [window orderOut:self];
 }

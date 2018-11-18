@@ -88,5 +88,6 @@
 - (NSString *)tableView:(NSTableView *)tableView stringValueForRow:(NSInteger)row;
 - (NSColor *)tableView:(NSTableView *)tableView labelColorForRow:(NSInteger)row;
 - (void)tableViewShouldCopyInfo:(NSTableView *)tableView;
+- (void)tableViewFlagsDidChange:(NSTableView *)tableView;
 
 @end

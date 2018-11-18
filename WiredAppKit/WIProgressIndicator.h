@@ -27,7 +27,7 @@
  */
 
 @interface WIProgressIndicator : NSProgressIndicator {
-	NSInteger				_tag;
+	NSInteger _tag;
 }
 
 - (void)setTag:(NSInteger)tag;

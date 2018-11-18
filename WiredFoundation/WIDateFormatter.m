@@ -92,8 +92,8 @@
 	NSUInteger				day, today;
 	
 	if(_naturalLanguageStyle != WIDateFormatterNoNaturalLanguageStyle) {
-		day = [[NSCalendar currentCalendar] ordinalityOfUnit:NSDayCalendarUnit inUnit:NSYearCalendarUnit forDate:date];
-		today = [[NSCalendar currentCalendar] ordinalityOfUnit:NSDayCalendarUnit inUnit:NSYearCalendarUnit forDate:[NSDate date]];
+		day = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:date];
+		today = [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitYear forDate:[NSDate date]];
 		
 		if(day == today)
 			dateString = WILS(@"today", @"WIDateFormatter: this day");

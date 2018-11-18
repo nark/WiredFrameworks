@@ -31,13 +31,13 @@
 @implementation NSObject(WIAppKit)
 
 - (IBAction)submitSheet:(id)sender {
-	[NSApp endSheet:[sender window] returnCode:NSOKButton];
+    [NSApp endSheet:[sender window] returnCode:NSModalResponseOK];
 }
 
 
 
 - (IBAction)cancelSheet:(id)sender {
-	[NSApp endSheet:[sender window] returnCode:NSCancelButton];
+    [NSApp endSheet:[sender window] returnCode:NSModalResponseCancel];
 }
 
 @end

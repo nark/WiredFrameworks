@@ -49,7 +49,7 @@
 	NSString			*trace;
 	FILE				*fp;
 	char				buffer[BUFSIZ];
-	NSUInteger			i = 0;
+	unsigned long		i = 0;
 	BOOL				handled = NO;
 	
 	if(!_loggingException) {
@@ -65,7 +65,7 @@
 				backtrace = [NSMutableString string];
 				
 				while(fgets(buffer, (int) sizeof(buffer), fp) != NULL) {
-					[backtrace appendFormat:@"%d%*s%@ in %s",
+					[backtrace appendFormat:@"%ld%*s%@ in %s",
 					 i,
 					 i < 10 ? 3 : i < 100 ? 2 : i < 1000 ? 3 : 1,
 					 " ",

@@ -36,5 +36,5 @@
 //- (NSString *)autosaveName;
 
 - (void)setDividerThickness:(CGFloat)thickness;
-
+- (void)_WI_applicationWillTerminate:(NSNotification *)notification;
 @end

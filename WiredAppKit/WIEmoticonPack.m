@@ -220,7 +220,7 @@
 	
 	//reset the emabled emoticon list
 	if (_enabledEmoticonArray) {
-		[_enabledEmoticonArray release], _enabledEmoticonArray = nil;
+        [_enabledEmoticonArray release]; _enabledEmoticonArray = nil;
 	}
 }
 

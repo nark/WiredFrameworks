@@ -226,9 +226,9 @@ extern NSString *const IKPictureTakerShowEmptyPictureKey;
 	} else {
 		openPanel = [NSOpenPanel openPanel];
         
-        [openPanel setAllowedFileTypes:[NSImage imageFileTypes]];
+        [openPanel setAllowedFileTypes:[NSImage imageTypes]];
         		
-		if([openPanel runModal] == NSOKButton) {
+        if([openPanel runModal] == NSModalResponseOK) {
 			data = [NSData dataWithContentsOfFile:[[openPanel URL] path]];
 			
 			if(data)
@@ -383,7 +383,7 @@ extern NSString *const IKPictureTakerShowEmptyPictureKey;
 #pragma mark -
 
 - (void)pictureTakerDidEnd:(id)picker returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo {
-	if(returnCode == NSOKButton) {
+    if(returnCode == NSModalResponseOK) {
 		[self setImage:[picker outputImage]];
 		
 		[[self target] performSelector:[self action] withObject:self];

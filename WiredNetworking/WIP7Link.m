@@ -111,6 +111,10 @@
 
 #pragma mark -
 
+- (void)pingTimer:(NSTimer *)timer {
+    [self sendMessage:_pingMessage];
+}
+
 - (void)_schedulePingTimer {
 	_pingTimer = [[NSTimer scheduledTimerWithTimeInterval:WD_CLIENT_PING_INTERVAL
 												   target:self
@@ -330,12 +334,5 @@
 	[loopPool release];
 	[pool release];
 }
-
-
-
-- (void)pingTimer:(NSTimer *)timer {
-	[self sendMessage:_pingMessage];
-}
-
 
 @end

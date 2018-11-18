@@ -24,7 +24,7 @@
 
 - (void)beginSheetWithParentWindow:(NSWindow *)window {
     if(_parentWindow)
-        [_parentWindow release], _parentWindow = nil;
+        [_parentWindow release]; _parentWindow = nil;
     
     _parentWindow = [window retain];
     

@@ -42,6 +42,9 @@
 	char		*path;
 	
 	path = tempnam([NSTemporaryDirectory() UTF8String], [[NSSWF:@"%@_", prefix] UTF8String]);
+    
+    //path = mkstemp([NSTemporaryDirectory() UTF8String], [[NSSWF:@"%@_", prefix] UTF8String]);
+    
 	string = [NSString stringWithUTF8String:path];
 	free(path);
 	

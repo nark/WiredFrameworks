@@ -39,7 +39,7 @@
 - (NSImage *)defaultImage;
 - (void)setMaxImageSize:(NSSize)maxImageSize;
 - (NSSize)maxImageSize;
-
+- (void)pictureTakerDidEnd:(id)picker returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo;
 @end
 
 

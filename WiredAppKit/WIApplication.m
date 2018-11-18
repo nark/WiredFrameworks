@@ -136,15 +136,17 @@ NSString * const WIApplicationDidChangeFlagsNotification	= @"WIApplicationDidCha
 		object:self];
 }
 
-
-
 - (void)_WI_applicationDidResignActive:(NSNotification *)notification {
 	[[NSNotificationCenter defaultCenter]
 		postNotificationName:WIApplicationDidChangeActiveNotification
 		object:self];
 }
 
-
+- (void)applicationDidChangeActiveStatus:(NSNotification *)notification {
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:WIApplicationDidChangeActiveNotification
+     object:self];
+}
 
 #pragma mark -
 
@@ -175,11 +177,10 @@ NSString * const WIApplicationDidChangeFlagsNotification	= @"WIApplicationDidCha
 
 
 - (NSApplicationTerminateReply)runTerminationDelayPanelWithTimeInterval:(NSTimeInterval)delay message:(NSString *)message {
-	NSAlert		*alert;
 	NSTimer		*timer;
 	NSInteger	result;
 	
-	_terminationDelay = delay;
+	_terminationDelay   = delay;
 	_terminationMessage = [message retain];
 
 	timer = [NSTimer timerWithTimeInterval:1.0
@@ -190,21 +191,25 @@ NSString * const WIApplicationDidChangeFlagsNotification	= @"WIApplicationDidCha
     
 	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSModalPanelRunLoopMode];
     
-    alert = [NSAlert alertWithMessageText:WILS(@"Are you sure you want to quit?", @"WIApplication: termination delay panel")
-                            defaultButton:WILS(@"Quit", @"WIApplication: termination delay panel")
-                          alternateButton:WILS(@"Cancel", @"WIApplication: termination delay panel")
-                              otherButton:nil
-                informativeTextWithFormat:@"%@", [self _terminationDelayStringValue]];
     
-	result = [alert runModal];
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:WILS(@"Are you sure you want to quit?", @"WIApplication: termination delay panel")];
+    [alert addButtonWithTitle:WILS(@"Quit",   @"WIApplication: termination delay panel")];
+    [alert addButtonWithTitle:WILS(@"Cancel", @"WIApplication: termination delay panel")];
+    [alert setInformativeText:[self _terminationDelayStringValue]];
+    
+    result = [alert runModal];
     
 	[_terminationMessage release];
 	[timer invalidate];
     	
-	if(result == NSAlertDefaultReturn)
+	if(result == NSAlertFirstButtonReturn)
 		return NSTerminateNow;
 	
-	return NSTerminateCancel;
+    else if (result == NSAlertSecondButtonReturn)
+        return NSTerminateCancel;
+    
+    return 1;
 }
 
 @end

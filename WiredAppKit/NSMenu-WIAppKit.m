@@ -54,9 +54,7 @@
 		[self addItem:item];
 }
 
-
-
-- (void)removeAllItems {
+- (void)removeAllItems1 {
 	while([self numberOfItems] > 0)
 		[self removeItemAtIndex:0];
 }

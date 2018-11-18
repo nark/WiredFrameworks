@@ -334,6 +334,36 @@ NSString * const WIFileModificationDate					= @"WIFileModificationDate";
 }
 
 
+- (void)tableViewSingleClick:(id)sender {
+    if([sender isKindOfClass:[NSTableView class]]) {
+        //        [[self _tableViewsAheadOfTableView:sender]
+        //            makeObjectsPerformSelector:@selector(deselectAll:)
+        //                            withObject:self];
+    }
+    
+    if([self action])
+        [[self target] performSelector:[self action] withObject:self];
+}
+
+
+
+- (void)tableViewDoubleClick:(id)sender {
+    if([self doubleAction])
+        [[self target] performSelector:[self doubleAction] withObject:self];
+}
+
+
+
+- (void)tableViewEscape:(id)sender {
+    [sender deselectAll:self];
+}
+
+
+
+- (void)tableViewSpace:(id)sender {
+    if([self spaceAction])
+        [[self target] performSelector:[self spaceAction] withObject:self];
+}
 
 #pragma mark -
 
@@ -880,40 +910,6 @@ NSString * const WIFileModificationDate					= @"WIFileModificationDate";
 	
 	[super setMenu:menu];
 }
-
-
-
-- (void)tableViewSingleClick:(id)sender {
-	if([sender isKindOfClass:[NSTableView class]]) {
-//		[[self _tableViewsAheadOfTableView:sender]
-//			makeObjectsPerformSelector:@selector(deselectAll:)
-//							withObject:self];
-	}
-	
-	if([self action])
-		[[self target] performSelector:[self action] withObject:self];
-}
-
-
-
-- (void)tableViewDoubleClick:(id)sender {
-	if([self doubleAction])
-		[[self target] performSelector:[self doubleAction] withObject:self];
-}
-
-
-
-- (void)tableViewEscape:(id)sender {
-	[sender deselectAll:self];
-}
-
-
-
-- (void)tableViewSpace:(id)sender {
-	if([self spaceAction])
-		[[self target] performSelector:[self spaceAction] withObject:self];
-}
-
 
 
 #pragma mark -

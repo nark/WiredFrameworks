@@ -30,7 +30,9 @@
             
             UInt32 resolutionFlags = kLSSharedFileListNoUserInteraction | kLSSharedFileListDoNotMountVolumes;
             CFURLRef URL = NULL;
-            OSStatus err = LSSharedFileListItemResolve(item, resolutionFlags, &URL, /*outRef*/ NULL);
+            
+            CFURLRef err = LSSharedFileListItemCopyResolvedURL(item, resolutionFlags, NULL );
+            
             if (err == noErr) {
                 foundIt = CFEqual(URL, itemURL);
                 CFRelease(URL);
@@ -58,7 +60,7 @@
             
             UInt32 resolutionFlags = kLSSharedFileListNoUserInteraction | kLSSharedFileListDoNotMountVolumes;
             CFURLRef URL = NULL;
-            OSStatus err = LSSharedFileListItemResolve(item, resolutionFlags, &URL, /*outRef*/ NULL);
+            CFURLRef err = LSSharedFileListItemCopyResolvedURL(item, resolutionFlags, NULL);
             if (err == noErr) {
                 Boolean foundIt = CFEqual(URL, itemURL);
                 CFRelease(URL);

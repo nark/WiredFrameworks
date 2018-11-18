@@ -1,9 +1,0 @@
-[submodule "libwired"]
-	path = libwired
-	url = https://github.com/nark/libwired.git
-[submodule "openssl"]
-	path = openssl
-	url = https://github.com/happywarrior/openssl-iOS.git
-[submodule "WiredFoundation/RegexKitLite"]
-	path = WiredFoundation/RegexKitLite
-	url = https://github.com/samdeane/RegexKitLite.git

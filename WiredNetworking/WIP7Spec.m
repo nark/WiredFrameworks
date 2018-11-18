@@ -144,7 +144,7 @@
 	self = [super init];
 	
 	pool = wi_pool_init(wi_pool_alloc());
-	spec = wi_p7_spec_init_with_string(wi_p7_spec_alloc(), [string wiredString], originator);
+	spec = wi_p7_spec_init_with_string(wi_p7_spec_alloc(), [string wiredString], (enum _wi_p7_originator)originator);
 	
 	if(!spec) {
 		if(error) {

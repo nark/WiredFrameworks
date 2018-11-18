@@ -46,6 +46,6 @@
 - (NSSize)frameSizeForContentSize:(NSSize)size;
 
 - (void)beginSheetModalForWindow:(NSWindow *)window;
-- (void)endSheet:(NSWindow *)window;
+- (void)endSheet1:(NSWindow *)window;
 
 @end

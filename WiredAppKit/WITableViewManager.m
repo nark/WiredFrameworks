@@ -477,6 +477,10 @@ static void _WITableViewManagerShader(void *info, const CGFloat *in, CGFloat *ou
 @implementation WITableViewManager
 
 - (id)initWithTableView:(WITableView *)tableView {
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    
 	WITableHeaderView	*headerView;
 	
 	self = [super init];
@@ -490,7 +494,7 @@ static void _WITableViewManagerShader(void *info, const CGFloat *in, CGFloat *ou
 		[[NSBundle bundleForClass:[self class]] pathForResource:@"WITableViewManager-SortAscending" ofType:@"tiff"]];
 	_sortDescendingImage = [[NSImage alloc] initWithContentsOfFile:
 		[[NSBundle bundleForClass:[self class]] pathForResource:@"WITableViewManager-SortDescending" ofType:@"tiff"]];
-
+    
 	if([_tableView isKindOfClass:[NSOutlineView class]]) {
 		_stringValueForRow		= @selector(outlineView:stringValueForRow:);
 		_shouldCopyInfo			= @selector(outlineViewShouldCopyInfo:);
@@ -512,6 +516,7 @@ static void _WITableViewManagerShader(void *info, const CGFloat *in, CGFloat *ou
 		_shouldCopyInfo			= @selector(tableViewShouldCopyInfo:);
 		_flagsDidChange			= @selector(tableViewFlagsDidChange:);
 		
+        
 		[[NSNotificationCenter defaultCenter]
 			addObserver:self
 			   selector:@selector(tableViewColumnDidMove:)
@@ -532,6 +537,7 @@ static void _WITableViewManagerShader(void *info, const CGFloat *in, CGFloat *ou
 	}
 
 	return self;
+    #pragma clang diagnostic pop
 }
 
 
@@ -843,13 +849,13 @@ static void _WITableViewManagerShader(void *info, const CGFloat *in, CGFloat *ou
 
 
 - (IBAction)submitSheet:(id)sender {
-	[[[_tableView window] windowController] submitSheet:sender];
+    [[[_tableView window] windowController] submitSheet:sender];
 }
 
 
 
 - (IBAction)cancelSheet:(id)sender {
-	[[[_tableView window] windowController] cancelSheet:sender];
+    [[[_tableView window] windowController] cancelSheet:sender];
 }
 
 
