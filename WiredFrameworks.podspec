@@ -20,7 +20,7 @@ DESC
   
   s.osx.deployment_target = "10.10"
   
-  s.source      = { :git => "https://github.com/nark/WiredFrameworks.git", :commit => "20205158d9a40b5490ad1dd6d606c089a20e8801" }
+  s.source      = { :git => "https://github.com/nark/WiredFrameworks.git", :commit => "d997c2e8b7480ee437b86db19d523915f088e61f" }
   
   s.subspec 'ChatHistory-default' do |sspc|
       
